@@ -5,9 +5,14 @@ paginate:
  pages: null
 ---
 
+{{ content }}
+
 <input type="search" id="search-input" placeholder="Search plants">
 
-{{ content }}
+<section class="plant-entries">
+ {% for entry in paginator.entries %}
+ {% endfor %}
+</section>
 
 liquid
 {% for entry in paginator.entries %}
