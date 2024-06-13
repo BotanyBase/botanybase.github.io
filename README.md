@@ -1,1 +1,3 @@
-# botanybase.github.io
+# BotanyBase
+
+A Plant Classification Field Guide
