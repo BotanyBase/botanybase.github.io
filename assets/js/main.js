@@ -35,3 +35,14 @@ searchInput.addEventListener('input', () => {
   });
   paginateResults(filteredEntries); // paginate the filtered entries
 });
+
+function paginateResults(filteredEntries) {
+  const paginator = new Paginator(filteredEntries, {
+    perPage: 10,
+    pages: null
+  });
+  const currentPage = paginator.currentPage;
+  const entriesPerPage = paginator.perPage;
+  const totalPages = paginator.totalPages;
+  // update the pagination controls and display the current page entries
+}
