@@ -63,9 +63,6 @@ hr {
   border: none;
   height: 2px;
   background-color: #8BC34A; /* light green */
-  background-image: linear-gradient(to right, #3E8E41 0%, #8BC34A 100%); /* green gradient */
-  background-size: 2px 2px;
-  background-position: 0% 50%;
   animation: hrmove 5s linear infinite;
 }
 
