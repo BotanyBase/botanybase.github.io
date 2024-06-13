@@ -10,14 +10,13 @@ paginate:
 <input type="search" id="search-input" placeholder="Search plants">
 
 <section class="plant-entries">
- {% for entry in paginator.entries %}
- {% endfor %}
+  {% for plant in plants %}
+    {% if plant.climate == page.climate %}
+      <h2>{{ plant.name }}</h2>
+      <p>{{ plant.description }}</p>
+    {% endif %}
+  {% endfor %}
 </section>
-
-liquid
-{% for entry in paginator.entries %}
-  <!-- display each plant entry here -->
-{% endfor %}
 
 <nav>
   {% if paginator.previous_page %}
