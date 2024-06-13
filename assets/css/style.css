@@ -58,3 +58,22 @@ h1 {
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #8BC34A; /* light green */
+  background-image: linear-gradient(to right, #3E8E41 0%, #8BC34A 100%); /* green gradient */
+  background-size: 2px 2px;
+  background-position: 0% 50%;
+  animation: hrmove 5s linear infinite;
+}
+
+@keyframes hrmove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
