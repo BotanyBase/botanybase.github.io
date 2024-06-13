@@ -1,0 +1,27 @@
+{
+  "background_color": "#cc9a68",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "BotanyBase",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "BotanyBase",
+  "start_url": "/",
+  "theme_color": "#cc9a68",
+  "icons": [
+    {
+      "src": "https://botanybase.github.io/assets/favicon.png",
+      "type": "image/png",
+      "sizes": "666x666"
+    }
+  ],
+  "id": "1DSTBB",
+  "description": "A Plant Idenfication Guide",
+  "display_override": [
+    "fullscreen",
+    "standalone",
+    "minimal-ui",
+    "window-controls-overlay",
+    "browser"
+  ]
+}
