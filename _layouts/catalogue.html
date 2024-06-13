@@ -26,3 +26,20 @@ paginate:
     <a href="{{ paginator.next_page_path }}">Next</a>
   {% endif %}
 </nav>
+
+<script>
+  const searchInput = document.getElementById('search-input');
+  const plantEntries = document.querySelectorAll('.plant-entry');
+
+  searchInput.addEventListener('input', () => {
+    const searchString = searchInput.value.toLowerCase();
+    plantEntries.forEach((entry) => {
+      const plantName = entry.querySelector('h2').textContent.toLowerCase();
+      if (plantName.includes(searchString)) {
+        entry.style.display = 'block';
+      } else {
+        entry.style.display = 'none';
+      }
+    });
+  });
+</script>
