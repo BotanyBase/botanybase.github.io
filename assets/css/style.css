@@ -25,3 +25,37 @@ h1 {
   font-style: normal;
   color: #5c4b36;
 }
+
+.button-box {
+  /* Fixed size */
+  width: 200px;
+  height: 50px;
+  
+  /* Curved edges */
+  border-radius: 10px;
+  
+  /* Background image */
+  background-image: url('your-background-image.jpg');
+  background-size: cover;
+  background-position: center;
+  
+  /* Centering */
+  margin: 20px auto;
+  display: block;
+  
+  /* Transition effect */
+  transition: all 0.3s ease-in-out;
+  
+  /* Additional styles */
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+}
+
+.button-box:hover {
+  /* Hover effect */
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
