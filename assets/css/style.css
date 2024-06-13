@@ -2,6 +2,7 @@
 
 html {
   background-color: #e0ceb8;
+  x-overflow: hidden;
 }
 
 p {
