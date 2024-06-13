@@ -1,0 +1,9 @@
+title: BotanyBase
+baseurl: botanybase.github.io
+
+pagination: 10
+paginate_path: "/page/:num"
+
+plugins: 
+ - jekyll-paginate
+ - jekyll-sitemap
