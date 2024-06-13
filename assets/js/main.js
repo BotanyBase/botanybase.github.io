@@ -18,4 +18,20 @@ circles.forEach((circle) => {
 
 
 
-//null.js
+//searchbar.js
+
+const searchInput = document.getElementById('search-input');
+const plantEntries = document.querySelectorAll('.plant-entry');
+let filteredEntries = [];
+
+searchInput.addEventListener('input', () => {
+  const searchString = searchInput.value.toLowerCase();
+  filteredEntries = []; // reset the filtered entries array
+  plantEntries.forEach((entry) => {
+    const entryText = entry.textContent.toLowerCase();
+    if (entryText.includes(searchString)) {
+      filteredEntries.push(entry); // add the entry to the filtered entries array
+    }
+  });
+  paginateResults(filteredEntries); // paginate the filtered entries
+});
