@@ -28,8 +28,8 @@ h1 {
 
 .button-box {
   /* Fixed size */
-  width: 90%;
-  height: 40vh;
+  width: 70%;
+  height: 30vh;
   
   /* Curved edges */
   border-radius: 10px;
