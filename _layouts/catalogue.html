@@ -1,7 +1,24 @@
 ---
 layout: default
+paginate:
+ per_page: 10
+ pages: null
 ---
 
 <input type="search" id="search-input" placeholder="Search plants">
 
 {{ content }}
+
+liquid
+{% for entry in paginator.entries %}
+  <!-- display each plant entry here -->
+{% endfor %}
+
+<nav>
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}">Previous</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}">Next</a>
+  {% endif %}
+</nav>
