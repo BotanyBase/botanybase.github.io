@@ -8,4 +8,16 @@
 - name: Dracaena Marginata
   climate: Tropical
   description: A versatile plant with slender leaves and a tall, upright habit.
+- name: test
+  climate: Tropical
+  description: test
+- name: test
+  climate: Tropical
+  description: test
+- name: test
+  climate: Tropical
+  description: test
+- name: test
+  climate: Tropical
+  description: test 
 ...
