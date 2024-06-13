@@ -5,21 +5,29 @@ title: Main
 
 <style>
 .circle-background {
-  /* Set the background size to a large value to ensure the circles are scattered */
-  background-size: 2000px 2000px;
-  /* Set the background position to random values */
-  background-position: random() 100%, random() 100%, random() 100%;
-  /* Set the background image to radial gradients with random sizes and colors */
-  background-image: radial-gradient(circle at 10px 10px, #ff0000 calc(random() * 100px + 10px), transparent 0),
-                     radial-gradient(circle at 20px 20px, #00ff00 calc(random() * 100px + 10px), transparent 0),
-                     radial-gradient(circle at 30px 30px, #0000ff calc(random() * 100px + 10px), transparent 0);
-  /* Set the height and width of the element */
-  width: 100%;
-  height: 100vh;
-  /* Center the element */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  
+  /* ... */
+  
+  grid-template-areas:
+    "circle-1 circle-2 circle-3"
+    "circle-4 circle-5 circle-6"
+    /* ... */;
+}
+
+.circle-background::before {
+  content: "";
+  display: block;
+  background: radial-gradient(circle at 10px 10px, #ff0000 20px, transparent 0);
+  width: 20px;
+  height: 20px;
+  grid-area: circle-1;
+}
+
+.circle-background::after {
+  /* ... */
 }
 </style>
 
