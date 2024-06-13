@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
+html {
+  background-color: #e0ceb8;
+}
+
 p {
   font-family: "Merriweather", serif;
   font-weight: 400;
@@ -15,5 +19,8 @@ a {
 }
 
 h1 {
-  
+    font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #5c4b36;
 }
