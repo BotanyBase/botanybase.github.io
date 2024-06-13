@@ -1,16 +1,17 @@
 ---
 layout: default
-paginate:
- per_page: 10
- pages: null
+paginate: true
+per_page: 10
 ---
+
+{% paginate paginator %}
 
 {{ content }}
 
 <input type="search" id="search-input" placeholder="Search plants">
 
 <section class="plant-entries">
-  {% for plant in plants %}
+  {% for plant in paginator.entries %}
     {% if plant.climate == page.climate %}
       <h2>{{ plant.name }}</h2>
       <p>{{ plant.description }}</p>
