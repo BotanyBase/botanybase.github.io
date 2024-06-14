@@ -15,40 +15,39 @@ layout: default
 <!-- Filter the plants by climate -->
 {% assign filtered_plants = site.plants | where: "climate", climate %}
 
-<!-- Display the filtered plants -->
-<div class="plant-entries">
+<div class="plant-entries" data-filtered-plants='{% json filtered_plants %}'>
   {% for plant in filtered_plants %}
-    <h2>{{ plant.name }}</h2>
-    <p>{{ plant.description }}</p>
-    <img src="{{ plant.image }}" alt="{{ plant.name }}">
+   <h2>{{ plant.name }}</h2>
+   <p>{{ plant.description }}</p>
+   <img src="{{ plant.image }}" alt="{{ plant.name }}">
   {% endfor %}
 </div>
 
 <script>
 const searchInput = document.getElementById('search-input');
-const plantEntriesContainer = document.querySelector('.plant-entries');
-const filtered_plants = []; // Define filtered_plants as an empty array
+  const plantEntriesContainer = document.querySelector('.plant-entries');
+  const filtered_plants = JSON.parse(plantEntriesContainer.dataset.filteredPlants);
 
-searchInput.addEventListener('input', () => {
-  const searchString = searchInput.value.toLowerCase();
-  const filteredPlants = filtered_plants.filter(plant => {
-    const plantName = plant.name.toLowerCase();
-    return plantName.includes(searchString);
+  searchInput.addEventListener('input', () => {
+    const searchString = searchInput.value.toLowerCase();
+    const filteredPlants = filtered_plants.filter(plant => {
+      const plantName = plant.name.toLowerCase();
+      return plantName.includes(searchString);
+    });
+    appendPlantsToContainer(filteredPlants);
   });
-  appendPlantsToContainer(filteredPlants);
-});
 
-function appendPlantsToContainer(plants) {
-  plantEntriesContainer.innerHTML = ''; // clear the container
-  plants.forEach(plant => {
-    const plantEntryHTML = `
-      <h2>${plant.name}</h2>
-      <p>${plant.description}</p>
-      <img src="${plant.image}" alt="${plant.name}">
-    `;
-    const plantEntryElement = document.createElement('div');
-    plantEntryElement.innerHTML = plantEntryHTML;
-    plantEntriesContainer.appendChild(plantEntryElement);
-  });
-}
+  function appendPlantsToContainer(plants) {
+    plantEntriesContainer.innerHTML = ''; // clear the container
+    plants.forEach(plant => {
+      const plantEntryHTML = `
+        <h2>${plant.name}</h2>
+        <p>${plant.description}</p>
+        <img src="${plant.image}" alt="${plant.name}">
+      `;
+      const plantEntryElement = document.createElement('div');
+      plantEntryElement.innerHTML = plantEntryHTML;
+      plantEntriesContainer.appendChild(plantEntryElement);
+    });
+  }
 </script>
