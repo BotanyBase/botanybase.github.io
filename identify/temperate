@@ -1,0 +1,11 @@
+---
+layout: catalogue
+title: Temperate
+climate: temperate
+---
+
+<!-- use this to define climate --> 
+<div id="climate-type">Temperate</div>
+
+<h1 style="text-align: center;">Temperatus</h1>
+<p style="text-align: center;">Plants in Temperate regions:</p>
