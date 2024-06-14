@@ -2,6 +2,40 @@
 layout: default
 ---
 
+<style>
+.plant-entries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.plant-entry {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.plant-entry h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plant-entry p {
+  margin-bottom: 20px;
+}
+
+.plant-entry img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+</style>
+
 {{ content }}
 
 <!-- catalogue.html -->
@@ -20,7 +54,7 @@ layout: default
 
 <script>
   // Fetch plant data from JSON file
-  fetch('data/plants.json')
+  fetch('plants.json')
   .then(response => response.json())
   .then(data => {
     const plants = data;
