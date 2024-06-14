@@ -20,17 +20,39 @@ layout: default
 
 <script>
   // Fetch plant data from JSON file
-  fetch('plants.json')
-    .then(response => response.json())
-    .then(data => {
-      const plants = data;
-      const searchInput = document.getElementById('search-input');
-      searchInput.addEventListener('input', () => {
-        const searchQuery = searchInput.value.toLowerCase();
-        const filteredPlants = plants.filter(plant => plant.name.toLowerCase().includes(searchQuery));
-        // Update plant entries container with filtered plants
-        const plantEntriesContainer = document.querySelector('.plant-entries');
-        plantEntriesContainer.innerHTML = ''; // clear the container
+  fetch('data/plants.json')
+  .then(response => response.json())
+  .then(data => {
+    const plants = data;
+    const searchInput = document.getElementById('search-input');
+    const plantEntriesContainer = document.querySelector('.plant-entries');
+
+    // Display message "Start typing, or enter * to show all plants"
+    const message = document.createElement('p');
+    message.textContent = 'Start typing, or enter * to show all plants';
+    plantEntriesContainer.appendChild(message);
+
+    searchInput.addEventListener('input', () => {
+      const searchQuery = searchInput.value.toLowerCase();
+      const filteredPlants = plants.filter(plant => plant.name.toLowerCase().includes(searchQuery));
+
+      // Clear the plant entries container
+      plantEntriesContainer.innerHTML = '';
+
+      // Display all plants if * is entered
+      if (searchQuery === '*') {
+        plants.forEach(plant => {
+          const plantEntryHTML = `
+            <h2>${plant.name}</h2>
+            <p>${plant.description}</p>
+            <img src="${plant.image}" alt="${plant.name}">
+          `;
+          const plantEntryElement = document.createElement('div');
+          plantEntryElement.innerHTML = plantEntryHTML;
+          plantEntriesContainer.appendChild(plantEntryElement);
+        });
+      } else {
+        // Display filtered plants
         filteredPlants.forEach(plant => {
           const plantEntryHTML = `
             <h2>${plant.name}</h2>
@@ -41,6 +63,8 @@ layout: default
           plantEntryElement.innerHTML = plantEntryHTML;
           plantEntriesContainer.appendChild(plantEntryElement);
         });
-      });
+      }
     });
+  });
+
 </script>
