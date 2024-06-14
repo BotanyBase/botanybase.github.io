@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Plant 1",
+    "description": "This is plant 1",
+    "image": "plant1.jpg",
+    "climate": "Tropical"
+  },
+  {
+    "name": "Plant 2",
+    "description": "This is plant 2",
+    "image": "plant2.jpg",
+    "climate": "Desert"
+  },
+  ...
+]
