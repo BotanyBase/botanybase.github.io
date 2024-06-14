@@ -4,21 +4,39 @@ title: Main
 ---
 
 <style>
-  .bg-1 {
-    background-image: url(https://botanybase.github.io/assets/img/Tropical.png);
+.btn {
+  background-color: #f7f7f7; /* White-ish background */
+  color: #34C759; /* Green text color */
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 auto; /* Center the button */
+}
+
+.btn:hover {
+  background-color: #ececec; /* Light gray hover background */
+  color: #2ecc71; /* Darker green hover text color */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
   }
-  .bg-2 {
-    background-image: url(https://botanybase.github.io/assets/img/Subtropical.png);
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 8px 16px;
+    font-size: 12px;
   }
-  .bg-3 {
-    background-image: url(https://botanybase.github.io/assets/img/Temperate.png);
-  }
-  .bg-4 {
-    background-image: url(https://botanybase.github.io/assets/img/Alpine3.png);
-  }
-  .bg-5 {
-    background-image: url(https://botanybase.github.io/assets/img/Desert.png);
-  }
+}
 </style>
 
 <br>
@@ -26,19 +44,9 @@ title: Main
 <h1 style="text-align: center; padding: 30px; font-size: 50px;">BotanyBase</h1>
 <p style="text-align: center;">A Plant Classification Guide</p>
 <small><p style="text-align: center;">By <a href="https://1d10t1c-stud10s.github.io">1D10T1C STUD10S</a></small>
+<h2 style="text-align: center;">Using the simplest interface, to help you appreciate nature.</h2>
+<br>
+<a class="btn btn-green" href="#">Start Now</a>
 <br>
 <hr>
 <br>
-<p style="padding: 10px;">Here we use <b>climates</b> to help identify plants, which is especially useful if you're unsure of what family, genus or specific species the plant is!</p>
-<p style="padding: 10px;"><strong>Select a Climate to Begin, if you'd like to identify via leaf type, go <a href="/identify/leaftype">here</a>.</strong></p>
-<p style="padding: 10px;"><strong>Unsure of which climate you're in, go <a href="/identify/full">here</a>.</strong></p>
-<br>
-<a class="button-box bg-1" href="identify/tropical">Tropical</a>
-<br>
-<a class="button-box bg-2" href="identify/subtropical">Subtropical</a>
-<br>
-<a class="button-box bg-3" href="identify/temperate.html">Temperate</a>
-<br>
-<a class="button-box bg-4" href="identify/alpine">Alpine</a>
-<br>
-<a class="button-box bg-5" href="identify/desert">Desert</a>
