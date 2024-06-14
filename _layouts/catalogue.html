@@ -55,6 +55,12 @@ searchButton:hover {
   /* Add a slight background color change to indicate hover */
   background-color: #3e8e41;
 }
+
+  .entry-wrapper {
+    background-color: #edc4af;
+    border-radius: 5px;
+  }
+  
 .plant-entries {
   display: flex;
   flex-wrap: wrap;
@@ -159,9 +165,11 @@ img {
         plantEntriesContainer.innerHTML = '';
         filtered.forEach(plant => {
           const plantEntryHTML = `
+           <div class="entry-wrapper">
             <h2>${plant.name}</h2>
             <p>${plant.description}</p>
             <img src="${plant.image}" alt="${plant.name}">
+           </div>
           `;
           const plantEntryElement = document.createElement('div');
           plantEntryElement.innerHTML = plantEntryHTML;
