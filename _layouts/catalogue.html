@@ -4,13 +4,15 @@ layout: default
 
 {{ content }}
 
-<input type="search" id="search-input" placeholder="Search plants">
-
-
 <!-- catalogue.html -->
+
+<input type="search" id="search-input" placeholder="Search plants">
 
 <!-- Get the climate variable from the front matter -->
 {% assign climate = page.climate | default: "All Climates" %}
+
+<!-- Fetch the _plants collection and assign it to site.plants -->
+{% assign site.plants = site._plants | sort: 'name' %}
 
 <!-- Filter the plants by climate -->
 {% assign filtered_plants = site.plants | where: "climate", climate %}
