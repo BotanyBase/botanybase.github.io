@@ -1,46 +1,26 @@
 ---
 layout: default
-paginate: true
-per_page: 10
 ---
-
-{% paginate paginator %}
 
 {{ content }}
 
 <input type="search" id="search-input" placeholder="Search plants">
 
 <section class="plant-entries">
-  {% for plant in paginator.entries %}
-    {% if plant.climate == page.climate %}
-      <h2>{{ plant.name }}</h2>
-      <p>{{ plant.description }}</p>
-    {% endif %}
-  {% endfor %}
+
 </section>
 
-<nav>
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}">Previous</a>
-  {% endif %}
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}">Next</a>
-  {% endif %}
-</nav>
-
 <script>
-  const searchInput = document.getElementById('search-input');
-  const plantEntries = document.querySelectorAll('.plant-entry');
+const searchInput = document.getElementById('search-input');
+const plantEntriesContainer = document.querySelector('.plant-entries');
 
-  searchInput.addEventListener('input', () => {
-    const searchString = searchInput.value.toLowerCase();
-    plantEntries.forEach((entry) => {
-      const plantName = entry.querySelector('h2').textContent.toLowerCase();
-      if (plantName.includes(searchString)) {
-        entry.style.display = 'block';
-      } else {
-        entry.style.display = 'none';
-      }
-    });
-  });
+searchInput.addEventListener('input', () => {
+  const searchString = searchInput.value.toLowerCase();
+  loadPlants(searchString, 0); // load initial plants
+});
+
+function loadPlants(searchString, offset) {
+  // fetch plants from API or database
+  // append plant entries to plantEntriesContainer
+}
 </script>
