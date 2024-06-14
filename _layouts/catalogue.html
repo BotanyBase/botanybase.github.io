@@ -2,60 +2,54 @@
 layout: default
 ---
 
-<!-- show top content -->
-{{ content }}
-
-<!-- catalogue.html -->
-
+<!-- Search bar -->
 <input type="search" id="search-input" placeholder="Search plants">
 
-<!-- Get the climate variable from the front matter -->
-{% assign climate = page.climate | default: "All Climates" %}
+<!-- Climate filter -->
+<select id="climate-filter">
+  <option value="">All Climates</option>
+  {% for climate in site.climates %}
+    <option value="{{ climate }}">{{ climate }}</option>
+  {% endfor %}
+</select>
 
-<!-- Fetch the _plants collection and assign it to site.plants -->
-{% assign site.plants = site.plants | sort: 'name' %}
-
-<!-- Filter the plants by climate -->
-{% assign filtered_plants = site.plants | where: "climate", climate %}
-
-<div class="plant-entries" data-filtered-plants="{{ filtered_plants | to_json }}">
-  {% for plant in filtered_plants %}
-   <h2>{{ plant.name }}</h2>
-   <p>{{ plant.description }}</p>
-   <img src="{{ plant.image }}" alt="{{ plant.name }}">
+<!-- Plant entries container -->
+<div class="plant-entries">
+  {% for plant in site.plants | where: "climate", page.climate %}
+    <h2>{{ plant.name }}</h2>
+    <p>{{ plant.description }}</p>
+    <img src="{{ plant.image }}" alt="{{ plant.name }}">
   {% endfor %}
 </div>
 
 <script>
-const searchInput = document.getElementById('search-input');
-const plantEntriesContainer = document.querySelector('.plant-entries');
+  const searchInput = document.getElementById('search-input');
+  const climateFilter = document.getElementById('climate-filter');
+  const plantEntriesContainer = document.querySelector('.plant-entries');
 
-const filteredPlantsData = plantEntriesContainer.dataset.filteredPlants;
-if (filteredPlantsData) {
-  const filtered_plants = JSON.parse(filteredPlantsData);
-  searchInput.addEventListener('input', () => {
-    const searchString = searchInput.value.toLowerCase();
-    const filteredPlants = filtered_plants.filter(plant => {
+  searchInput.addEventListener('input', searchAndFilter);
+  climateFilter.addEventListener('change', searchAndFilter);
+
+  function searchAndFilter() {
+    const searchQuery = searchInput.value.toLowerCase();
+    const selectedClimate = climateFilter.value;
+
+    const filteredPlants = site.plants.filter(plant => {
       const plantName = plant.name.toLowerCase();
-      return plantName.includes(searchString);
+      return (plantName.includes(searchQuery) && 
+        (selectedClimate === "" || plant.climate === selectedClimate));
     });
-    appendPlantsToContainer(filteredPlants);
-  });
-} else {
-  console.log("No filtered plants data found");
-}
 
-function appendPlantsToContainer(plants) {
-  plantEntriesContainer.innerHTML = ''; // clear the container
-  plants.forEach(plant => {
-    const plantEntryHTML = `
-      <h2>${plant.name}</h2>
-      <p>${plant.description}</p>
-      <img src="${plant.image}" alt="${plant.name}">
-    `;
-    const plantEntryElement = document.createElement('div');
-    plantEntryElement.innerHTML = plantEntryHTML;
-    plantEntriesContainer.appendChild(plantEntryElement);
-  });
-}
+    plantEntriesContainer.innerHTML = ''; // clear the container
+    filteredPlants.forEach(plant => {
+      const plantEntryHTML = `
+        <h2>${plant.name}</h2>
+        <p>${plant.description}</p>
+        <img src="${plant.image}" alt="${plant.name}">
+      `;
+      const plantEntryElement = document.createElement('div');
+      plantEntryElement.innerHTML = plantEntryHTML;
+      plantEntriesContainer.appendChild(plantEntryElement);
+    });
+  }
 </script>
