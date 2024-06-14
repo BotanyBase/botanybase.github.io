@@ -7,3 +7,6 @@ paginate_path: "/page/:num"
 plugins: 
  - jekyll-paginate
  - jekyll-sitemap
+
+include:
+  - '_plants'
