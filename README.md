@@ -6,7 +6,7 @@ A Plant Classification Field Guide
 
 ### Contribution
 
-For those who wish to contribute, please read the [contribution guide](https://botanybase.github.io/contribute)
+For those who wish to contribute, please read the [contribution guide](https://botanybase.github.io/contribute).
 
 ### About
 
