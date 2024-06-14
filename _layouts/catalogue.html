@@ -2,20 +2,14 @@
 layout: default
 ---
 
-<!-- Search bar -->
-<input type="search" id="search-input" placeholder="Search plants">
+<!-- catalogue.html -->
 
-<!-- Climate filter -->
-<select id="climate-filter">
-  <option value="">All Climates</option>
-  {% for climate in site.climates %}
-    <option value="{{ climate }}">{{ climate }}</option>
-  {% endfor %}
-</select>
+<!-- Search input field -->
+<input type="search" id="search-input" placeholder="Search plants">
 
 <!-- Plant entries container -->
 <div class="plant-entries">
-  {% for plant in site.plants | where: "climate", page.climate %}
+  {% for plant in site.plants %}
     <h2>{{ plant.name }}</h2>
     <p>{{ plant.description }}</p>
     <img src="{{ plant.image }}" alt="{{ plant.name }}">
@@ -23,33 +17,28 @@ layout: default
 </div>
 
 <script>
-  const searchInput = document.getElementById('search-input');
-  const climateFilter = document.getElementById('climate-filter');
-  const plantEntriesContainer = document.querySelector('.plant-entries');
-
-  searchInput.addEventListener('input', searchAndFilter);
-  climateFilter.addEventListener('change', searchAndFilter);
-
-  function searchAndFilter() {
-    const searchQuery = searchInput.value.toLowerCase();
-    const selectedClimate = climateFilter.value;
-
-    const filteredPlants = site.plants.filter(plant => {
-      const plantName = plant.name.toLowerCase();
-      return (plantName.includes(searchQuery) && 
-        (selectedClimate === "" || plant.climate === selectedClimate));
+  // Fetch plant data from JSON file
+  fetch('plants.json')
+    .then(response => response.json())
+    .then(data => {
+      const plants = data;
+      const searchInput = document.getElementById('search-input');
+      searchInput.addEventListener('input', () => {
+        const searchQuery = searchInput.value.toLowerCase();
+        const filteredPlants = plants.filter(plant => plant.name.toLowerCase().includes(searchQuery));
+        // Update plant entries container with filtered plants
+        const plantEntriesContainer = document.querySelector('.plant-entries');
+        plantEntriesContainer.innerHTML = ''; // clear the container
+        filteredPlants.forEach(plant => {
+          const plantEntryHTML = `
+            <h2>${plant.name}</h2>
+            <p>${plant.description}</p>
+            <img src="${plant.image}" alt="${plant.name}">
+          `;
+          const plantEntryElement = document.createElement('div');
+          plantEntryElement.innerHTML = plantEntryHTML;
+          plantEntriesContainer.appendChild(plantEntryElement);
+        });
+      });
     });
-
-    plantEntriesContainer.innerHTML = ''; // clear the container
-    filteredPlants.forEach(plant => {
-      const plantEntryHTML = `
-        <h2>${plant.name}</h2>
-        <p>${plant.description}</p>
-        <img src="${plant.image}" alt="${plant.name}">
-      `;
-      const plantEntryElement = document.createElement('div');
-      plantEntryElement.innerHTML = plantEntryHTML;
-      plantEntriesContainer.appendChild(plantEntryElement);
-    });
-  }
 </script>
