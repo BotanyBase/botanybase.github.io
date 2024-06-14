@@ -1,0 +1,28 @@
+
+[
+  {
+    "name": "Monstera Deliciosa",
+    "climate": "Tropical",
+    "description": "A popular houseplant known for its large, glossy leaves."
+  },
+  {
+    "name": "Philodendron Brasil",
+    "climate": "Tropical",
+    "description": "A low-maintenance plant with heart-shaped leaves."
+  },
+  {
+    "name": "Dracaena Marginata",
+    "climate": "Tropical",
+    "description": "A versatile plant with slender leaves and a tall, upright habit."
+  },
+  {
+    "name": "test",
+    "climate": "Tropical",
+    "description": "test"
+  },
+  {
+    "name": "test",
+    "climate": "Tropical",
+    "description": "test"
+  },
+]
