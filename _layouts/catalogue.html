@@ -48,6 +48,15 @@ layout: default
 <!-- Search input field -->
 <input type="search" id="search-input" placeholder="Search plants">
 
+{% assign currentClimate = page.climate | downcase %}
+{% assign filteredPlants = "" | split: "," %}
+
+{% for plant in site.data.plants %}
+  {% if plant.climate | downcase == currentClimate %}
+    {% assign filteredPlants = filteredPlants | concat: plant %}
+  {% endif %}
+{% endfor %}
+
 <!-- Plant entries container -->
 <div class="plant-entries">
   {% for plant in site.plants %}
