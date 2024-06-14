@@ -25,9 +25,11 @@ layout: default
 
 <script>
 const searchInput = document.getElementById('search-input');
-  const plantEntriesContainer = document.querySelector('.plant-entries');
-  const filtered_plants = JSON.parse(plantEntriesContainer.dataset.filteredPlants);
+const plantEntriesContainer = document.querySelector('.plant-entries');
 
+const filteredPlantsData = plantEntriesContainer.dataset.filteredPlants;
+if (filteredPlantsData) {
+  const filtered_plants = JSON.parse(filteredPlantsData);
   searchInput.addEventListener('input', () => {
     const searchString = searchInput.value.toLowerCase();
     const filteredPlants = filtered_plants.filter(plant => {
@@ -36,26 +38,21 @@ const searchInput = document.getElementById('search-input');
     });
     appendPlantsToContainer(filteredPlants);
   });
-
-  function appendPlantsToContainer(plants) {
-    plantEntriesContainer.innerHTML = ''; // clear the container
-    plants.forEach(plant => {
-      const plantEntryHTML = `
-        <h2>${plant.name}</h2>
-        <p>${plant.description}</p>
-        <img src="${plant.image}" alt="${plant.name}">
-      `;
-      const plantEntryElement = document.createElement('div');
-      plantEntryElement.innerHTML = plantEntryHTML;
-      plantEntriesContainer.appendChild(plantEntryElement);
-    });
-  }
-
-const filtered_plants = plantEntriesContainer.dataset.filteredPlants;
-if (filtered_plants) {
-  const parsedPlants = JSON.parse(filtered_plants);
-  // Use parsedPlants in your search functionality
 } else {
-  console.log("No filtered plants found");
+  console.log("No filtered plants data found");
+}
+
+function appendPlantsToContainer(plants) {
+  plantEntriesContainer.innerHTML = ''; // clear the container
+  plants.forEach(plant => {
+    const plantEntryHTML = `
+      <h2>${plant.name}</h2>
+      <p>${plant.description}</p>
+      <img src="${plant.image}" alt="${plant.name}">
+    `;
+    const plantEntryElement = document.createElement('div');
+    plantEntryElement.innerHTML = plantEntryHTML;
+    plantEntriesContainer.appendChild(plantEntryElement);
+  });
 }
 </script>
