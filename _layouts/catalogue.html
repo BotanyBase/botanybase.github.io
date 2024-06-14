@@ -3,6 +3,50 @@ layout: default
 ---
 
 <style>
+/* Style the search input field */
+#searchInput {
+  /* Add some padding to make the input field more spacious */
+  padding: 10px;
+  /* Set the font size and color */
+  font-size: 18px;
+  color: #333;
+  /* Add a border to the input field */
+  border: 1px solid #ccc;
+  /* Make the input field rounded */
+  border-radius: 10px;
+  /* Set the width of the input field */
+  width: 100%;
+}
+
+/* Style the search input field when focused */
+#searchInput:focus {
+  /* Add a slight border color change to indicate focus */
+  border-color: #aaa;
+  /* Add a box shadow to give it a slightly elevated look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the search button */
+#searchButton {
+  /* Set the background color and font color */
+  background-color: #4CAF50;
+  color: #fff;
+  /* Add some padding to make the button more spacious */
+  padding: 10px 20px;
+  /* Set the font size and font weight */
+  font-size: 18px;
+  font-weight: bold;
+  /* Make the button rounded */
+  border-radius: 10px;
+  /* Set the cursor to a pointer to indicate it's clickable */
+  cursor: pointer;
+}
+
+/* Style the search button when hovered */
+#searchButton:hover {
+  /* Add a slight background color change to indicate hover */
+  background-color: #3e8e41;
+}
 .plant-entries {
   display: flex;
   flex-wrap: wrap;
