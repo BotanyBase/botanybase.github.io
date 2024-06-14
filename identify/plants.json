@@ -3,30 +3,88 @@
     "name": "Monstera Deliciosa",
     "image": "https://21facts.net/wp-content/uploads/2020/10/Monstera-Deliciosa.jpg",
     "climate": "Tropical",
-    "description": "A popular houseplant known for its large, glossy leaves."
+    "description": "A popular houseplant known for its large, glossy leaves.",
+    "height": "Up to 6 feet",
+    "special_feature": "Statement piece"
   },
   {
     "name": "Philodendron Brasil",
     "image": "https://theplantcellar.com.au/wp-content/uploads/2020/12/products-20201207_103331-scaled.jpg",
     "climate": "Tropical",
-    "description": "A low-maintenance plant with heart-shaped leaves."
+    "description": "A low-maintenance plant with heart-shaped leaves.",
+    "height": "Up to 4 feet",
+    "special_feature": "Versatile"
   },
   {
     "name": "Dracaena Marginata",
     "image": "https://tse3.mm.bing.net/th?id=OIP.FEPslj0I-WXCTrrNDkWqhwHaHa&pid=Api&P=0&h=180",
     "climate": "Tropical",
-    "description": "A versatile plant with slender leaves and a tall, upright habit."
+    "description": "A versatile plant with slender leaves and a tall, upright habit.",
+    "height": "Up to 10 feet",
+    "special_feature": "Air purification"
   },
   {
     "name": "Tufted Airplant",
     "image": "https://garden.org/pics/2019-02-05/Hemde/691b63.jpg",
     "climate": "Tropical",
-    "description": "Another common household plant, decorated in vibrant red."
+    "description": "Another common household plant, decorated in vibrant red.",
+    "height": "Up to 3 feet",
+    "special_feature": "Epiphyte"
   },
   {
     "name": "Bird of Paradise",
     "image": "https://gardendrum.com/wp-content/uploads/2012/02/Heliconia-2.jpg",
     "climate": "Subtropical",
-    "description": "Comes in various colours, what makes it unique is it's bird beak shaped flowers."
+    "description": "Comes in various colours, what makes it unique is its bird beak shaped flowers.",
+    "height": "Up to 6 feet",
+    "special_feature": "Striking appearance"
+  },
+  {
+    "name": "Gardenia",
+    "image": "https://plantly.io/wp-content/uploads/2023/03/gardenia-bush-flower.jpg",
+    "climate": "Subtropical",
+    "description": "A fragrant plant with white flowers and glossy leaves.",
+    "height": "Up to 4 feet",
+    "special_feature": "Fragrant"
+  },
+  {
+    "name": "English Ivy",
+    "image": "https://tse2.mm.bing.net/th?id=OIP.kyJm_x5ueX5v8I39QCBTfAHaFj&pid=Api&P=0&h=180",
+    "climate": "Temperate",
+    "description": "A versatile plant with trailing stems and small leaves.",
+    "height": "Up to 8 feet",
+    "special_feature": "Easy to train"
+  },
+  {
+    "name": "Peace Lily",
+    "image": "https://www.noticiasdejardim.com/wp-content/uploads/2020/07/peace-lily-plants-peace-lily-care-1.jpg",
+    "climate": "Temperate",
+    "description": "A plant with white blooms and dark green leaves, known for its air purification abilities.",
+    "height": "Up to 3 feet",
+    "special_feature": "Air purification"
+  },
+  {
+    "name": "Alpine Forget-Me-Not",
+    "image": "https://worldoffloweringplants.com/wp-content/uploads/2018/01/Myosotis-alpestris-Alpine-Forget-me-not2.jpg",
+    "climate": "Alpine",
+    "description": "A small, flowering plant with blue blooms.",
+    "height": "Up to 1 foot",
+    "special_feature": "Tiny flowers"
+  },
+  {
+    "name": "Sedum",
+    "image": "https://sp.yimg.com/ib/th?id=OIP.1hsHbQFrnVbDAoa5DVXE4QHaE8&pid=Api&w=148&h=148&c=7&dpr=2&rs=1",
+    "climate": "Desert",
+    "description": "A succulent plant with thick, fleshy leaves.",
+    "height": "Up to 2 feet",
+    "special_feature": "Drought tolerance"
+  },
+  {
+    "name": "Aloe Vera",
+    "image": "https://tse4.mm.bing.net/th?id=OIP.hzbCCb3NMiEbO8dWx4fQ0AHaFj&pid=Api&P=0&h=180",
+    "climate": "Desert",
+    "description": "A succulent plant with healing properties.",
+    "height": "Up to 3 feet",
+    "special_feature": "Healing properties"
   }
 ]
