@@ -6,6 +6,7 @@ layout: default
 
 <input type="search" id="search-input" placeholder="Search plants">
 
+
 <!-- catalogue.html -->
 
 <!-- Get the climate variable from the front matter -->
@@ -15,10 +16,13 @@ layout: default
 {% assign filtered_plants = site.plants | where: "climate", climate %}
 
 <!-- Display the filtered plants -->
-{% for plant in filtered_plants %}
-  <h2>{{ plant.name }}</h2>
-  <p>{{ plant.description }}</p>
-{% endfor %}
+<div class="plant-entries">
+  {% for plant in filtered_plants %}
+    <h2>{{ plant.name }}</h2>
+    <p>{{ plant.description }}</p>
+    <img src="{{ plant.image }}" alt="{{ plant.name }}">
+  {% endfor %}
+</div>
 
 <script>
 const searchInput = document.getElementById('search-input');
