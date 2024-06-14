@@ -122,6 +122,31 @@ searchButton:hover {
     const currentClimate = document.querySelector('#climate-type').textContent.toLowerCase();
     const filteredPlants = plants.filter(plant => plant.climate.toLowerCase() === currentClimate);
     const plantEntriesContainer = document.querySelector('.plant-entries');
+    const searchInput = document.querySelector('#search-input');
+
+    // Display message "Start typing, or enter * to show all plants"
+    const message = document.createElement('p');
+    message.textContent = 'Start typing, or enter * to show all plants';
+    plantEntriesContainer.appendChild(message);
+
+    // Filter plants based on search input
+    searchInput.addEventListener('input', () => {
+      const searchQuery = searchInput.value.toLowerCase();
+      const filteredPlants = plants.filter(plant => plant.name.toLowerCase().includes(searchQuery));
+      plantEntriesContainer.innerHTML = '';
+      filteredPlants.forEach(plant => {
+        const plantEntryHTML = `
+          <h2>${plant.name}</h2>
+          <p>${plant.description}</p>
+          <img src="${plant.image}" alt="${plant.name}">
+        `;
+        const plantEntryElement = document.createElement('div');
+        plantEntryElement.innerHTML = plantEntryHTML;
+        plantEntriesContainer.appendChild(plantEntryElement);
+      });
+    });
+
+    // Display filtered plants
     filteredPlants.forEach(plant => {
       const plantEntryHTML = `
         <h2>${plant.name}</h2>
@@ -132,6 +157,4 @@ searchButton:hover {
       plantEntryElement.innerHTML = plantEntryHTML;
       plantEntriesContainer.appendChild(plantEntryElement);
     });
-  });
-
-</script>
+  })</script>
