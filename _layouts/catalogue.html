@@ -133,29 +133,22 @@ searchButton:hover {
     // Filter plants based on search input
     searchInput.addEventListener('input', () => {
       const searchQuery = searchInput.value.toLowerCase();
-      const filteredPlants = plants.filter(plant => plant.name.toLowerCase().includes(searchQuery));
+      const filteredPlants = plants.filter(plant => plant.name.toLowerCase().includes(searchQuery) && plant.climate.toLowerCase() === currentClimate);
       plantEntriesContainer.innerHTML = '';
-      filteredPlants.forEach(plant => {
-        const plantEntryHTML = `
-          <h2>${plant.name}</h2>
-          <p>${plant.description}</p>
-          <img src="${plant.image}" alt="${plant.name}">
-        `;
-        const plantEntryElement = document.createElement('div');
-        plantEntryElement.innerHTML = plantEntryHTML;
-        plantEntriesContainer.appendChild(plantEntryElement);
-      });
+      if (searchQuery === '') {
+        plantEntriesContainer.appendChild(message);
+      } else {
+        filteredPlants.forEach(plant => {
+          const plantEntryHTML = `
+            <h2>${plant.name}</h2>
+            <p>${plant.description}</p>
+            <img src="${plant.image}" alt="${plant.name}">
+          `;
+          const plantEntryElement = document.createElement('div');
+          plantEntryElement.innerHTML = plantEntryHTML;
+          plantEntriesContainer.appendChild(plantEntryElement);
+        });
+      }
     });
-
-    // Display filtered plants
-    filteredPlants.forEach(plant => {
-      const plantEntryHTML = `
-        <h2>${plant.name}</h2>
-        <p>${plant.description}</p>
-        <img src="${plant.image}" alt="${plant.name}">
-      `;
-      const plantEntryElement = document.createElement('div');
-      plantEntryElement.innerHTML = plantEntryHTML;
-      plantEntriesContainer.appendChild(plantEntryElement);
-    });
-  })</script>
+  });
+</script>
