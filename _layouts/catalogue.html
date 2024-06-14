@@ -15,7 +15,7 @@ layout: default
 <!-- Filter the plants by climate -->
 {% assign filtered_plants = site.plants | where: "climate", climate %}
 
-<div class="plant-entries" data-filtered-plants='{% json filtered_plants %}'>
+<div class="plant-entries" data-filtered-plants="{{ filtered_plants | to_json }}">
   {% for plant in filtered_plants %}
    <h2>{{ plant.name }}</h2>
    <p>{{ plant.description }}</p>
