@@ -20,7 +20,7 @@ circles.forEach((circle) => {
 
 //searchbar.js
 
-const searchInput = document.getElementById('search-input');
+/*const searchInput = document.getElementById('search-input');
 const plantEntries = document.querySelectorAll('.plant-entry');
 let filteredEntries = [];
 
@@ -45,4 +45,4 @@ function paginateResults(filteredEntries) {
   const entriesPerPage = paginator.perPage;
   const totalPages = paginator.totalPages;
   // update the pagination controls and display the current page entries
-}
+}*/
