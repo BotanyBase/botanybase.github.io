@@ -6,9 +6,19 @@ layout: default
 
 <input type="search" id="search-input" placeholder="Search plants">
 
-<section class="plant-entries">
+<!-- catalogue.html -->
 
-</section>
+<!-- Get the climate variable from the front matter -->
+{% assign climate = page.climate | default: "All Climates" %}
+
+<!-- Filter the plants by climate -->
+{% assign filtered_plants = site.plants | where: "climate", climate %}
+
+<!-- Display the filtered plants -->
+{% for plant in filtered_plants %}
+  <h2>{{ plant.name }}</h2>
+  <p>{{ plant.description }}</p>
+{% endfor %}
 
 <script>
 const searchInput = document.getElementById('search-input');
@@ -16,23 +26,14 @@ const plantEntriesContainer = document.querySelector('.plant-entries');
 
 searchInput.addEventListener('input', () => {
   const searchString = searchInput.value.toLowerCase();
-  loadPlants(searchString, 0); // load initial plants
+  const filteredPlants = filtered_plants.filter(plant => {
+    const plantName = plant.name.toLowerCase();
+    return plantName.includes(searchString);
+  });
+  appendPlantsToContainer(filteredPlants);
 });
 
-function loadPlants(searchString, offset) {
-  fetch('data/plants.json')
-    .then(response => response.json())
-    .then(data => {
-      const filteredPlants = data.filter(plant => {
-        const plantName = plant.name.toLowerCase();
-        return plantName.includes(searchString);
-      });
-      appendPlantsToContainer(filteredPlants);
-    });
-}
-
 function appendPlantsToContainer(plants) {
-  const plantEntriesContainer = document.querySelector('.plant-entries');
   plantEntriesContainer.innerHTML = ''; // clear the container
   plants.forEach(plant => {
     const plantEntryHTML = `
