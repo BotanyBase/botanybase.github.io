@@ -50,4 +50,12 @@ const searchInput = document.getElementById('search-input');
       plantEntriesContainer.appendChild(plantEntryElement);
     });
   }
+
+const filtered_plants = plantEntriesContainer.dataset.filteredPlants;
+if (filtered_plants) {
+  const parsedPlants = JSON.parse(filtered_plants);
+  // Use parsedPlants in your search functionality
+} else {
+  console.log("No filtered plants found");
+}
 </script>
