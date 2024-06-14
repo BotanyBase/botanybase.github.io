@@ -8,6 +8,8 @@ permalink: contribute
   
 # Contributing
 
+<p><a href="https://botanybase.github.io">Back</a></p>
+
 If you wish to help us out, here is how **you** can do so! 
 What you'll need:
 - Basic knowledge of JSON file format
