@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<!-- show top content -->
 {{ content }}
 
 <!-- catalogue.html -->
@@ -12,7 +13,7 @@ layout: default
 {% assign climate = page.climate | default: "All Climates" %}
 
 <!-- Fetch the _plants collection and assign it to site.plants -->
-{% assign site.plants = site._plants | sort: 'name' %}
+<!--{% assign site.plants = site.plants | sort: 'name' %} -->
 
 <!-- Filter the plants by climate -->
 {% assign filtered_plants = site.plants | where: "climate", climate %}
