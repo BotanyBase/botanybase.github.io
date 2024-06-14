@@ -20,7 +20,29 @@ searchInput.addEventListener('input', () => {
 });
 
 function loadPlants(searchString, offset) {
-  // fetch plants from API or database
-  // append plant entries to plantEntriesContainer
+  fetch('data/plants.json')
+    .then(response => response.json())
+    .then(data => {
+      const filteredPlants = data.filter(plant => {
+        const plantName = plant.name.toLowerCase();
+        return plantName.includes(searchString);
+      });
+      appendPlantsToContainer(filteredPlants);
+    });
+}
+
+function appendPlantsToContainer(plants) {
+  const plantEntriesContainer = document.querySelector('.plant-entries');
+  plantEntriesContainer.innerHTML = ''; // clear the container
+  plants.forEach(plant => {
+    const plantEntryHTML = `
+      <h2>${plant.name}</h2>
+      <p>${plant.description}</p>
+      <img src="${plant.image}" alt="${plant.name}">
+    `;
+    const plantEntryElement = document.createElement('div');
+    plantEntryElement.innerHTML = plantEntryHTML;
+    plantEntriesContainer.appendChild(plantEntryElement);
+  });
 }
 </script>
