@@ -1,14 +1,26 @@
 [
   {
-    "name": "Plant 1",
-    "description": "This is plant 1",
-    "image": "plant1.jpg",
-    "climate": "Tropical"
+    "name": "Monstera Deliciosa",
+    "image": "https://21facts.net/wp-content/uploads/2020/10/Monstera-Deliciosa.jpg",
+    "climate": "Tropical",
+    "description": "A popular houseplant known for its large, glossy leaves."
   },
   {
-    "name": "Plant 2",
-    "description": "This is plant 2",
-    "image": "plant2.jpg",
-    "climate": "Desert"
+    "name": "Philodendron Brasil",
+    "image": "https://theplantcellar.com.au/wp-content/uploads/2020/12/products-20201207_103331-scaled.jpg",
+    "climate": "Tropical",
+    "description": "A low-maintenance plant with heart-shaped leaves."
+  },
+  {
+    "name": "Dracaena Marginata",
+    "image": "https://tse3.mm.bing.net/th?id=OIP.FEPslj0I-WXCTrrNDkWqhwHaHa&pid=Api&P=0&h=180"
+    "climate": "Tropical",
+    "description": "A versatile plant with slender leaves and a tall, upright habit."
+  },
+  {
+    "name": "Tufted Airplant",
+    "image": "https://garden.org/pics/2019-02-05/Hemde/691b63.jpg",
+    "climate": "Tropical",
+    "Description": "Another common household plant, decorated in vibrant red."
   }
 ]
