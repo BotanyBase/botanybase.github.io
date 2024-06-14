@@ -26,6 +26,27 @@ h1 {
   color: #5c4b36;
 }
 
+h2 {
+    font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #5c4b36;
+}
+
+h3 {
+    font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #5c4b36;
+}
+
+h4 {
+    font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #5c4b36;
+}
+
 .button-box {
   /* Fixed size */
   width: 70%;
