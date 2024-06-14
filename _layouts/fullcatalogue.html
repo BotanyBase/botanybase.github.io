@@ -1,0 +1,182 @@
+---
+layout: default
+---
+
+<style>
+  #climate-type {
+    display: none;
+  }
+  
+/* Style the search input field */
+#search-input {
+  /* Add some padding to make the input field more spacious */
+  padding: 5px;
+  /* Set the font size and color */
+  font-size: 15px;
+  color: #333;
+  /* Add a border to the input field */
+  border: 1px solid #ccc;
+  /* Make the input field rounded */
+  border-radius: 10px;
+  /* Set the width of the input field */
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Style the search input field when focused */
+#search-input:focus {
+  /* Add a slight border color change to indicate focus */
+  border-color: #aaa;
+  /* Add a box shadow to give it a slightly elevated look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Style the search button */
+searchButton {
+  /* Set the background color and font color */
+  background-color: #4CAF50;
+  color: #fff;
+  /* Add some padding to make the button more spacious */
+  padding: 10px 20px;
+  /* Set the font size and font weight */
+  font-size: 18px;
+  font-weight: bold;
+  /* Make the button rounded */
+  border-radius: 10px;
+  /* Set the cursor to a pointer to indicate it's clickable */
+  cursor: pointer;
+}
+
+/* Style the search button when hovered */
+searchButton:hover {
+  /* Add a slight background color change to indicate hover */
+  background-color: #3e8e41;
+}
+
+  .entry-wrapper {
+    background-color: #d9bd98;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+.plant-entries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.plant-entry {
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* smooth box shadow */
+  background-color: #fff; /* white background */
+}
+
+.plant-entry h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plant-entry p {
+  margin-bottom: 20px;
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-height: 50vh;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+</style>
+
+{{ content }}
+
+<p style="text-align: center;"><a href="https://botanybase.github.io">Back</a></p>
+
+<br>
+<hr>
+<br>
+
+<!-- catalogue.html -->
+
+<!-- Search input field -->
+<input type="search" id="search-input" placeholder="Search plants">
+<br>
+
+{% assign currentClimate = page.climate | downcase %}
+{% assign filteredPlants = "" | split: "," %}
+
+{% for plant in site.data.plants %}
+  {% if plant.climate | downcase == currentClimate %}
+    {% assign filteredPlants = filteredPlants | concat: plant %}
+  {% endif %}
+{% endfor %}
+
+<!-- Plant entries container -->
+<div class="plant-entries">
+  {% for plant in site.plants %}
+    <h2>{{ plant.name }}</h2>
+    <p>{{ plant.description }}</p>
+    <img src="{{ plant.image }}" alt="{{ plant.name }}">
+  {% endfor %}
+</div>
+
+<script>
+ fetch('plants.json')
+  .then(response => response.json())
+  .then(data => {
+    const plants = data;
+    const currentClimate = document.querySelector('#climate-type').textContent.toLowerCase();
+    const filteredPlants = plants.filter(plant => plant.climate.toLowerCase() === currentClimate);
+    const plantEntriesContainer = document.querySelector('.plant-entries');
+    const searchInput = document.querySelector('#search-input');
+
+    // Display message "Start typing, or enter * to show all plants"
+    const message = document.createElement('p');
+    message.textContent = 'Start typing, or enter * to show all plants';
+    plantEntriesContainer.appendChild(message);
+    
+    // Display message "No results, try a different query"
+    const message2 = document.createElement('p');
+    message2.textContent = 'No results, try a different query';
+
+    searchInput.addEventListener('input', () => {
+      const searchQuery = searchInput.value.toLowerCase();
+      let filtered = [];
+      if (searchQuery === '') {
+        plantEntriesContainer.innerHTML = '';
+        plantEntriesContainer.appendChild(message);
+      } else if (searchQuery === '*') {
+        filtered = plants;
+      } else {
+        filtered = plants.filter(plant => plant.name.toLowerCase().includes(searchQuery));
+      }
+      if (filtered.length === 0) {
+        plantEntriesContainer.innerHTML = '';
+        plantEntriesContainer.appendChild(message2);
+      } else {
+        plantEntriesContainer.innerHTML = '';
+        filtered.forEach(plant => {
+          const plantEntryHTML = `
+           <div class="entry-wrapper">
+            <h2>${plant.name}</h2>
+            <p>${plant.description}</p>
+            <img src="${plant.image}" alt="${plant.name}">
+           </div>
+          `;
+          const plantEntryElement = document.createElement('div');
+          plantEntryElement.innerHTML = plantEntryHTML;
+          plantEntriesContainer.appendChild(plantEntryElement);
+        });
+      }
+    });
+  });
+</script>
