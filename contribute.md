@@ -4,6 +4,8 @@ title: Contribute
 permalink: contribute
 ---
 
+<div style="padding: 10px;">
+  
 # Contributing
 
 If you wish to help us out, here is how **you** can do so! 
@@ -21,3 +23,5 @@ What you'll need:
 5. Fill up your plant and create a pull request
 6. Our team will check and if everything goes well, we'll approve
 7. In the event we ask you to change or deny your pull request, please cooperate :)
+
+</div>
