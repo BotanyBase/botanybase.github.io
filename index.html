@@ -14,13 +14,14 @@ title: Main
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block; /* Make the button a block element */
   margin: 0 auto; /* Center the button */
+  max-width: 200px; /* Add a max width to ensure centering works */
 }
 
 .btn:hover {
-  background-color: #ececec; /* Light gray hover background */
-  color: #2ecc71; /* Darker green hover text color */
+  background-color: #34C759; /* Green background on hover */
+  color: #ffffff; /* White text on hover */
 }
 
 /* Responsive design */
@@ -49,4 +50,9 @@ title: Main
 <a class="btn btn-green" href="/identify">Start Now</a>
 <br>
 <hr>
+<br>
+<p style="text-align: center;">We have multiple ways to help you find out what you're looking at, from leaf types to climate regions. Get started now! (It's really easy too)</p>
+<hr>
+<h3 style="text-align: center;">Our Database isn't the most extensive!</h3>
+<p style="text-align: center;">Help us <a href="/contribute">contribute</a> now!</p>
 <br>
