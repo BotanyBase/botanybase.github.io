@@ -130,12 +130,10 @@ img {
 </div>
 
 <script>
- fetch('plants.json')
+fetch('plants.json')
   .then(response => response.json())
   .then(data => {
     const plants = data;
-    const currentClimate = document.querySelector('#climate-type').textContent.toLowerCase();
-    const filteredPlants = plants.filter(plant => plant.climate.toLowerCase() === currentClimate);
     const plantEntriesContainer = document.querySelector('.plant-entries');
     const searchInput = document.querySelector('#search-input');
 
@@ -143,7 +141,7 @@ img {
     const message = document.createElement('p');
     message.textContent = 'Start typing, or enter * to show all plants';
     plantEntriesContainer.appendChild(message);
-    
+
     // Display message "No results, try a different query"
     const message2 = document.createElement('p');
     message2.textContent = 'No results, try a different query';
@@ -151,14 +149,20 @@ img {
     searchInput.addEventListener('input', () => {
       const searchQuery = searchInput.value.toLowerCase();
       let filtered = [];
+
       if (searchQuery === '') {
         plantEntriesContainer.innerHTML = '';
         plantEntriesContainer.appendChild(message);
       } else if (searchQuery === '*') {
         filtered = plants;
       } else {
-        filtered = plants.filter(plant => plant.name.toLowerCase().includes(searchQuery));
+        filtered = plants.filter(plant => {
+          const plantName = plant.name.toLowerCase();
+          const plantDescription = plant.description.toLowerCase();
+          return plantName.includes(searchQuery) || plantDescription.includes(searchQuery);
+        });
       }
+
       if (filtered.length === 0) {
         plantEntriesContainer.innerHTML = '';
         plantEntriesContainer.appendChild(message2);
@@ -166,11 +170,11 @@ img {
         plantEntriesContainer.innerHTML = '';
         filtered.forEach(plant => {
           const plantEntryHTML = `
-           <div class="entry-wrapper">
-            <h2>${plant.name}</h2>
-            <p>${plant.description}</p>
-            <img src="${plant.image}" alt="${plant.name}">
-           </div>
+            <div class="entry-wrapper">
+              <h2>${plant.name}</h2>
+              <p>${plant.description}</p>
+              <img src="${plant.image}" alt="${plant.name}">
+            </div>
           `;
           const plantEntryElement = document.createElement('div');
           plantEntryElement.innerHTML = plantEntryHTML;
