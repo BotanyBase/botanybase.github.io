@@ -136,15 +136,23 @@ searchButton:hover {
     message.textContent = 'Start typing, or enter * to show all plants';
     plantEntriesContainer.appendChild(message);
 
-    // Filter plants based on search input
     searchInput.addEventListener('input', () => {
       const searchQuery = searchInput.value.toLowerCase();
-      const filteredPlants = plants.filter(plant => plant.name.toLowerCase().includes(searchQuery) && plant.climate.toLowerCase() === currentClimate);
-      plantEntriesContainer.innerHTML = '';
+      let filtered = [];
       if (searchQuery === '') {
+        plantEntriesContainer.innerHTML = '';
+        plantEntriesContainer.appendChild(message);
+      } else if (searchQuery === '*') {
+        filtered = filteredPlants;
+      } else {
+        filtered = filteredPlants.filter(plant => plant.name.toLowerCase().includes(searchQuery));
+      }
+      if (filtered.length === 0) {
+        plantEntriesContainer.innerHTML = '';
         plantEntriesContainer.appendChild(message);
       } else {
-        filteredPlants.forEach(plant => {
+        plantEntriesContainer.innerHTML = '';
+        filtered.forEach(plant => {
           const plantEntryHTML = `
             <h2>${plant.name}</h2>
             <p>${plant.description}</p>
