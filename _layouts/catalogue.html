@@ -27,6 +27,7 @@ layout: default
 <script>
 const searchInput = document.getElementById('search-input');
 const plantEntriesContainer = document.querySelector('.plant-entries');
+const filtered_plants = []; // Define filtered_plants as an empty array
 
 searchInput.addEventListener('input', () => {
   const searchString = searchInput.value.toLowerCase();
