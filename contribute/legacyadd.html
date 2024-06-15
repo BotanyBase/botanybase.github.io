@@ -64,3 +64,35 @@ title: Add to DB
   <textarea name="description" required></textarea><br><br>
   <button type="submit">Add Plant</button>
 </form>
+
+<script>
+const form = document.getElementById('plantForm');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const image = document.getElementById('image').value;
+  const climate = document.getElementById('climate').value;
+  const description = document.getElementById('description').value;
+
+  const data = {
+    name,
+    image,
+    climate,
+    description
+  };
+
+  fetch('(link unavailable)', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Api-Key': 'your-api-key'
+    },
+    body: JSON.stringify(data)
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error(error));
+});
+</script>
