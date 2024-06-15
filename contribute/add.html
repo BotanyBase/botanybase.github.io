@@ -5,13 +5,13 @@ title: Add to DB
 
        <h1>Contribute to the Plant Database</h1>
         <form id="plantForm">
-            <label for="name">Plant Name:</label>
+            <label for="name">Plant Name:</label><br>
             <input type="text" id="name" name="name" required><br>
             
-            <label for="image">Plant Image URL:</label>
+            <label for="image">Plant Image URL:</label><br>
             <input type="url" id="image" name="image" required><br>
             
-            <label for="climate">Plant Climate:</label>
+            <label for="climate">Plant Climate:</label><br>
             <select id="climate" name="climate" required>
                 <option value="tropical">Tropical</option>
                 <option value="subtropical">Subtropical</option>
@@ -20,15 +20,16 @@ title: Add to DB
                 <option value="desert">Desert</option>
             </select><br>
             
-            <label for="description">Plant Description:</label>
+            <label for="description">Plant Description:</label><br>
             <textarea id="description" name="description" required></textarea><br>
             
             <button type="submit">Submit</button>
         </form>
         <div id="message"></div>
 
+<script src="https://unpkg.com/github-context@1.0.0/dist/browser/github-context.browser.js"></script>
 <script>
-       const { github } = require('github-context');
+       import { github } from 'github-context/browser';
         document.getElementById('plantForm').addEventListener('submit', async function(event) {
             event.preventDefault();
             
