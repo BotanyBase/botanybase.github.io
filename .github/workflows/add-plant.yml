@@ -1,42 +1,33 @@
-name: Add Plant
-
+name: Update Plants JSON
 on:
   workflow_dispatch:
     inputs:
       name:
-        description: 'Plant Name'
-        required: true
+        type: string
       image:
-        description: 'Plant Image URL'
-        required: true
+        type: string
       climate:
-        description: 'Plant Climate'
-        required: true
+        type: string
       description:
-        description: 'Plant Description'
-        required: true
-
+        type: string
 jobs:
-  update-plants:
+  update-json:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch plants.json
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const plantsJson = JSON.parse(fs.readFileSync('plants.json', 'utf8'));
-            const newPlant = {
-              name: github.context.inputs.name,
-              image: github.context.inputs.image,
-              climate: github.context.inputs.climate,
-              description: github.context.inputs.description
-            };
-            plantsJson.push(newPlant);
-            fs.writeFileSync('plants.json', JSON.stringify(plantsJson, null, 2));
-      - name: Commit and push changes
-        uses: actions/github-script@v6
-        with:
-          script: |
-            git add .
-            git commit -m "Add new plant: ${github.context.inputs.name}"
-            git push origin main
+      - name: Update JSON
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          fetch('https,api/github/com/repos/BotanyBase/botanybase/github/io/contents/identify/plants,json', {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: 'Bearer $GITHUB_TOKEN'
+            },
+            body: JSON.stringify({
+              name: '${name}',
+              image: '${image}',
+              climate: '${climate}',
+              description: '${description}'
+            })
+          })
