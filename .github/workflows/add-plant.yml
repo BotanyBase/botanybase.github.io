@@ -1,0 +1,38 @@
+name: Add Plant to Database
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        type: string
+      image:
+        type: string
+      climate:
+        type: string
+      description:
+        type: string
+
+jobs:
+  add-plant:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Add plant to database
+        run: |
+          const plants = JSON.parse(fs.readFileSync('plants.json', 'utf8'));
+          plants.push({
+            name: inputs.name,
+            image: inputs.image,
+            climate: inputs.climate,
+            description: inputs.description
+          });
+          fs.writeFileSync('plants.json', JSON.stringify(plants, null, 2));
+          git.add('plants.json');
+          git.commit('Add new plant data');
+          git.push();
+      - name: Post submission message
+        uses: actions/github@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          msg: 'New plant data submitted!'
