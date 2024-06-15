@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Create Issue
         run: |
-          echo: "PAT_TOKEN: PAT_TOKEN"
+          echo: "PAT_TOKEN: $PAT_TOKEN"
           curl -X POST \
           https://api.github.com/orgs/BotanyBase/repos/botanybase.github.io/issues \
           -H 'Authorization: Bearer $PAT_TOKEN' \
