@@ -1,0 +1,9 @@
+workflows:
+  your-workflow-id:
+    inputs:
+      data:
+        type: string
+        required: true
+    triggers:
+      - type: webhook
+        endpoint: /trigger
