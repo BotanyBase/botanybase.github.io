@@ -4,7 +4,7 @@ title: Add to DB
 ---
 
 <h1 style="text-align: center;">Contribute to the Plant Database</h1>
-<form action="https://github.com/BotanyBase/botanybase.github.io/actions/workflows/add-plant.yml" method="post" id="plantForm" style="text-align: center; display: block; margin: 0 auto;">
+<form action="https://api.github.com/repos/BotanyBase/botanybase.github.io/actions/workflows/add-plant.yml/dispatches" method="post" id="plantForm" style="text-align: center; display: block; margin: 0 auto;">
   <input type="hidden" name="workflow_name" value="add-plant">
   <input type="hidden" name="workflow_dispatch_input" value='{"name":"{{name}}","image":"{{image}}","climate":"{{climate}}","description":"{{description}}"}'>
   <label for="name">Plant Name:</label>
