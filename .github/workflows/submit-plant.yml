@@ -1,26 +1,33 @@
-name: Plant Submission Workflow
+name: Create Issue from HTML Form
+
 on:
   workflow_dispatch:
     inputs:
       name:
-        type: string
+        description: 'Name'
+        required: true
       image:
-        type: string
+        description: 'Image'
+        required: true
       climate:
-        type: string
+        description: 'Climate'
+        required: true
       description:
-        type: string
+        description: 'Description'
+        required: true
+
 jobs:
   create-issue:
     runs-on: ubuntu-latest
-    env:
-       PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
     steps:
-      - shell: bash
-      - uses: actions/checkout@v2
-      - name: Create Issue
-        run: |
-          echo "PAT_TOKEN: $PAT_TOKEN"
-          curl -X POST \
-          https://api.github.com/repos/BotanyBase/botanybase.github.io/issues \
-          -d '{"title": "${name}", "body": "Image: ${image}\nClimate: ${climate}\nDescription: ${description}"}'
+      - name: Create issue from form inputs
+        uses: github-actions/github-script@v5
+        with:
+          github-token: ${{ secrets.PAT_TOKEN }}
+          script: |
+            github.issues.create({
+              owner: github.repository_owner,
+              repo: github.repository_name,
+              title: "${ inputs.name }",
+              body: "Image: ${ inputs.image }\nClimate: ${ inputs.climate }\nDescription: ${ inputs.description }"
+            })
