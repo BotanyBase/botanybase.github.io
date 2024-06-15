@@ -1,4 +1,7 @@
+Here is the regenerated YAML file with the corrected `run` step:
+```
 name: Update Plants JSON
+
 on:
   workflow_dispatch:
     inputs:
@@ -10,6 +13,7 @@ on:
         type: string
       description:
         type: string
+
 jobs:
   update-json:
     runs-on: ubuntu-latest
@@ -17,18 +21,10 @@ jobs:
       - name: Update JSON
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run:
-          javascript
-          fetch("https://api.github.com/repos/BotanyBase/botanybase.github.io/contents/identify/plants.json", {
-            method: 'PUT',
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: 'Bearer $GITHUB_TOKEN'
-            },
-            body: JSON.stringify({
-              name: '${name}',
-              image: '${image}',
-              climate: '${climate}',
-              description: '${description}'
-            })
-          })
+        run: |
+          curl -X PUT \
+          https://api.github.com/repos/BotanyBase/botanybase.github.io/contents/identify/plants.json \
+          -H 'Content-Type: application/json' \
+          -H "Authorization: Bearer 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" \
+          -d '{"name": "${name}", "image": "${image}", "climate": "${climate}", "description": "${description}"}'
+          
