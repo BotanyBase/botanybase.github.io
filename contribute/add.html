@@ -28,6 +28,7 @@ title: Add to DB
         <div id="message"></div>
 
 <script>
+       const { github } = require('github-context');
         document.getElementById('plantForm').addEventListener('submit', async function(event) {
             event.preventDefault();
             
