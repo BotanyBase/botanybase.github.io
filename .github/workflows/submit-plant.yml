@@ -14,13 +14,14 @@ jobs:
   create-issue:
     runs-on: ubuntu-latest
     env:
-      GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+       PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - name: Create Issue
         run: |
+          echo: "PAT_TOKEN: PAT_TOKEN"
           curl -X POST \
           https://api.github.com/orgs/BotanyBase/repos/botanybase.github.io/issues \
-          -H 'Authorization: Bearer $GITHUB_TOKEN' \
+          -H 'Authorization: Bearer $PAT_TOKEN' \
           -H 'Content-Type: application/json' \
           -d '{"title": "${name}", "body": "Image: ${image}\nClimate: ${climate}\nDescription: ${description}"}'
