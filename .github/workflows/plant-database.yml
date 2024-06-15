@@ -1,2 +1,10 @@
-- name: Checkout repository
-  uses: actions /checkout@v2
+
+      - name: Checkout repository
+        uses: actions /checkout@v2
+
+      - name: Add data to database
+        run: node add-data-to-database.js
+
+      - name: Merge pull request
+        uses: actions/merge-pull-request@v2
+
