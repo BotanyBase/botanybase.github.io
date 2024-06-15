@@ -18,7 +18,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          fetch('https://api.github.com/repos/BotanyBase/botanybase.github.io/contents/identify/plants.json', {
+          fetch("https://api.github.com/repos/BotanyBase/botanybase.github.io/contents/identify/plants.json", {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
