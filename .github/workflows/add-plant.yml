@@ -1,5 +1,3 @@
-Here is the regenerated YAML file with the corrected `run` step:
-```
 name: Update Plants JSON
 
 on:
