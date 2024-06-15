@@ -23,6 +23,6 @@ jobs:
           curl -X PUT \
           https://api.github.com/repos/BotanyBase/botanybase.github.io/contents/identify/plants.json \
           -H 'Content-Type: application/json' \
-          -H "Authorization: Bearer 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" \
+          -H Authorization: Bearer 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 \
           -d '{"name": "${name}", "image": "${image}", "climate": "${climate}", "description": "${description}"}'
           
