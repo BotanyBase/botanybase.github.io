@@ -80,34 +80,42 @@ const form = document.getElementById('plantForm');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const nameInput = document.getElementById("name");
-    const imageInput = document.getElementById("image");
-    const climateInput = document.getElementById("climate");
-    const descriptionInput = document.getElementById("description");
-
-    if (nameInput && imageInput && climateInput && descriptionInput) {
-      const name = nameInput.value;
-      const image = imageInput.value;
-      const climate = climateInput.value;
-      const description = descriptionInput.value;
-
-  fetch('https://api.github.com/repos/BotanyBase/botanybase.github.io/contents/identify/plants.json', {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: 'Bearer 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'
-    },
-    body: JSON.stringify(data)
-  })
-  .then(response => response.json())
-  .then(data => {
-    const message = document.getElementById('message');
-    message.innerHTML = 'Submission successful!';
-    message.classList.add('success');
-  })
-  .catch(error => {
-    const message = document.getElementById('message');
-    message.innerHTML = 'Error: ' + error.message;
-    message.classList.add('error');
-  });
+  const imageInput = document.getElementById("image");
+  const climateInput = document.getElementById("climate");
+  const descriptionInput = document.getElementById("description");
+  
+  if (nameInput && imageInput && climateInput && descriptionInput) {
+    const name = nameInput.value;
+    const image = imageInput.value;
+    const climate = climateInput.value;
+    const description = descriptionInput.value;
+    
+    const data = {
+      "name": name,
+      "image": image,
+      "climate": climate,
+      "description": description
+    };
+    
+    fetch('https://api.github.com/repos/BotanyBase/botanybase.github.io/contents/identify/plants.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer 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'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+      const message = document.getElementById('message');
+      message.innerHTML = 'Submission successful!';
+      message.classList.add('success');
+    })
+    .catch(error => {
+      const message = document.getElementById('message');
+      message.innerHTML = 'Error: ' + error.message;
+      message.classList.add('error');
+    });
+  }
 });
 </script>
