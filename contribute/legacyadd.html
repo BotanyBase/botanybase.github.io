@@ -79,18 +79,18 @@ title: Add to DB
 const form = document.getElementById('plantForm');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  const name = document.getElementById('name').value;
-  const image = document.getElementById('image').value;
-  const climate = document.getElementById('climate').value;
-  const description = document.getElementById('description').value;
-  const data = {
-    name,
-    image,
-    climate,
-    description
-  };
+  const nameInput = document.getElementById("name");
+    const imageInput = document.getElementById("image");
+    const climateInput = document.getElementById("climate");
+    const descriptionInput = document.getElementById("description");
 
-  fetch('https,api/github/com/repos/BotanyBase/botanybase/github/io/contents/identify/plants,json', {
+    if (nameInput && imageInput && climateInput && descriptionInput) {
+      const name = nameInput.value;
+      const image = imageInput.value;
+      const climate = climateInput.value;
+      const description = descriptionInput.value;
+
+  fetch('https://api.github.com/repos/BotanyBase/botanybase.github.io/contents/identify/plants.json', {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
