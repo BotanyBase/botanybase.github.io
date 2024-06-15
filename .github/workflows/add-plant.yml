@@ -1,0 +1,29 @@
+# .github/workflows/add-plant.yml
+
+name: Add Plant to Database
+
+on:
+  form:
+    github-forms:
+      schema:
+        - name: string
+        - image: string
+        - climate: enum(tropical, subtropical, temperate, alpine, desert)
+        - description: string
+
+jobs:
+  add-plant:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: github-forms/validate@v1
+      - uses: github-api/update-file@v1
+        with:
+          repo-token: ${{ secrets.PAT_TOKEN }}
+          file-path: 'identify/plants.json'
+          json-data: |
+            {
+              "name": "${{ github.forms.name }}",
+              "image": "${{ github.forms.image }}",
+              "climate": "${{ github.forms.climate }}",
+              "description": "${{ github.forms.description }}"
+            }
