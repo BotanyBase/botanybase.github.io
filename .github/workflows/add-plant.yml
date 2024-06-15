@@ -1,40 +1,42 @@
-# .github/workflows/add-plant.yml
-
-name: Add Plant to Database
+name: Add Plant
 
 on:
-  repository_dispatch:
-    workflows: add-plant
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Plant Name'
+        required: true
+      image:
+        description: 'Plant Image URL'
+        required: true
+      climate:
+        description: 'Plant Climate'
+        required: true
+      description:
+        description: 'Plant Description'
+        required: true
 
 jobs:
-  add-plant:
+  update-plants:
     runs-on: ubuntu-latest
     steps:
-      - uses: github-forms/validate@v1
+      - name: Fetch plants.json
+        uses: actions/github-script@v6
         with:
-          schema: |
-            {
-              "type": "object",
-              "properties": {
-                "name": {"type": "string"},
-                "image": {"type": "string"},
-                "climate": {"enum": ["tropical", "subtropical", "temperate", "alpine", "desert"]},
-                "description": {"type": "string"}
-              },
-              "required": ["name", "image", "climate", "description"]
-            }
-      - uses: github-api/update-file@v1
+          script: |
+            const plantsJson = JSON.parse(fs.readFileSync('plants.json', 'utf8'));
+            const newPlant = {
+              name: github.context.inputs.name,
+              image: github.context.inputs.image,
+              climate: github.context.inputs.climate,
+              description: github.context.inputs.description
+            };
+            plantsJson.push(newPlant);
+            fs.writeFileSync('plants.json', JSON.stringify(plantsJson, null, 2));
+      - name: Commit and push changes
+        uses: actions/github-script@v6
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          file-path: 'identify/plants.json'
-          json-data: |
-            {
-              "name": "${{ github.forms.name }}",
-              "image": "${{ github.forms.image }}",
-              "climate": "${{ github.forms.climate }}",
-              "description": "${{ github.forms.description }}"
-            }
-      - name: Commit changes
-        uses: github-actions/commit@v4
-        with:
-          message: 'Add new plant entry'
+          script: |
+            git add .
+            git commit -m "Add new plant: ${github.context.inputs.name}"
+            git push origin main
