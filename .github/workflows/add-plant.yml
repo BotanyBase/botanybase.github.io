@@ -17,7 +17,8 @@ jobs:
       - name: Update JSON
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
+        run:
+          javascript
           fetch("https://api.github.com/repos/BotanyBase/botanybase.github.io/contents/identify/plants.json", {
             method: 'PUT',
             headers: {
