@@ -3,6 +3,44 @@ layout: default
 title: Add to DB
 ---
 
+<style>
+  /* Add a background color and padding to the form */
+  form {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Style the form fields */
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+
+  /* Add a button style */
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Add a hover effect to the button */
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+</style>
+
 <h1 style="text-align: center;">Contribute to the Plant Database</h1>
 <form action="https://api.github.com/repos/BotanyBase/botanybase.github.io/actions/workflows/add-plant.yml/dispatches" method="post" id="plantForm" style="text-align: center; display: block; margin: 0 auto;">
   <input type="hidden" name="workflow_name" value="add-plant">
@@ -19,7 +57,7 @@ title: Add to DB
     <option value="alpine">Alpine</option>
     <option value="desert">Desert</option>
   </select><br><br>
-  <label for="description">Plant Description:</label>
+  <label for="description">Plant Description:</label><br>
   <textarea name="description" required></textarea><br><br>
   <button type="submit">Add Plant</button>
 </form>
