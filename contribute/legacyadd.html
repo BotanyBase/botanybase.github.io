@@ -4,6 +4,14 @@ title: Add to DB
 ---
 
 <style>
+  .success {
+    color: green;
+  }
+
+  .error {
+    color: red;
+  }
+    
   /* Add a background color and padding to the form */
   form {
     background-color: #a38f84;
@@ -65,6 +73,8 @@ title: Add to DB
   <button type="submit">Add Plant</button>
 </form>
 
+<div id="message"></div>
+
 <script>
 const form = document.getElementById('plantForm');
 form.addEventListener('submit', (event) => {
@@ -80,13 +90,24 @@ form.addEventListener('submit', (event) => {
     description
   };
 
-  fetch('https://api.github.com/repos/BotanyBase/botanybase.github.io/contents/identify/plants.json', {
+  fetch('https,api/github/com/repos/BotanyBase/botanybase/github/io/contents/identify/plants,json', {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
       Authorization: 'Bearer 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'
     },
     body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(data => {
+    const message = document.getElementById('message');
+    message.innerHTML = 'Submission successful!';
+    message.classList.add('success');
+  })
+  .catch(error => {
+    const message = document.getElementById('message');
+    message.innerHTML = 'Error: ' + error.message;
+    message.classList.add('error');
   });
 });
 </script>
