@@ -4,7 +4,7 @@ title: Add to DB
 ---
 
        <h1>Contribute to the Plant Database</h1>
-        <form id="plantForm">
+        <form id="plantForm" style="text-align: center; display: block; margin: 0 auto;>
             <label for="name">Plant Name:</label><br>
             <input type="text" id="name" name="name" required><br>
             
@@ -29,7 +29,6 @@ title: Add to DB
 
 <script src="https://unpkg.com/github-context@1.0.0/dist/browser/github-context.browser.js"></script>
 <script>
-       import { github } from 'github-context/browser';
         document.getElementById('plantForm').addEventListener('submit', async function(event) {
             event.preventDefault();
             
