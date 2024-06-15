@@ -45,7 +45,7 @@ title: Add to DB
 
 <h1 style="text-align: center;">Contribute to the Plant Database</h1>
 <p style="padding: 10px; text-align: center;"><a href="https://botanybase.github.io">Back</a></p>
-<form action="https://api.github.com/repos/BotanyBase/botanybase.github.io/actions/workflows/add-plant.yml/dispatches" method="post" id="plantForm" style="text-align: center; display: block; margin: 0 auto;">
+<form id="plantForm" style="text-align: center; display: block; margin: 0 auto;">
   <input type="hidden" name="workflow_name" value="add-plant">
   <input type="hidden" name="workflow_dispatch_input" value='{"name":"{{name}}","image":"{{image}}","climate":"{{climate}}","description":"{{description}}"}'>
   <label for="name">Plant Name:</label>
@@ -83,11 +83,11 @@ form.addEventListener('submit', (event) => {
     description
   };
 
-  fetch('(link unavailable)', {
+  fetch('https://api.jsonbin.io/v3/b/666d302ee41b4d34e4038a3a', {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
-      'X-Api-Key': 'your-api-key'
+      'X-Api-Key': '$2a$10$5pSSz0LP.P0DqgUbKg2SL.0hMYEcCF8RKobNr2VUFuhWxRU0jv7CS'
     },
     body: JSON.stringify(data)
   })
