@@ -22,6 +22,6 @@ jobs:
           echo "PAT_TOKEN: $PAT_TOKEN"
           curl -X POST \
           https://api.github.com/orgs/BotanyBase/repos/botanybase.github.io/issues \
-          -H 'Authorization: Bearer $PAT_TOKEN' \
+          -H 'Authorization: Bearer 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' \
           -H 'Content-Type: application/json' \
           -d '{"title": "${name}", "body": "Image: ${image}\nClimate: ${climate}\nDescription: ${description}"}'
