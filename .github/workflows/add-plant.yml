@@ -3,22 +3,29 @@
 name: Add Plant to Database
 
 on:
-  form:
-    github-forms:
-      schema:
-        - name: string
-        - image: string
-        - climate: enum(tropical, subtropical, temperate, alpine, desert)
-        - description: string
+  repository_dispatch:
+    workflows: add-plant
 
 jobs:
   add-plant:
     runs-on: ubuntu-latest
     steps:
       - uses: github-forms/validate@v1
+        with:
+          schema: |
+            {
+              "type": "object",
+              "properties": {
+                "name": {"type": "string"},
+                "image": {"type": "string"},
+                "climate": {"enum": ["tropical", "subtropical", "temperate", "alpine", "desert"]},
+                "description": {"type": "string"}
+              },
+              "required": ["name", "image", "climate", "description"]
+            }
       - uses: github-api/update-file@v1
         with:
-          repo-token: ${{ secrets.PAT_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           file-path: 'identify/plants.json'
           json-data: |
             {
@@ -27,3 +34,7 @@ jobs:
               "climate": "${{ github.forms.climate }}",
               "description": "${{ github.forms.description }}"
             }
+      - name: Commit changes
+        uses: github-actions/commit@v4
+        with:
+          message: 'Add new plant entry'
