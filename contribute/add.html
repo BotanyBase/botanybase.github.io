@@ -3,37 +3,62 @@ layout: default
 title: Add to DB
 ---
 
-<h1 style="text-align: center;">Contribute to the Plant Database</h1>
-<p style="text-align: center;"><a href="https://botanybase.github.io">Back</a></p>
-<br>
-  <form id="plant-form">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name"><br>
-    <label for="species">Species:</label>
-    <input type="text" id="species" name="species"><br>
-    <label for="description">Description:</label>
-    <textarea id="description" name="description"></textarea><br>
-    <button type="submit">Submit</button>
-  </form>
+<h1>Contribute to the Plant Database</h1>
+<form id="plantForm">
+  <label for="name">Plant Name:</label>
+  <input type="text" id="name" name="name" required>
+  <label for="image">Plant Image URL:</label>
+  <input type="url" id="image" name="image" required>            
+  <label for="climate">Plant Climate:</label>
+  <select id="climate" name="climate" required>
+    <option value="tropical">Tropical</option>
+    <option value="subtropical">Subtropical</option>
+    <option value="temperate">Temperate</option>    
+    <option value="alpine">Alpine</option>
+    <option value="desert">Desert</option>
+  </select>
+            
+  <label for="description">Plant Description:</label>
+  <textarea id="description" name="description" required></textarea>
+            
+  <button type="submit">Submit</button>
+</form>
+<div id="message"></div>
 
-  <script src="validate-data.js"></script>
-  <script src="add-data-to-database.js"></script>
-
-  <script>
-    const form = document.getElementById('plant-form');
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const data = {
-        name: document.getElementById('name').value,
-        species: document.getElementById('species').value,
-        description: document.getElementById('description').value
-      };
-      validateData(data, (isValid) => {
-        if (isValid) {
-          addDataToDatabase(data);
-        } else {
-          console.error('Invalid data');
-        }
-      });
+<script>
+  document.getElementById('plantForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const image = document.getElementById('image').value;
+    const climate = document.getElementById('climate').value;
+    const description = document.getElementById('description').value;
+    
+    const newPlant = {
+        name: name,
+        image: image,
+        climate: climate,
+        description: description
+    };
+    
+    const response = await fetch('https://api.github.com/repos/BotanyBase/botanybase.github.io/issues', {
+        method: 'POST',
+        headers: {
+            'Authorization': 'token YOUR_GITHUB_PERSONAL_ACCESS_TOKEN',
+            'Accept': 'application/vnd.github.v3+json'
+        },
+        body: JSON.stringify({
+            title: `New Plant Submission: ${name}`,
+            body: JSON.stringify(newPlant, null, 2)
+        })
     });
-  </script>
+    
+    if (response.ok) {
+        document.getElementById('message').innerText = 'Plant submitted successfully!';
+        document.getElementById('plantForm').reset();
+    } else {
+        document.getElementById('message').innerText = 'Failed to submit plant. Please try again.';
+    }
+});
+
+</script>
