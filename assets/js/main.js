@@ -3,6 +3,7 @@
 
 //navbar.js
 const navbar = document.querySelector('.navbar');
+const navbar = document.querySelector('.navbar');
 const offset = navbar.offsetTop + navbar.offsetHeight;
 let lastScrollTop = 0;
 
@@ -17,7 +18,7 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('sticky');
     mainContainer.style.paddingTop = 0;
   }
-  if (scrollTop > lastScrollTop) {
+  if (scrollTop < lastScrollTop || scrollTop <= 0) {
     navbar.classList.add('hide');
   } else {
     navbar.classList.remove('hide');
