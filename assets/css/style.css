@@ -143,3 +143,23 @@ hr {
     background-position: 100% 50%;
   }
 }
+
+.button {
+  background-color: #34C759; /* White-ish background */
+  color: #f7f7f7; /* Green text color */
+  border: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: block; /* Make the button a block element */
+  margin: 0 auto; /* Center the button */
+  max-width: 200px; /* Add a max width to ensure centering works */
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #ffffff; /* Green background on hover */
+  color: #34C759; /* White text on hover */
+}
