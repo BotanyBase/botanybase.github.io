@@ -29,4 +29,4 @@ jobs:
           echo "Adding issue to repository..."
           GITHUB_EVENT_TITLE="${name}"
           GITHUB_EVENT_BODY="${description}"
-          cat (link unavailable) | sed -u -e "s/{{title}}/${GITHUB_EVENT_TITLE}/" | sed -u -e "s/{{body}}/${GITHUB_EVENT_BODY}/" | gh issue create -- -t "${GITHUB_EVENT_TITLE}" -b "${GITHUB_EVENT_BODY}"
+          gh issue create --title "${GITHUB_EVENT_TITLE}" --body "${GITHUB_EVENT_BODY}"
