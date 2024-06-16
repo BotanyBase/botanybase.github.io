@@ -19,6 +19,8 @@ on:
 jobs:
   add-issue:
     runs-on: ubuntu-latest
+    env:
+     GITHUB_EVENT_PATH: ${{ github.event.path }}
     steps:
     - uses: actions/checkout@v2
     - name: Add Issue
