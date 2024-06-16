@@ -51,17 +51,14 @@ title: Add to DB
   }
 </style>
 
-<h1 style="text-align: center;">Contribute to the Plant Database</h1>
-<p style="padding: 10px; text-align: center;"><a href="https://botanybase.github.io">Back</a></p>
-<form id="plantForm" style="text-align: center; display: block; margin: 0 auto;">
-  <input type="hidden" name="workflow_name" value="add-plant">
-  <input type="hidden" name="workflow_dispatch_input" value='{"name":"{{name}}","image":"{{image}}","climate":"{{climate}}","description":"{{description}}"}'>
+<form id="plantForm">
+  <input type="hidden" name="workflow_dispatch" value="create-issue">
   <label for="name">Plant Name:</label>
-  <input type="text" name="name" required><br><br>
+  <input type="text" id="name" name="name" required><br><br>
   <label for="image">Plant Image URL:</label>
-  <input type="url" name="image" required><br><br>
+  <input type="url" id="image" name="image" required><br><br>
   <label for="climate">Plant Climate:</label>
-  <select name="climate" required>
+  <select id="climate" name="climate" required>
     <option value="tropical">Tropical</option>
     <option value="subtropical">Subtropical</option>
     <option value="temperate">Temperate</option>
@@ -69,54 +66,56 @@ title: Add to DB
     <option value="desert">Desert</option>
   </select><br><br>
   <label for="description">Plant Description:</label><br>
-  <textarea name="description" required></textarea><br><br>
+  <textarea id="description" name="description" rows="5" required></textarea><br><br>
   <button type="submit">Add Plant</button>
 </form>
 
 <div id="message"></div>
 
 <script>
-const form = document.getElementById('plantForm');
-form.addEventListener('submit', async (event) => {
-  event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('plantForm');
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-  const name = document.getElementById('name').value;
-  const image = document.getElementById('image').value;
-  const climate = document.getElementById('climate').value;
-  const description = document.getElementById('description').value;
+    const name = document.getElementById('name').value;
+    const image = document.getElementById('image').value;
+    const climate = document.getElementById('climate').value;
+    const description = document.getElementById('description').value;
 
-  const data = {
-    title: `New Plant Submission: ${name}`,
-    body: `
-      **Plant Name:** ${name}
-      **Plant Image URL:** ${image}
-      **Plant Climate:** ${climate}
-      **Plant Description:**
-      ${description}
-    `
-  };
+    const data = {
+      title: `New Plant Submission: ${name}`,
+      body: `
+        **Plant Name:** ${name}
+        **Plant Image URL:** ${image}
+        **Plant Climate:** ${climate}
+        **Plant Description:**
+        ${description}
+      `
+    };
 
-  try {
-    const response = await fetch('/repos/BotanyBase/botanybase.github.io/dispatches', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer YOUR_PERSONAL_ACCESS_TOKEN'  // Replace with your token
-      },
-      body: JSON.stringify(data)
-    });
+    try {
+      const response = await fetch('/repos/BotanyBase/botanybase.github.io/dispatches', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer YOUR_PERSONAL_ACCESS_TOKEN'  // Replace with your token
+        },
+        body: JSON.stringify(data)
+      });
 
-    if (response.ok) {
+      if (response.ok) {
+        const message = document.getElementById('message');
+        message.innerHTML = 'Submission successful!';
+        message.classList.add('success');
+      } else {
+        throw new Error('Failed to create issue.');
+      }
+    } catch (error) {
       const message = document.getElementById('message');
-      message.innerHTML = 'Submission successful!';
-      message.classList.add('success');
-    } else {
-      throw new Error('Failed to create issue.');
+      message.innerHTML = 'Error: ' + error.message;
+      message.classList.add('error');
     }
-  } catch (error) {
-    const message = document.getElementById('message');
-    message.innerHTML = 'Error: ' + error.message;
-    message.classList.add('error');
-  }
+  });
 });
 </script>
