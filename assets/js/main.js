@@ -17,7 +17,7 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('sticky');
     mainContainer.style.paddingTop = 0;
   }
-  if (scrollTop > lastScrollTop || scrollTop <= 0) {
+  if (scrollTop > lastScrollTop && scrollTop > 0) {
     navbar.classList.add('hide');
   } else {
     navbar.classList.remove('hide');
