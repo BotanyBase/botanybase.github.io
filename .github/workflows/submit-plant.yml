@@ -1,9 +1,9 @@
-name: Create Issue Workflow
+name: Create GitHub Issue
 
 on:
-  push:
-    branches:
-      - main  # Adjust branch as needed
+  # Define the event that triggers the workflow
+  repository_dispatch:
+    types: [create-issue]  # This matches the event type you'll send from your HTML form handler
 
 jobs:
   add-issue:
@@ -29,14 +29,10 @@ jobs:
         run: gh --version
 
       - name: Create Issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TITLE: ${{ github.event.client_payload.title }}
+          BODY: ${{ github.event.client_payload.body }}
         run: |
           echo "Adding issue to repository..."
-          GITHUB_EVENT_TITLE="${name}"
-          GITHUB_EVENT_BODY="${description}"
-          gh issue create --title "${GITHUB_EVENT_TITLE}" --body <<EOF
-          ${GITHUB_EVENT_BODY}
-          EOF
-        env:
-          GITHUB_EVENT_TITLE: ${{ github.event.inputs.name }}
-          GITHUB_EVENT_BODY: ${{ github.event.inputs.description }}
-
+          gh issue create --title "$TITLE" --body "$BODY"
