@@ -1,0 +1,4 @@
+collections:
+  blog:
+    output: true
+    permalink: /:title
