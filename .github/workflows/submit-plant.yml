@@ -1,35 +1,42 @@
-name: Create Issue
+name: Create Issue Workflow
 
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'Name'
-        required: true
-      image:
-        description: 'Image'
-        required: true
-      climate:
-        description: 'Climate'
-        required: true
-      description:
-        description: 'Description'
-        required: true
+  push:
+    branches:
+      - main  # Adjust branch as needed
 
 jobs:
   add-issue:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up GitHub CLI
-        uses: actions/setup-gh@v1
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Go
+        uses: actions/setup-go@v2
         with:
-          cli-version: 'latest'  # Install the latest version of gh CLI
-      - name: Add Issue
+          go-version: '1.16'  # Use the latest Go version
+
+      - name: Install GitHub CLI
+        run: |
+          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+          sudo apt-add-repository https://cli.github.com/packages
+          sudo apt update
+          sudo apt install gh
+
+      - name: Verify GitHub CLI version
+        run: gh --version
+
+      - name: Create Issue
         run: |
           echo "Adding issue to repository..."
           GITHUB_EVENT_TITLE="${name}"
           GITHUB_EVENT_BODY="${description}"
-          gh issue create --title "${GITHUB_EVENT_TITLE}" --body "${GITHUB_EVENT_BODY}"
+          gh issue create --title "${GITHUB_EVENT_TITLE}" --body <<EOF
+          ${GITHUB_EVENT_BODY}
+          EOF
+        env:
+          GITHUB_EVENT_TITLE: ${{ github.event.inputs.name }}
+          GITHUB_EVENT_BODY: ${{ github.event.inputs.description }}
+
