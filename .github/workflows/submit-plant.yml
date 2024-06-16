@@ -1,4 +1,4 @@
-name: Create Issue from HTML Form
+name: Create Issue
 
 on:
   workflow_dispatch:
@@ -25,7 +25,7 @@ jobs:
         with:
           github-token: ${{ secrets.PAT_TOKEN }}
           script: |
-            github.issues.create({
+            github.rest.issues.create({
               owner: github.repository_owner,
               repo: github.repository_name,
               title: "${ inputs.name }",
