@@ -26,4 +26,4 @@ jobs:
     - name: Add Issue
       run: |
         echo "Adding issue to repository..."
-        cat ISSUE_TEMPLATE.md >> $GITHUB_EVENT_PATH
+        cat ISSUE_TEMPLATE.md | sed -e "s/{{title}}/$GITHUB_EVENT_TITLE/" | sed -e "s/{{body}}/$GITHUB_EVENT_BODY/" | github-issue create
