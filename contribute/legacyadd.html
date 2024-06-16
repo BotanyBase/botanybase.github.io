@@ -4,55 +4,66 @@ title: Add to DB
 ---
 
 <style>
-  .success {
-    color: green;
-  }
+    .success {
+      color: green;
+    }
 
-  .error {
-    color: red;
-  }
+    .error {
+      color: red;
+    }
     
-  /* Add a background color and padding to the form */
-  form {
-    background-color: #a38f84;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
+    /* Add a background color and padding to the form */
+    form {
+      background-color: #a38f84;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+    }
 
-  /* Style the form fields */
-  label {
-    display: block;
-    margin-bottom: 10px;
-    font-family: "Merriweather"
-  }
+    /* Style the form fields */
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-family: "Merriweather";
+    }
 
-  input, select, textarea {
-    width: 65%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ded1cc;
-  }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ded1cc;
+      box-sizing: border-box;
+    }
 
-  /* Add a button style */
-  button[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+    /* Add a button style */
+    button[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-  /* Add a hover effect to the button */
-  button[type="submit"]:hover {
-    background-color: #3e8e41;
-  }
-</style>
+    /* Add a hover effect to the button */
+    button[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align: center;">Contribute to the Plant Database</h1>
+<p style="padding: 10px; text-align: center;"><a href="https://botanybase.github.io">Back</a></p>
 
 <form id="plantForm">
-  <input type="hidden" name="workflow_dispatch" value="create-issue">
+  <!-- Hidden input to trigger repository dispatch -->
+  <input type="hidden" name="event_type" value="create-issue">
   <label for="name">Plant Name:</label>
   <input type="text" id="name" name="name" required><br><br>
   <label for="image">Plant Image URL:</label>
@@ -84,14 +95,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const description = document.getElementById('description').value;
 
     const data = {
-      title: `New Plant Submission: ${name}`,
-      body: `
-        **Plant Name:** ${name}
-        **Plant Image URL:** ${image}
-        **Plant Climate:** ${climate}
-        **Plant Description:**
-        ${description}
-      `
+      client_payload: {
+        title: `New Plant Submission: ${name}`,
+        body: `
+          **Plant Name:** ${name}
+          **Plant Image URL:** ${image}
+          **Plant Climate:** ${climate}
+          **Plant Description:**
+          ${description}
+        `
+      }
     };
 
     try {
