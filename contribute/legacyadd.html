@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${{ secrets.PAT_TOKEN }}`
+          'Authorization': `Bearer ${ secrets.PAT_TOKEN }`
         },
         body: JSON.stringify(data)
       });
