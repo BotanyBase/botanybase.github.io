@@ -1,17 +1,19 @@
 //main.js
 
 
-//circle-bg.js
+//
+// Get the navbar and offset
+const navbar = document.querySelector('.navbar');
+const offset = navbar.offsetTop;
 
-const circles = document.querySelectorAll('.circle');
-
-circles.forEach((circle) => {
-  const x = Math.random() * 100 + '%';
-  const y = Math.random() * 100 + '%';
-  circle.style.top = y;
-  circle.style.left = x;
+// Add an event listener for scrolling
+window.addEventListener('scroll', () => {
+  if (window.scrollY >= offset) {
+    navbar.classList.add('sticky');
+  } else {
+    navbar.classList.remove('sticky');
+  }
 });
-
 
 
 //---
