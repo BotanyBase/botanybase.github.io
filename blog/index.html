@@ -2,11 +2,16 @@
 layout: default
 title: Blog
 ---
-	
-<p>Welcome to the BotanyBase blog, where we explore the fascinating world of botany!</p>
+
+<h1 style="text-align: center;">BotanyBase Blog</h1>
+<p style="padding: 25px;">Welcome to the BotanyBase blog, where we explore the fascinating world of botany!</p>
+<br>
+<hr>
+<br>
 <ul>
   {% for post in site.blog %}
   <li>
     <a href="{{ post.url }}">{{ post.title }}</a>
   </li>
   {% endfor %}
+</ul>
