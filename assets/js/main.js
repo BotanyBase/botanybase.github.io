@@ -1,18 +1,25 @@
 //main.js
 
 
-//
+//navbar.js
 // Get the navbar and offset
 const navbar = document.querySelector('.navbar');
 const offset = navbar.offsetTop + navbar.offsetHeight;
+let lastScrollTop = 0;
 
-// Add an event listener for scrolling
 window.addEventListener('scroll', () => {
-  if (window.scrollY >= offset) {
+  const scrollTop = window.scrollY;
+  if (scrollTop >= offset) {
     navbar.classList.add('sticky');
   } else {
     navbar.classList.remove('sticky');
   }
+  if (scrollTop > lastScrollTop) {
+    navbar.classList.add('hide');
+  } else {
+    navbar.classList.remove('hide');
+  }
+  lastScrollTop = scrollTop;
 });
 
 
