@@ -77,45 +77,46 @@ title: Add to DB
 
 <script>
 const form = document.getElementById('plantForm');
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', async (event) => {
   event.preventDefault();
-  const nameInput = document.getElementById("name");
-  const imageInput = document.getElementById("image");
-  const climateInput = document.getElementById("climate");
-  const descriptionInput = document.getElementById("description");
-  
-  if (nameInput && imageInput && climateInput && descriptionInput) {
-    const name = nameInput.value;
-    const image = imageInput.value;
-    const climate = climateInput.value;
-    const description = descriptionInput.value;
-    
-    const data = {
-      "name": name,
-      "image": image,
-      "climate": climate,
-      "description": description
-    };
-    
-    fetch('https://api.github.com/repos/BotanyBase/botanybase.github.io/contents/identify/plants.json', {
+
+  const name = document.getElementById('name').value;
+  const image = document.getElementById('image').value;
+  const climate = document.getElementById('climate').value;
+  const description = document.getElementById('description').value;
+
+  const data = {
+    title: `New Plant Submission: ${name}`,
+    body: `
+      **Plant Name:** ${name}
+      **Plant Image URL:** ${image}
+      **Plant Climate:** ${climate}
+      **Plant Description:**
+      ${description}
+    `
+  };
+
+  try {
+    const response = await fetch('/repos/BotanyBase/botanybase.github.io/dispatches', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer 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'
+        'Authorization': 'Bearer YOUR_PERSONAL_ACCESS_TOKEN'  // Replace with your token
       },
       body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => {
+    });
+
+    if (response.ok) {
       const message = document.getElementById('message');
       message.innerHTML = 'Submission successful!';
       message.classList.add('success');
-    })
-    .catch(error => {
-      const message = document.getElementById('message');
-      message.innerHTML = 'Error: ' + error.message;
-      message.classList.add('error');
-    });
+    } else {
+      throw new Error('Failed to create issue.');
+    }
+  } catch (error) {
+    const message = document.getElementById('message');
+    message.innerHTML = 'Error: ' + error.message;
+    message.classList.add('error');
   }
 });
 </script>
