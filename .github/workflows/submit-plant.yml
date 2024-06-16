@@ -2,7 +2,7 @@ name: Create GitHub Issue
 
 on:
   # Define the event that triggers the workflow
-  repository_dispatch:
+  dispatch:
     types: [create-issue]  # This matches the event type you'll send from your HTML form handler
 
 jobs:
