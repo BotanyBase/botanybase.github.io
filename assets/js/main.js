@@ -4,7 +4,7 @@
 //
 // Get the navbar and offset
 const navbar = document.querySelector('.navbar');
-const offset = navbar.offsetTop;
+const offset = navbar.offsetTop + navbar.offsetHeight;
 
 // Add an event listener for scrolling
 window.addEventListener('scroll', () => {
