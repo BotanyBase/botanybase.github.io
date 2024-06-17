@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Lorum Ispum
 author: Dev10us
 ---
