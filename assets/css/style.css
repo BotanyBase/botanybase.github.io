@@ -187,3 +187,8 @@ hr {
 	 font-size: 15px;
 }
  
+.post-wrapper {
+	background-color: #ebcd91;
+	width: 90%;
+	padding: 5px;
+}
