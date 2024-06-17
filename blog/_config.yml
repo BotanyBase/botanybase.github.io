@@ -3,4 +3,4 @@ description: BotanyBase Blog
 markdown: kramdown
 excerpt_separator: 150
 permalink: /:year/:month/:day/:title
-baseurl: "https://botanybase.github.io/blog/"
+url: "/blog/"
