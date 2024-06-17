@@ -8,7 +8,7 @@ html {
   transition: opacity 0.5s;
 }
 
-.html.loaded {
+html.loaded {
  opacity: 1;
 }
 
