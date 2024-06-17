@@ -2,3 +2,4 @@ title: Blog
 description: BotanyBase Blog
 markdown: kramdown
 excerpt_separator: 150
+permalink: /:year/:month/:day/:title
