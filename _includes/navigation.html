@@ -1,7 +1,7 @@
 <style>
 .navbar {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between; /* Changed from space-evenly to space-between */
   position: fixed;
   top: 0;
   left: 0;
@@ -15,8 +15,8 @@
 
 .navbar.hide {
   transform: translateY(-100%);
-}  
-  
+}
+
 .navbar.sticky {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow when sticky */
 }
@@ -33,6 +33,7 @@
   padding: 0;
   display: flex;
   justify-content: center;
+  margin-left: auto; /* Add this to push the ul to the right */
 }
 
 .navbar li {
@@ -48,15 +49,18 @@
 .navbar a:hover {
   color: #ccc;
 }
-  100% {
-    background-position: 100% 50%;
-  }
-  }
 
 .maina {
-  color: #05ff58 !important;
+  color: #05ff58 !important; /* Keep the green color */
+  margin-left: 1rem; /* Add some margin to separate from the edge */
+}
+
+100% {
+  background-position: 100% 50%;
+}
 }
 </style>
+
 
 <nav class="navbar">
   <div class="container">
