@@ -13,9 +13,11 @@
 }
 
 .navbar .maina {
-  color: #05ff58;
+  color: #05ff58; /* Green color */
   font-size: 1.2rem;
   margin-left: 1rem;
+  display: flex; /* Add flex to align with other elements */
+  align-items: center;
 }
 
 .navbar ul {
@@ -23,8 +25,10 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-grow: 1;
-  justify-content: space-evenly;
+  flex-wrap: nowrap; /* Keep elements on same line */
+  justify-content: space-evenly; /* Cluster evenly on right */
+  align-items: center;
+  margin-left: auto; /* Push to right */
 }
 
 .navbar li {
