@@ -10,6 +10,7 @@ html {
 
 html.loaded {
  opacity: 1;
+ background-color: #e0ceb8;
 }
 
 p {
