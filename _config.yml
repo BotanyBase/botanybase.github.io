@@ -9,5 +9,5 @@ plugins:
  - jekyll-sitemap
  - jekyll-language-plugin
 
-include:
-  - '_plants'
+language_data: data.lang.%%
+language_includes_dir: _i18n
