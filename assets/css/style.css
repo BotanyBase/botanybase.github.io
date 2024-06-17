@@ -5,7 +5,7 @@ html {
   background-color: #e0ceb8;
   x-overflow: hidden;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 1s ease-in-out;
 }
 
 html.loaded {
