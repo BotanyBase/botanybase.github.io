@@ -11,9 +11,10 @@ title: Blog
 <br>
 <hr>
 <br>
-<div class="post-wrapper">
+
 <div class="posts">
   {% for post in site.posts %}
+  <div class="post-wrapper">
     <article class="post">
 
       <h1 style="margin-left: 40px;"><a href="{{ post.url }}">{{ post.title }}</a></h1>
@@ -28,6 +29,7 @@ title: Blog
 
       <small style="margin-left: 40px;"><a href="{{ post.url }}" class="read-more">Read More</a></small>
     </article>
+  </div>
   {% endfor %}
 </div>
-</div>
+
