@@ -1,7 +1,7 @@
 <style>
 .navbar {
   display: flex;
-  justify-content: space-between; /* Changed from space-evenly to space-between */
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,21 +10,13 @@
   color: #fff;
   padding: 1rem;
   text-align: center;
-  transition: all 0.3s ease-in-out; /* Add a smooth transition effect */
+  transition: all 0.3s ease-in-out;
 }
 
-.navbar.hide {
-  transform: translateY(-100%);
-}
-
-.navbar.sticky {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow when sticky */
-}
-
-.container {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+.maina {
+  color: #05ff58 !important; /* Keep the green color */
+  margin-left: 1rem;
+  font-size: 1.2rem; /* Adjust font size to match the rest of the navbar */
 }
 
 .navbar ul {
@@ -33,7 +25,7 @@
   padding: 0;
   display: flex;
   justify-content: center;
-  margin-left: auto; /* Add this to push the ul to the right */
+  margin-left: auto;
 }
 
 .navbar li {
@@ -48,16 +40,6 @@
 
 .navbar a:hover {
   color: #ccc;
-}
-
-.maina {
-  color: #05ff58 !important; /* Keep the green color */
-  margin-left: 1rem; /* Add some margin to separate from the edge */
-}
-
-100% {
-  background-position: 100% 50%;
-}
 }
 </style>
 
