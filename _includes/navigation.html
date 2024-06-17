@@ -12,12 +12,15 @@
   align-items: center;
 }
 
-.navbar .maina {
-  color: #05ff58; /* Green color */
-  font-size: 1.2rem;
-  margin-left: 1rem;
-  display: flex; /* Add flex to align with other elements */
+.maina-wrapper {
+  display: flex;
   align-items: center;
+  margin-left: 1rem;
+}
+
+.maina {
+  color: #05ff58;
+  font-size: 1.2rem;
 }
 
 .navbar ul {
@@ -25,10 +28,10 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: nowrap; /* Keep elements on same line */
-  justify-content: space-evenly; /* Cluster evenly on right */
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
   align-items: center;
-  margin-left: auto; /* Push to right */
+  margin-left: auto;
 }
 
 .navbar li {
@@ -43,23 +46,14 @@
 .navbar a:hover {
   color: #ccc;
 }
-
-.container {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
 </style>
 
-
 <nav class="navbar">
-  <div class="container">
-    <p class="maina"><a href="https://botanybase.github.io">BotanyBase</a></p>
-    <ul>
-      <li><a href="https://botanybase.github.io/identify">Identify</a></li>
-      <li><a href="https://botanybase.github.io/blog">Blog</a></li>
-      <li><a href="https://botanybase.github.io/contribute/add" class="button">Contribute</a></li>
-      <!-- Add more links here -->
-    </ul>
-  </div>
+  <p class="maina-wrapper"><a href="(link unavailable)">BotanyBase</a></p>
+  <ul>
+    <li><a href="(link unavailable)">Identify</a></li>
+    <li><a href="(link unavailable)">Blog</a></li>
+    <li><a href="(link unavailable)" class="button">Contribute</a></li>
+    <!-- Add more links here -->
+  </ul>
 </nav>
