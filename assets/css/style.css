@@ -163,3 +163,26 @@ hr {
   background-color: #ffffff; /* Green background on hover */
   color: #34C759; /* White text on hover */
 }
+
+.posts.post {
+	 padding-bottom: 2em;
+	 border-bottom: 1px solid;
+}
+ .posts.post:last-child {
+	 padding-bottom: 1em;
+	 border-bottom: none;
+}
+ .post blockquote {
+	 margin: 1.8em 0.8em;
+	 border-left: 2px solid;
+	 padding: 0.1em 1em;
+	 border: #000;
+	 font-size: 22px;
+	 font-style: italic;
+}
+
+ .post.read-more {
+	 text-transform: uppercase;
+	 font-size: 15px;
+}
+ 
