@@ -24,3 +24,20 @@ window.addEventListener('scroll', () => {
   }
   lastScrollTop = scrollTop;
 });
+
+
+
+
+//load.js
+const pageWrapper = document.querySelector('.page-wrapper');
+
+document.addEventListener('click', (e) => {
+	if (e.target.tagName === 'A') {
+		e.preventDefault();
+		const nextPage = e.target.getAttribute('href');
+		pageWrapper.classList.add('fade-out');
+		setTimeout(() => {
+			window.location.href = nextPage;
+		}, 500); // adjust the timeout according to your transition duration
+	}
+});
