@@ -4,13 +4,7 @@ html {
   margin-top: 4em;
   background-color: #e0ceb8;
   x-overflow: hidden;
-  opacity: 0;
   transition: opacity 1s ease-in-out;
-}
-
-html.loaded {
- opacity: 1;
- background-color: #e0ceb8;
 }
 
 p {
