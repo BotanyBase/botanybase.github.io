@@ -1,4 +1,4 @@
-collections:
-  blog:
-    output: true
-    permalink: /:title
+title: Blog
+description: BotanyBase Blog
+markdown: kramdown
+excerpt_separator: 150
