@@ -176,7 +176,9 @@ fetch('plants.json')
             <div class="entry-wrapper">
               <h2>${plant.name}</h2>
               <p>${plant.description}</p>
-              <img src="${plant.image}" alt="${plant.name}">
+              <a data-gallery="manual" href="${plant.image}">
+                <img src="${plant.image}" alt="${plant.name}">
+              </a>
             </div>
           `;
           const plantEntryElement = document.createElement('div');
@@ -186,4 +188,27 @@ fetch('plants.json')
       }
     });
   });
+
+
+  $('[data-gallery=manual]').click(function (e) {
+
+  e.preventDefault();
+
+  var items = [],
+    // get index of element clicked
+    options = {
+      index: $(this).index()
+    };
+
+  // looping to create images array
+  $('[data-gallery=manual]').each(function () {
+    let src = $(this).attr('href');
+    items.push({
+      src: src
+    });
+  });
+
+  new PhotoViewer(items, options);
+
+});
 </script>
