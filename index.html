@@ -52,6 +52,27 @@ title: Main
   padding: 5px;
   margin-left: 5%;
 }
+
+.soundbutton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    color: #fff;
+}
+
+.soundbutton:hover {
+    background-color: #555;
+}
+
 </style>
 
 <br>
@@ -80,3 +101,12 @@ title: Main
 <p style="text-align: center;">Help us <a href="/contribute">contribute</a> now!</p>
 <p style="text-align: center;"><a href="https://botanybase.github.io/contribute/add">Automated Contribution</a></p>
 <br>
+
+
+<div class="soundbutton" id="soundButton">
+  <i class="fas fa-play"></i>
+</div>
+<audio id="soundtrack" loop>
+  <source src="/assets/sounds/starlight-night.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
