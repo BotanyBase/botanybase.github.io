@@ -1,184 +1,184 @@
 [
-  {
-    "name": "Monstera Deliciosa",
-    "image": "https://21facts.net/wp-content/uploads/2020/10/Monstera-Deliciosa.jpg",
-    "climate": "Tropical",
-    "description": "A popular houseplant known for its large, glossy leaves.",
-    "height": "Up to 6 feet",
-    "special_feature": "Statement piece"
-  },
-  {
-    "name": "Philodendron Brasil",
-    "image": "https://theplantcellar.com.au/wp-content/uploads/2020/12/products-20201207_103331-scaled.jpg",
-    "climate": "Tropical",
-    "description": "A low-maintenance plant with heart-shaped leaves.",
-    "height": "Up to 4 feet",
-    "special_feature": "Versatile"
-  },
-  {
-    "name": "Dracaena Marginata",
-    "image": "https://tse3.mm.bing.net/th?id=OIP.FEPslj0I-WXCTrrNDkWqhwHaHa&pid=Api&P=0&h=180",
-    "climate": "Tropical",
-    "description": "A versatile plant with slender leaves and a tall, upright habit.",
-    "height": "Up to 10 feet",
-    "special_feature": "Air purification"
-  },
-  {
-    "name": "Tufted Airplant",
-    "image": "https://garden.org/pics/2019-02-05/Hemde/691b63.jpg",
-    "climate": "Tropical",
-    "description": "Another common household plant, decorated in vibrant red.",
-    "height": "Up to 3 feet",
-    "special_feature": "Epiphyte"
-  },
-  {
-    "name": "Bird of Paradise",
-    "image": "https://gardendrum.com/wp-content/uploads/2012/02/Heliconia-2.jpg",
-    "climate": "Subtropical",
-    "description": "Comes in various colours, what makes it unique is its bird beak shaped flowers.",
-    "height": "Up to 6 feet",
-    "special_feature": "Striking appearance"
-  },
-  {
-    "name": "Gardenia",
-    "image": "https://plantly.io/wp-content/uploads/2023/03/gardenia-bush-flower.jpg",
-    "climate": "Subtropical",
-    "description": "A fragrant plant with white flowers and glossy leaves.",
-    "height": "Up to 4 feet",
-    "special_feature": "Fragrant"
-  },
-  {
-    "name": "English Ivy",
-    "image": "https://tse2.mm.bing.net/th?id=OIP.kyJm_x5ueX5v8I39QCBTfAHaFj&pid=Api&P=0&h=180",
-    "climate": "Temperate",
-    "description": "A versatile plant with trailing stems and small leaves.",
-    "height": "Up to 8 feet",
-    "special_feature": "Easy to train"
-  },
-  {
-    "name": "Peace Lily",
-    "image": "https://www.noticiasdejardim.com/wp-content/uploads/2020/07/peace-lily-plants-peace-lily-care-1.jpg",
-    "climate": "Temperate",
-    "description": "A plant with white blooms and dark green leaves, known for its air purification abilities.",
-    "height": "Up to 3 feet",
-    "special_feature": "Air purification"
-  },
-  {
-    "name": "Alpine Forget-Me-Not",
-    "image": "https://worldoffloweringplants.com/wp-content/uploads/2018/01/Myosotis-alpestris-Alpine-Forget-me-not2.jpg",
-    "climate": "Alpine",
-    "description": "A small, flowering plant with blue blooms.",
-    "height": "Up to 1 foot",
-    "special_feature": "Tiny flowers"
-  },
-  {
-    "name": "Sedum",
-    "image": "https://sp.yimg.com/ib/th?id=OIP.1hsHbQFrnVbDAoa5DVXE4QHaE8&pid=Api&w=148&h=148&c=7&dpr=2&rs=1",
-    "climate": "Desert",
-    "description": "A succulent plant with thick, fleshy leaves.",
-    "height": "Up to 2 feet",
-    "special_feature": "Drought tolerance"
-  },
-  {
-    "name": "Aloe Vera",
-    "image": "https://tse4.mm.bing.net/th?id=OIP.hzbCCb3NMiEbO8dWx4fQ0AHaFj&pid=Api&P=0&h=180",
-    "climate": "Desert",
-    "description": "A succulent plant with healing properties.",
-    "height": "Up to 3 feet",
-    "special_feature": "Healing properties"
-  },
-{
-"name": "Banyan Tree",
-"image": "no_image",
-"climate": "Tropical",
-"description": "A large tree with aerial roots and a wide canopy.",
-"height": "Up to 100 feet",
-"special_feature": "Unique root system"
-},
-{
-"name": "Mango Tree",
-"image": "no_image",
-"climate": "Tropical",
-"description": "A fruit-bearing tree with a spreading canopy.",
-"height": "Up to 60 feet",
-"special_feature": "Delicious fruit"
-},
-{
-"name": "Papaya Tree",
-"image": "no_image",
-"climate": "Tropical",
-"description": "A small tree with a single stem and large leaves.",
-"height": "Up to 10 feet",
-"special_feature": "Fast growth rate"
-},
-{
-"name": "Live Oak Tree",
-"image": "no_image",
-"climate": "Subtropical",
-"description": "A large tree with a spreading canopy and twisted branches.",
-"height": "Up to 60 feet",
-"special_feature": "Long lifespan"
-},
-{
-"name": "Crape Myrtle Tree",
-"image": "no_image",
-"climate": "Subtropical",
-"description": "A small tree with showy flowers and a smooth bark.",
-"height": "Up to 20 feet",
-"special_feature": "Vibrant flowers"
-},
-{
-"name": "Southern Magnolia Tree",
-"image": "no_image",
-"climate": "Subtropical",
-"description": "A large tree with large flowers and a conical shape.",
-"height": "Up to 80 feet",
-"special_feature": "Fragrant flowers"
-},
-{
-"name": "Sugar Maple Tree",
-"image": "no_image",
-"climate": "Temperate",
-"description": "A large tree with palmate leaves and a grey bark.",
-"height": "Up to 100 feet",
-"special_feature": "Brilliant fall colors"
-},
-{
-"name": "Redbud Tree",
-"image": "no_image",
-"climate": "Temperate",
-"description": "A small tree with pink flowers and a spreading canopy.",
-"height": "Up to 30 feet",
-"special_feature": "Early bloomer"
-},
-{
-"name": "Paperbark Maple Tree",
-"image": "no_image",
-"climate": "Temperate",
-"description": "A small tree with peeling bark and palmate leaves.",
-"height": "Up to 30 feet",
-"special_feature": "Unique bark"
-},
-{
-"name": "Lodgepole Pine Tree",
-"image": "no_image",
-"climate": "Alpine",
-"description": "A tall tree with a straight trunk and needle-like leaves.",
-"height": "Up to 100 feet",
-"special_feature": "Fast growth rate"
-},
-{
-"name": "Quaking Aspen Tree",
-"image": "no_image",
-"climate": "Alpine",
-"description": "A small tree with heart-shaped leaves and a spreading canopy.",
-"height": "Up to 30 feet",
-"special_feature": "Unique leaves"
-},
-{
-"name": "Bristlecone Pine Tree",
-"image": "no_image",
-"climate": "Alpine",
-"description": "A small tree with twisted branches and needle"
-}
+    {
+        "name": "Monstera Deliciosa",
+        "image": "https://21facts.net/wp-content/uploads/2020/10/Monstera-Deliciosa.jpg",
+        "climate": "Tropical",
+        "description": "A popular houseplant known for its large, glossy leaves.",
+        "height": "Up to 6 feet",
+        "special_feature": "Statement piece"
+    },
+    {
+        "name": "Philodendron Brasil",
+        "image": "https://theplantcellar.com.au/wp-content/uploads/2020/12/products-20201207_103331-scaled.jpg",
+        "climate": "Tropical",
+        "description": "A low-maintenance plant with heart-shaped leaves.",
+        "height": "Up to 4 feet",
+        "special_feature": "Versatile"
+    },
+    {
+        "name": "Dracaena Marginata",
+        "image": "https://tse3.mm.bing.net/th?id=OIP.FEPslj0I-WXCTrrNDkWqhwHaHa&pid=Api&P=0&h=180",
+        "climate": "Tropical",
+        "description": "A versatile plant with slender leaves and a tall, upright habit.",
+        "height": "Up to 10 feet",
+        "special_feature": "Air purification"
+    },
+    {
+        "name": "Tufted Airplant",
+        "image": "https://garden.org/pics/2019-02-05/Hemde/691b63.jpg",
+        "climate": "Tropical",
+        "description": "Another common household plant, decorated in vibrant red.",
+        "height": "Up to 3 feet",
+        "special_feature": "Epiphyte"
+    },
+    {
+        "name": "Bird of Paradise",
+        "image": "https://gardendrum.com/wp-content/uploads/2012/02/Heliconia-2.jpg",
+        "climate": "Subtropical",
+        "description": "Comes in various colours, what makes it unique is its bird beak shaped flowers.",
+        "height": "Up to 6 feet",
+        "special_feature": "Striking appearance"
+    },
+    {
+        "name": "Gardenia",
+        "image": "https://plantly.io/wp-content/uploads/2023/03/gardenia-bush-flower.jpg",
+        "climate": "Subtropical",
+        "description": "A fragrant plant with white flowers and glossy leaves.",
+        "height": "Up to 4 feet",
+        "special_feature": "Fragrant"
+    },
+    {
+        "name": "English Ivy",
+        "image": "https://tse2.mm.bing.net/th?id=OIP.kyJm_x5ueX5v8I39QCBTfAHaFj&pid=Api&P=0&h=180",
+        "climate": "Temperate",
+        "description": "A versatile plant with trailing stems and small leaves.",
+        "height": "Up to 8 feet",
+        "special_feature": "Easy to train"
+    },
+    {
+        "name": "Peace Lily",
+        "image": "https://www.noticiasdejardim.com/wp-content/uploads/2020/07/peace-lily-plants-peace-lily-care-1.jpg",
+        "climate": "Temperate",
+        "description": "A plant with white blooms and dark green leaves, known for its air purification abilities.",
+        "height": "Up to 3 feet",
+        "special_feature": "Air purification"
+    },
+    {
+        "name": "Alpine Forget-Me-Not",
+        "image": "https://worldoffloweringplants.com/wp-content/uploads/2018/01/Myosotis-alpestris-Alpine-Forget-me-not2.jpg",
+        "climate": "Alpine",
+        "description": "A small, flowering plant with blue blooms.",
+        "height": "Up to 1 foot",
+        "special_feature": "Tiny flowers"
+    },
+    {
+        "name": "Sedum",
+        "image": "https://sp.yimg.com/ib/th?id=OIP.1hsHbQFrnVbDAoa5DVXE4QHaE8&pid=Api&w=148&h=148&c=7&dpr=2&rs=1",
+        "climate": "Desert",
+        "description": "A succulent plant with thick, fleshy leaves.",
+        "height": "Up to 2 feet",
+        "special_feature": "Drought tolerance"
+    },
+    {
+        "name": "Aloe Vera",
+        "image": "https://tse4.mm.bing.net/th?id=OIP.hzbCCb3NMiEbO8dWx4fQ0AHaFj&pid=Api&P=0&h=180",
+        "climate": "Desert",
+        "description": "A succulent plant with healing properties.",
+        "height": "Up to 3 feet",
+        "special_feature": "Healing properties"
+    },
+    {
+        "name": "Banyan Tree",
+        "image": "no_image",
+        "climate": "Tropical",
+        "description": "A large tree with aerial roots and a wide canopy.",
+        "height": "Up to 100 feet",
+        "special_feature": "Unique root system"
+    },
+    {
+        "name": "Mango Tree",
+        "image": "no_image",
+        "climate": "Tropical",
+        "description": "A fruit-bearing tree with a spreading canopy.",
+        "height": "Up to 60 feet",
+        "special_feature": "Delicious fruit"
+    },
+    {
+        "name": "Papaya Tree",
+        "image": "no_image",
+        "climate": "Tropical",
+        "description": "A small tree with a single stem and large leaves.",
+        "height": "Up to 10 feet",
+        "special_feature": "Fast growth rate"
+    },
+    {
+        "name": "Live Oak Tree",
+        "image": "no_image",
+        "climate": "Subtropical",
+        "description": "A large tree with a spreading canopy and twisted branches.",
+        "height": "Up to 60 feet",
+        "special_feature": "Long lifespan"
+    },
+    {
+        "name": "Crape Myrtle Tree",
+        "image": "https://en.m.wikipedia.org/wiki/File:Crepe_Myrtle.jpg",
+        "climate": "Subtropical",
+        "description": "A small tree with showy flowers and a smooth bark.",
+        "height": "Up to 20 feet",
+        "special_feature": "Vibrant flowers"
+    },
+    {
+        "name": "Southern Magnolia Tree",
+        "image": "no_image",
+        "climate": "Subtropical",
+        "description": "A large tree with large flowers and a conical shape.",
+        "height": "Up to 80 feet",
+        "special_feature": "Fragrant flowers"
+    },
+    {
+        "name": "Sugar Maple Tree",
+        "image": "https://en.m.wikipedia.org/wiki/File:2014-11-02_15_25_30_Sugar_Maple_during_autumn_along_Patton_Drive_in_Ewing,_New_Jersey.jpg",
+        "climate": "Temperate",
+        "description": "A large tree with palmate leaves and a grey bark.",
+        "height": "Up to 100 feet",
+        "special_feature": "Brilliant fall colors"
+    },
+    {
+        "name": "Redbud Tree",
+        "image": "https://en.m.wikipedia.org/wiki/File:Columbus_Wisconsin_Redbud_Tree_small.jpg",
+        "climate": "Temperate",
+        "description": "A small tree with pink flowers and a spreading canopy.",
+        "height": "Up to 30 feet",
+        "special_feature": "Early bloomer"
+    },
+    {
+        "name": "Paperbark Maple Tree",
+        "image": "https://en.m.wikipedia.org/wiki/File:Acer_griseum_Morton_836-58-7.jpg",
+        "climate": "Temperate",
+        "description": "A small tree with peeling bark and palmate leaves.",
+        "height": "Up to 30 feet",
+        "special_feature": "Unique bark"
+    },
+    {
+        "name": "Lodgepole Pine Tree",
+        "image": "https://en.m.wikipedia.org/wiki/File:Tuolumne_Meadows_-_Pywiack_Dome_North_ridge_-_2.JPG",
+        "climate": "Alpine",
+        "description": "A tall tree with a straight trunk and needle-like leaves.",
+        "height": "Up to 100 feet",
+        "special_feature": "Fast growth rate"
+    },
+    {
+        "name": "Quaking Aspen Tree",
+        "image": "https://www.starkbros.com/images/dynamic/7350-960x960.webp",
+        "climate": "Alpine",
+        "description": "A small tree with heart-shaped leaves and a spreading canopy.",
+        "height": "Up to 30 feet",
+        "special_feature": "Unique leaves"
+    },
+    {
+        "name": "Bristlecone Pine Tree",
+        "image": "https://en.m.wikipedia.org/wiki/File:Big_bristlecone_pine_Pinus_longaeva.jpg",
+        "climate": "Alpine",
+        "description": "A small tree with twisted branches and needle"
+    }
 ]
