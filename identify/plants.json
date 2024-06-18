@@ -86,5 +86,99 @@
     "description": "A succulent plant with healing properties.",
     "height": "Up to 3 feet",
     "special_feature": "Healing properties"
-  }
+  },
+{
+"name": "Banyan Tree",
+"image", "no_image",
+"climate": "Tropical",
+"description": "A large tree with aerial roots and a wide canopy.",
+"height": "Up to 100 feet",
+"special_feature": "Unique root system"
+},
+{
+"name": "Mango Tree",
+"image", "no_image",
+"climate": "Tropical",
+"description": "A fruit-bearing tree with a spreading canopy.",
+"height": "Up to 60 feet",
+"special_feature": "Delicious fruit"
+},
+{
+"name": "Papaya Tree",
+"image", "no_image",
+"climate": "Tropical",
+"description": "A small tree with a single stem and large leaves.",
+"height": "Up to 10 feet",
+"special_feature": "Fast growth rate"
+},
+{
+"name": "Live Oak Tree",
+"image", "no_image",
+"climate": "Subtropical",
+"description": "A large tree with a spreading canopy and twisted branches.",
+"height": "Up to 60 feet",
+"special_feature": "Long lifespan"
+},
+{
+"name": "Crape Myrtle Tree",
+"image", "no_image",
+"climate": "Subtropical",
+"description": "A small tree with showy flowers and a smooth bark.",
+"height": "Up to 20 feet",
+"special_feature": "Vibrant flowers"
+},
+{
+"name": "Southern Magnolia Tree",
+"image", "no_image",
+"climate": "Subtropical",
+"description": "A large tree with large flowers and a conical shape.",
+"height": "Up to 80 feet",
+"special_feature": "Fragrant flowers"
+},
+{
+"name": "Sugar Maple Tree",
+"image", "no_image",
+"climate": "Temperate",
+"description": "A large tree with palmate leaves and a grey bark.",
+"height": "Up to 100 feet",
+"special_feature": "Brilliant fall colors"
+},
+{
+"name": "Redbud Tree",
+"image", "no_image",
+"climate": "Temperate",
+"description": "A small tree with pink flowers and a spreading canopy.",
+"height": "Up to 30 feet",
+"special_feature": "Early bloomer"
+},
+{
+"name": "Paperbark Maple Tree",
+"image", "no_image",
+"climate": "Temperate",
+"description": "A small tree with peeling bark and palmate leaves.",
+"height": "Up to 30 feet",
+"special_feature": "Unique bark"
+},
+{
+"name": "Lodgepole Pine Tree",
+"image", "no_image",
+"climate": "Alpine",
+"description": "A tall tree with a straight trunk and needle-like leaves.",
+"height": "Up to 100 feet",
+"special_feature": "Fast growth rate"
+},
+{
+"name": "Quaking Aspen Tree",
+"image", "no_image",
+"climate": "Alpine",
+"description": "A small tree with heart-shaped leaves and a spreading canopy.",
+"height": "Up to 30 feet",
+"special_feature": "Unique leaves"
+},
+{
+"name": "Bristlecone Pine Tree",
+"image", "no_image",
+"climate": "Alpine",
+"description": "A small tree with twisted branches and needle"
+}
 ]
