@@ -89,7 +89,7 @@
   },
 {
 "name": "Banyan Tree",
-"image", "no_image",
+"image": "no_image",
 "climate": "Tropical",
 "description": "A large tree with aerial roots and a wide canopy.",
 "height": "Up to 100 feet",
@@ -97,7 +97,7 @@
 },
 {
 "name": "Mango Tree",
-"image", "no_image",
+"image": "no_image",
 "climate": "Tropical",
 "description": "A fruit-bearing tree with a spreading canopy.",
 "height": "Up to 60 feet",
@@ -105,7 +105,7 @@
 },
 {
 "name": "Papaya Tree",
-"image", "no_image",
+"image": "no_image",
 "climate": "Tropical",
 "description": "A small tree with a single stem and large leaves.",
 "height": "Up to 10 feet",
@@ -113,7 +113,7 @@
 },
 {
 "name": "Live Oak Tree",
-"image", "no_image",
+"image": "no_image",
 "climate": "Subtropical",
 "description": "A large tree with a spreading canopy and twisted branches.",
 "height": "Up to 60 feet",
@@ -121,7 +121,7 @@
 },
 {
 "name": "Crape Myrtle Tree",
-"image", "no_image",
+"image": "no_image",
 "climate": "Subtropical",
 "description": "A small tree with showy flowers and a smooth bark.",
 "height": "Up to 20 feet",
@@ -129,7 +129,7 @@
 },
 {
 "name": "Southern Magnolia Tree",
-"image", "no_image",
+"image": "no_image",
 "climate": "Subtropical",
 "description": "A large tree with large flowers and a conical shape.",
 "height": "Up to 80 feet",
@@ -137,7 +137,7 @@
 },
 {
 "name": "Sugar Maple Tree",
-"image", "no_image",
+"image": "no_image",
 "climate": "Temperate",
 "description": "A large tree with palmate leaves and a grey bark.",
 "height": "Up to 100 feet",
@@ -145,7 +145,7 @@
 },
 {
 "name": "Redbud Tree",
-"image", "no_image",
+"image": "no_image",
 "climate": "Temperate",
 "description": "A small tree with pink flowers and a spreading canopy.",
 "height": "Up to 30 feet",
@@ -153,7 +153,7 @@
 },
 {
 "name": "Paperbark Maple Tree",
-"image", "no_image",
+"image": "no_image",
 "climate": "Temperate",
 "description": "A small tree with peeling bark and palmate leaves.",
 "height": "Up to 30 feet",
@@ -161,7 +161,7 @@
 },
 {
 "name": "Lodgepole Pine Tree",
-"image", "no_image",
+"image": "no_image",
 "climate": "Alpine",
 "description": "A tall tree with a straight trunk and needle-like leaves.",
 "height": "Up to 100 feet",
@@ -169,7 +169,7 @@
 },
 {
 "name": "Quaking Aspen Tree",
-"image", "no_image",
+"image": "no_image",
 "climate": "Alpine",
 "description": "A small tree with heart-shaped leaves and a spreading canopy.",
 "height": "Up to 30 feet",
@@ -177,7 +177,7 @@
 },
 {
 "name": "Bristlecone Pine Tree",
-"image", "no_image",
+"image": "no_image",
 "climate": "Alpine",
 "description": "A small tree with twisted branches and needle"
 }
