@@ -145,7 +145,7 @@
     },
     {
         "name": "Redbud Tree",
-        "image": "https://en.m.wikipedia.org/wiki/File:Columbus_Wisconsin_Redbud_Tree_small.jpg",
+        "image": "https://cdn.mos.cms.futurecdn.net/KqZzsz2Jz4yvU8gr9cPe3m.jpg",
         "climate": "Temperate",
         "description": "A small tree with pink flowers and a spreading canopy.",
         "height": "Up to 30 feet",
@@ -153,7 +153,7 @@
     },
     {
         "name": "Paperbark Maple Tree",
-        "image": "https://en.m.wikipedia.org/wiki/File:Acer_griseum_Morton_836-58-7.jpg",
+        "image": "https://jfschmidt.com/wp-content/uploads/2023/01/acer-fireburstpaperbark-web-01.jpg",
         "climate": "Temperate",
         "description": "A small tree with peeling bark and palmate leaves.",
         "height": "Up to 30 feet",
@@ -161,7 +161,7 @@
     },
     {
         "name": "Lodgepole Pine Tree",
-        "image": "https://en.m.wikipedia.org/wiki/File:Tuolumne_Meadows_-_Pywiack_Dome_North_ridge_-_2.JPG",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeTSwQ_iFZ6BqV3sBJbwpLM-xupHogqlu9ng&s",
         "climate": "Alpine",
         "description": "A tall tree with a straight trunk and needle-like leaves.",
         "height": "Up to 100 feet",
@@ -177,7 +177,7 @@
     },
     {
         "name": "Bristlecone Pine Tree",
-        "image": "https://en.m.wikipedia.org/wiki/File:Big_bristlecone_pine_Pinus_longaeva.jpg",
+        "image": "https://cdn.britannica.com/63/231263-050-81F6B74C/Bristlecone-pine-Mount-Washington-Great-Basin-National-Park-Nevada.jpg",
         "climate": "Alpine",
         "description": "A small tree with twisted branches and needle"
     }
