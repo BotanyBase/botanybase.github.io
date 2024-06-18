@@ -32,3 +32,19 @@ window.addEventListener('scroll', () => {
 window.addEventListener('load', () => {
   document.documentElement.classList.add('loaded');
 });
+
+
+//audio.js
+const soundButton = document.getElementById('soundButton');
+const soundtrack = document.getElementById('soundtrack');
+
+soundButton.addEventListener('click', () => {
+    if (soundtrack.paused) {
+        soundtrack.play();
+        soundButton.innerHTML = '<i class="fas fa-pause"></i>';
+    } else {
+        soundtrack.pause();
+        //soundtrack.currentTime = 0;
+        soundButton.innerHTML = '<i class="fas fa-play"></i>';
+    }
+});
