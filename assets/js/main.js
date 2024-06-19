@@ -1,6 +1,19 @@
 //main.js
 
 
+//loadpagesmoothly.js
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
+
 //install-sw.js
 const registerServiceWorker = async () => {
   console.log("noError1")
