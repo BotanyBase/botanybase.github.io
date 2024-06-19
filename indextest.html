@@ -19,95 +19,53 @@ title: Main
   max-width: 200px; /* Add a max width to ensure centering works */
   transition-duration: l;
   
-.rotatingText {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  text-align: center;
-}
-
-.rotatingText-content {
+h1 {
+  color: #61bd37;
+  display: inline-block;
   position: relative;
-  width: 100%;
-}
-
-.rotatingText-description {
-  font-family: "Georgia", serif;
-  font-style: italic;
-  font-size: 14px;
-  margin: 0;
-}
-@media (min-width: 768px) {
-  .rotatingText-description {
-    font-size: 18px;
+  span {
+    display: inline-block;
   }
-}
-
-.rotatingText-adjective {
-  font-family: "Open Sans", sans-serif;
-  font-size: 40px;
-  left: 0;
-  margin-bottom: 0;
-  margin-top: 30px;
-  opacity: 0;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  text-transform: uppercase;
-  top: 0;
-}
-@media (min-width: 768px) {
-  .rotatingText-adjective {
-    font-size: 70px;
+  > span {
+    display: block;
+    position: relative;
+    > span {
+      transition: .4s;
+      opacity: 0;
+      > span {
+        overflow: hidden;
+      }
+      &:nth-child(1) {
+        transform: translateX(-10px);
+        > span {
+          transform: translateY(-50%);
+          > span {
+            transform: translateY(50%);
+          }
+        }
+      }
+      
+      &:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(10px);
+        > span {
+          transform: translateY(50%);
+          > span {
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
   }
-}
-
-.rotatingText-adjective:nth-of-type(1) {
-  -webkit-animation: rotate-text-up 1.5s 0.75s;
-          animation: rotate-text-up 1.5s 0.75s;
-}
-.rotatingText-adjective:nth-of-type(2) {
-  -webkit-animation: rotate-text-up 1.5s 2s;
-          animation: rotate-text-up 1.5s 2s;
-}
-.rotatingText-adjective:nth-of-type(3) {
-  -webkit-animation: fade-text-in 1.5s 3.25s forwards;
-          animation: fade-text-in 1.5s 3.25s forwards;
-}
-
-@-webkit-keyframes rotate-text-up {
-  0% {
-    transform: translate3d(0, 80px, 0);
-    opacity: 0;
-  }
-  20%, 80% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-  100% {
-    transform: translate3d(0, -40px, 0);
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes fade-text-in {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 80px, 0);
-  }
-  50%, 100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes fade-text-in {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 80px, 0);
-  }
-  50%, 100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+  &.move {
+    > span {
+      > span {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
   }
 }
 </style>
@@ -115,11 +73,15 @@ title: Main
 <br>
 <div style="background-image: url('https://botanybase.github.io/assets/img/MainBG.png'); background-size: cover; background-position: center; height: 100vh;">
 <hr>
-<h1 style="text-align: center; padding: 30px; font-size: 50px;">BotanyBase</h1>
-<div class="rotatingText-content">
-  <h2 class="rotatingText-adjective">Botany,</h2>
-  <h2 class="rotatingText-adjective">Open Source,</h2>
-  <h2 class="rotatingText-adjective">BotanyBase</h2>
+<!--<h1 style="text-align: center; padding: 30px; font-size: 50px;">BotanyBase</h1>-->
+<div class="container">
+  <h1 class="cut-text">
+    <span>
+      <span><span><span>BotanyBase</span></span></span>
+      <span><span><span>BotanyBase
+</span></span></span>
+      </span>
+  </h1>
 </div>
 <p style="text-align: center;">A Plant Classification Guide</p>
 <small><p style="text-align: center;">By <a href="https://1d10t1c-stud10s.github.io">1D10T1C STUD10S</a></small>
