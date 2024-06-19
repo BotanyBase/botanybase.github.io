@@ -17,7 +17,7 @@
   },
   {
     "name": "Joshua Tree",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Joshua_tree_1.jpg/800px-Joshua_tree_1.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Joshua_Tree_01.jpg",
     "climate": "Desert",
     "description": "A distinctive tree with spiky leaves and a unique branching structure.",
     "height": "Up to 40 feet",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Cacti",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Cactus_Mojave_Desert.jpg/800px-Cactus_Mojave_Desert.jpg",
+    "image": "https://hips.hearstapps.com/hmg-prod/images/red-orange-cactus-flowers-parodia-notocactus-royalty-free-image-1717719946.jpg",
     "climate": "Desert",
     "description": "A diverse family of plants adapted to arid conditions with thick, fleshy stems.",
     "height": "Varies widely",
@@ -33,7 +33,7 @@
   },
   {
     "name": "Desert Ironwood",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Ironwood.jpg/800px-Ironwood.jpg",
+    "image": "https://horticultureunlimited.com/wp-content/uploads/2016/01/Olneya-tesota-Desert-Ironwood-1-410x400.jpg",
     "climate": "Desert",
     "description": "A slow-growing tree with dense, hard wood, and small leaves.",
     "height": "Up to 30 feet",
@@ -41,7 +41,7 @@
   },
   {
     "name": "Saguaro Cactus",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Saguaro_Cactus.jpg/800px-Saguaro_Cactus.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Carnegiea_gigantea_in_Saguaro_National_Park_near_Tucson%2C_Arizona_during_November_%2858%29.jpg/1024px-Carnegiea_gigantea_in_Saguaro_National_Park_near_Tucson%2C_Arizona_during_November_%2858%29.jpg",
     "climate": "Desert",
     "description": "A large cactus with a tall, tree-like structure and arm-like branches.",
     "height": "Up to 40 feet",
