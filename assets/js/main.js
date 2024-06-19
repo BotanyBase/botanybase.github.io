@@ -1,6 +1,43 @@
 //main.js
 
 
+//install-sw.js
+const registerServiceWorker = async () => {
+  console.log("noError1")
+  if ("serviceWorker" in navigator) {
+    console.log("noError2")
+    try {
+      const registration = await navigator.serviceWorker.register("/sw.js", {
+        scope: "/",
+      });
+      console.log("noError3")
+      if (registration.installing) {
+        console.log("Service worker installing");
+      } else if (registration.waiting) {
+        console.log("Service worker installed");
+      } else if (registration.active) {
+        console.log("Service worker active");
+      }
+    } catch (error) {
+      console.error(`Registration failed with ${error}`);
+    }
+  }
+};
+
+
+// Check if a service worker is installed
+navigator.serviceWorker.getRegistrations().then(registrations => {
+  if (registrations.length > 0) {
+    // Show the modal notification
+    showOfflineNotification();
+     console.log("noError4")
+  }
+});
+
+registerServiceWorker();
+
+
+
 //navbar.js
 const navbar = document.querySelector('.navbar');
 const offset = navbar.offsetTop + navbar.offsetHeight;
@@ -48,3 +85,4 @@ soundButton.addEventListener('click', () => {
         soundButton.innerHTML = '<i class="fas fa-play"></i>';
     }
 });
+
