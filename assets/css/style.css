@@ -165,6 +165,26 @@ hr {
   color: #34C759; /* White text on hover */
 }
 
+.button2 {
+  background-color: #ffffff; /* White-ish background */
+  color: #34C759; /* Green text color */
+  border: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: block; /* Make the button a block element */
+  margin: 0 auto; /* Center the button */
+  max-width: 200px; /* Add a max width to ensure centering works */
+  transition-duration: 0.4s;
+}
+
+.button2:hover {
+  background-color: #34C759; /* Green background on hover */
+  color: #ffffff; /* White text on hover */
+}
+
 .posts.post {
 	 padding-bottom: 2em;
 	 border-bottom: 1px solid;
