@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Bird of Paradise",
+    "image": "https://gardendrum.com/wp-content/uploads/2012/02/Heliconia-2.jpg",
+    "climate": "Subtropical",
+    "description": "Comes in various colours, what makes it unique is its bird beak shaped flowers.",
+    "height": "Up to 6 feet",
+    "special_feature": "Striking appearance"
+  },
+  {
+    "name": "Gardenia",
+    "image": "https://plantly.io/wp-content/uploads/2023/03/gardenia-bush-flower.jpg",
+    "climate": "Subtropical",
+    "description": "A fragrant plant with white flowers and glossy leaves.",
+    "height": "Up to 4 feet",
+    "special_feature": "Fragrant"
+  },
+  {
+    "name": "Live Oak Tree",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIJU2Vm9rN0s5C2EOVOj909mJvO3YJDNkaMw&usqp=CAU52.jpg",
+    "climate": "Subtropical",
+    "description": "A large tree with a spreading canopy and twisted branches.",
+    "height": "Up to 60 feet",
+    "special_feature": "Long lifespan"
+  },
+  {
+    "name": "Crape Myrtle Tree",
+    "image": "https://cdn.shopify.com/s/files/1/0059/8835/2052/products/Tuscarora_Crape_myrtle_2_FGT.jpg?v=1612444257",
+    "climate": "Subtropical",
+    "description": "A small tree with showy flowers and a smooth bark.",
+    "height": "Up to 20 feet",
+    "special_feature": "Vibrant flowers"
+  },
+  {
+    "name": "Southern Magnolia Tree",
+    "image": "https://moreleaf.org/wp-content/uploads/2021/06/magnolia-1024x768.png",
+    "climate": "Subtropical",
+    "description": "A large tree with large flowers and a conical shape.",
+    "height": "Up to 80 feet",
+    "special_feature": "Fragrant flowers"
+  }
+]
