@@ -133,10 +133,20 @@ img {
 </div>
 
 <script>
- fetch('plants.json')
-  .then(response => response.json())
-  .then(data => {
-    const plants = data;
+ // List of JSON file URLs
+const jsonFiles = [
+    'https://botanybase.github.io/data/plants.json'
+];
+
+// Function to fetch and combine JSON files
+async function fetchAndCombineJSON() {
+    const promises = jsonFiles.map(url => fetch(url).then(response => response.json()));
+    const dataArrays = await Promise.all(promises);
+    return dataArrays.flat(); // Combine all arrays into one
+}
+
+// Fetch and combine the JSON files
+fetchAndCombineJSON().then(plants => {
     const currentClimate = document.querySelector('#climate-type').textContent.toLowerCase();
     const filteredPlants = plants.filter(plant => plant.climate.toLowerCase() === currentClimate);
     const plantEntriesContainer = document.querySelector('.plant-entries');
@@ -146,40 +156,41 @@ img {
     const message = document.createElement('p');
     message.textContent = 'Start typing, or enter * to show all plants';
     plantEntriesContainer.appendChild(message);
-    
+
     // Display message "No results, try a different query"
     const message2 = document.createElement('p');
     message2.textContent = 'No results, try a different query';
 
     searchInput.addEventListener('input', () => {
-      const searchQuery = searchInput.value.toLowerCase();
-      let filtered = [];
-      if (searchQuery === '') {
-        plantEntriesContainer.innerHTML = '';
-        plantEntriesContainer.appendChild(message);
-      } else if (searchQuery === '*') {
-        filtered = filteredPlants;
-      } else {
-        filtered = filteredPlants.filter(plant => plant.name.toLowerCase().includes(searchQuery));
-      }
-      if (filtered.length === 0) {
-        plantEntriesContainer.innerHTML = '';
-        plantEntriesContainer.appendChild(message2);
-      } else {
-        plantEntriesContainer.innerHTML = '';
-        filtered.forEach(plant => {
-          const plantEntryHTML = `
-           <div class="entry-wrapper">
-            <h2>${plant.name}</h2>
-            <p>${plant.description}</p>
-            <img src="${plant.image}" alt="${plant.name}">
-           </div>
-          `;
-          const plantEntryElement = document.createElement('div');
-          plantEntryElement.innerHTML = plantEntryHTML;
-          plantEntriesContainer.appendChild(plantEntryElement);
-        });
-      }
+        const searchQuery = searchInput.value.toLowerCase();
+        let filtered = [];
+        if (searchQuery === '') {
+            plantEntriesContainer.innerHTML = '';
+            plantEntriesContainer.appendChild(message);
+        } else if (searchQuery === '*') {
+            filtered = filteredPlants;
+        } else {
+            filtered = filteredPlants.filter(plant => plant.name.toLowerCase().includes(searchQuery));
+        }
+        if (filtered.length === 0) {
+            plantEntriesContainer.innerHTML = '';
+            plantEntriesContainer.appendChild(message2);
+        } else {
+            plantEntriesContainer.innerHTML = '';
+            filtered.forEach(plant => {
+                const plantEntryHTML = `
+                    <div class="entry-wrapper">
+                        <h2>${plant.name}</h2>
+                        <p>${plant.description}</p>
+                        <img src="${plant.image}" alt="${plant.name}">
+                    </div>
+                `;
+                const plantEntryElement = document.createElement('div');
+                plantEntryElement.innerHTML = plantEntryHTML;
+                plantEntriesContainer.appendChild(plantEntryElement);
+            });
+        }
     });
-  });
+});
+;
 </script>
