@@ -57,24 +57,33 @@
   color: #ccc;
 }
 
+/* Hamburger menu styles */
+.menu-toggle {
+  display: none;
+}
+
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
   .navbar ul {
     display: none;
-    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
     width: 100%;
     text-align: center;
   }
-  
-  .navbar.show ul {
-    display: flex;
+  .navbar ul.show {
+    display: block;
   }
-
   .navbar li {
     margin-right: 0;
     padding: 0.5rem 0;
   }
-
+  .navbar a {
+    display: block;
+    padding: 0.5rem 0;
+  }
   .menu-toggle {
     display: block;
     cursor: pointer;
@@ -85,7 +94,11 @@
 
 <nav class="navbar">
   <p class="maina-wrapper"><a class="maina" href="https://botanybase.github.io/">BotanyBase</a></p>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span class="hamburger"></span>
+    <span class="hamburger"></span>
+    <span class="hamburger"></span>
+  </div>
   <ul>
     <li><a href="https://botanybase.github.io/identify">Identify</a></li>
     <li><a href="https://botanybase.github.io/blog">Blog</a></li>
@@ -100,11 +113,12 @@
 function toggleMenu() {
   var navbar = document.querySelector('.navbar');
   var menuToggle = document.querySelector('.menu-toggle');
-  navbar.classList.toggle('show');
-  if (navbar.classList.contains('show')) {
-    menuToggle.innerHTML = '×'; // Change to a close icon or text when menu is open
+  var navMenu = document.querySelector('.navbar ul');
+  navMenu.classList.toggle('show');
+  if (navMenu.classList.contains('show')) {
+    menuToggle.innerHTML = '×'; 
   } else {
-    menuToggle.innerHTML = '☰'; // Original hamburger icon/text
+    menuToggle.innerHTML = '<span class="hamburger"></span><span class="hamburger"></span><span class="hamburger"></span>'; 
   }
 }
 </script>
