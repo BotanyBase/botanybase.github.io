@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Sedum",
+    "image": "https://sp.yimg.com/ib/th?id=OIP.1hsHbQFrnVbDAoa5DVXE4QHaE8&pid=Api&w=148&h=148&c=7&dpr=2&rs=1",
+    "climate": "Desert",
+    "description": "A succulent plant with thick, fleshy leaves.",
+    "height": "Up to 2 feet",
+    "special_feature": "Drought tolerance"
+  },
+  {
+    "name": "Aloe Vera",
+    "image": "https://tse4.mm.bing.net/th?id=OIP.hzbCCb3NMiEbO8dWx4fQ0AHaFj&pid=Api&P=0&h=180",
+    "climate": "Desert",
+    "description": "A succulent plant with healing properties.",
+    "height": "Up to 3 feet",
+    "special_feature": "Healing properties"
+  },
+  {
+    "name": "Joshua Tree",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Joshua_tree_1.jpg/800px-Joshua_tree_1.jpg",
+    "climate": "Desert",
+    "description": "A distinctive tree with spiky leaves and a unique branching structure.",
+    "height": "Up to 40 feet",
+    "special_feature": "Unique, spiky appearance"
+  },
+  {
+    "name": "Cacti",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Cactus_Mojave_Desert.jpg/800px-Cactus_Mojave_Desert.jpg",
+    "climate": "Desert",
+    "description": "A diverse family of plants adapted to arid conditions with thick, fleshy stems.",
+    "height": "Varies widely",
+    "special_feature": "Water-storing tissues"
+  },
+  {
+    "name": "Desert Ironwood",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Ironwood.jpg/800px-Ironwood.jpg",
+    "climate": "Desert",
+    "description": "A slow-growing tree with dense, hard wood, and small leaves.",
+    "height": "Up to 30 feet",
+    "special_feature": "Very hard wood"
+  },
+  {
+    "name": "Saguaro Cactus",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Saguaro_Cactus.jpg/800px-Saguaro_Cactus.jpg",
+    "climate": "Desert",
+    "description": "A large cactus with a tall, tree-like structure and arm-like branches.",
+    "height": "Up to 40 feet",
+    "special_feature": "Large size and arms"
+  }
+]
