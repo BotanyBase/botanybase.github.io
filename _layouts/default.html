@@ -4,12 +4,12 @@
   {% include head.html %}
   
   <body onload="myFunction()" style="margin:0;">
-
-    {% include navigation.html %}
     
     <main>
-    <span class="loader" id="loader"></span>
+    <div class="loader" id="loader"></div>
     <div id="myDiv" style="display: none;" class="animate-bottom">
+      
+        {% include navigation.html %}
         <br>
         {{ content }}
         <!-- page content -->
