@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Monstera Deliciosa",
+    "image": "https://21facts.net/wp-content/uploads/2020/10/Monstera-Deliciosa.jpg",
+    "climate": "Tropical",
+    "description": "A popular houseplant known for its large, glossy leaves.",
+    "height": "Up to 6 feet",
+    "special_feature": "Statement piece"
+  },
+  {
+    "name": "Philodendron Brasil",
+    "image": "https://theplantcellar.com.au/wp-content/uploads/2020/12/products-20201207_103331-scaled.jpg",
+    "climate": "Tropical",
+    "description": "A low-maintenance plant with heart-shaped leaves.",
+    "height": "Up to 4 feet",
+    "special_feature": "Versatile"
+  },
+  {
+    "name": "Dracaena Marginata",
+    "image": "https://tse3.mm.bing.net/th?id=OIP.FEPslj0I-WXCTrrNDkWqhwHaHa&pid=Api&P=0&h=180",
+    "climate": "Tropical",
+    "description": "A versatile plant with slender leaves and a tall, upright habit.",
+    "height": "Up to 10 feet",
+    "special_feature": "Air purification"
+  },
+  {
+    "name": "Tufted Airplant",
+    "image": "https://garden.org/pics/2019-02-05/Hemde/691b63.jpg",
+    "climate": "Tropical",
+    "description": "Another common household plant, decorated in vibrant red.",
+    "height": "Up to 3 feet",
+    "special_feature": "Epiphyte"
+  },
+  {
+    "name": "Banyan Tree",
+    "image": "https://i0.wp.com/oceanblueproject.org/wp-content/uploads/2022/08/5-unique-facts-about-the-banyan-tree.jpg?resize=1200%2C1754&ssl=1",
+    "climate": "Tropical",
+    "description": "A large tree with aerial roots and a wide canopy.",
+    "height": "Up to 100 feet",
+    "special_feature": "Unique root system"
+  },
+  {
+    "name": "Mango Tree",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Lqo2teyWoNi9JWU-wfFGCIsV9O8TxYMwSQ&s",
+    "climate": "Tropical",
+    "description": "A fruit-bearing tree with a spreading canopy.",
+    "height": "Up to 60 feet",
+    "special_feature": "Delicious fruit"
+  },
+  {
+    "name": "Papaya Tree",
+    "image": "https://images.squarespace-cdn.com/content/v1/5a2cb68dc027d863edfe8275/1605406829095-X5IX867WYC957NTLWNQB/Unknown-4.jpeg",
+    "climate": "Tropical",
+    "description": "A small tree with a single stem and large leaves.",
+    "height": "Up to 10 feet",
+    "special_feature": "Fast growth rate"
+  }
+]
