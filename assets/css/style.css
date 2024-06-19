@@ -358,8 +358,8 @@ hr {
 }
 
 .corners {
-	width: 40px;
-	height: 40px;
+	width: 45px;
+	height: 45px;
 	position: relative;
 	transform-origin: center;
 	animation: spin 3s infinite linear;
@@ -372,8 +372,8 @@ hr {
 	
 	&::before {
 		display: block;
-	        width: 35%;
-		height: 35%;
+	        width: 50%;
+		height: 50%;
 		border-radius: 0 40% 0 40%;
 		background-color: #61bd37;
 		content: '';
