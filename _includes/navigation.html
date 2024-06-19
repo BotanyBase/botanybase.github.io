@@ -116,9 +116,9 @@ function toggleMenu() {
   var navMenu = document.querySelector('.navbar ul');
   navMenu.classList.toggle('show');
   if (navMenu.classList.contains('show')) {
-    menuToggle.innerHTML = '×'; 
+    menuToggle.innerHTML = '<i class="fa fa-times"></i>'; 
   } else {
-    menuToggle.innerHTML = '<span class="hamburger"></span><span class="hamburger"></span><span class="hamburger"></span>'; 
+    menuToggle.innerHTML = '<i class="fa fa-bars"></i>'; 
   }
 }
 </script>
