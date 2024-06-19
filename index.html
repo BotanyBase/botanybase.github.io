@@ -54,6 +54,8 @@ title: Main
   padding: 5px;
   margin-left: 5%;
 }
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Oswald); .wordCarousel { 	font-size: 36px; 	font-weight: 100; 	color: #939393; } .wordCarousel div { 	overflow: hidden; 	position: relative; 	float: right; 	height: 65px; 	padding-top: 10px; 	margin-top: -10px; } .wordCarousel div li { 	font-family: Serif; 	color: #ccc; 	font-weight: 700; 	padding: 0 10px; 	height: 45px; 	margin-bottom: 45px; 	display: block; } .flip2 { 	-webkit-animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; 	animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; } .flip3 { 	-webkit-animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; 	animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; } .flip4 { 	-webkit-animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; 	animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; } @-webkit-keyframes flip2 { 	0% { 		margin-top: -180px; 	} 	5% { 		margin-top: -90px; 	} 	50% { 		margin-top: -90px; 	} 	55% { 		margin-top: 0px; 	} 	99.99% { 		margin-top: 0px; 	} 	100% { 		margin-top: -270px; 	} } @keyframes flip2 { 	0% { 		margin-top: -180px; 	} 	5% { 		margin-top: -90px; 	} 	50% { 		margin-top: -90px; 	} 	55% { 		margin-top: 0px; 	} 	99.99% { 		margin-top: 0px; 	} 	100% { 		margin-top: -270px; 	} } @-webkit-keyframes flip3 { 	0% { 		margin-top: -270px; 	} 	5% { 		margin-top: -180px; 	} 	33% { 		margin-top: -180px; 	} 	38% { 		margin-top: -90px; 	} 	66% { 		margin-top: -90px; 	} 	71% { 		margin-top: 0px; 	} 	99.99
 </style>
 
 <br>
@@ -69,6 +71,17 @@ title: Main
 </div>
 <hr>
 <br>
+<h4 class="wordCarousel">
+  <span>Word swipe animation:
+  </span>
+  <div> <!-- Use classes 2,3, or 4 to match the number of words --> 
+    <ul class="flip3"> 
+      <li>Open Source</li>
+      <li>Completely Free</li> 
+      <li>Essy to Use</li>
+    </ul>
+  </div>
+</h4>
 <p style="text-align: center; text-decoration: bold; padding: 5px;">We have multiple ways to help you find out what you're looking at, from leaf types to climate regions. Get started now! No signing up required too :) (It's really easy too, steps below)</p>
 <br>
 <div class="bgsecondary1">
