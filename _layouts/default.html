@@ -9,7 +9,7 @@
     
     <main>
     <div id="loader"></div>
-    <div id="myDiv" style="display: none;">
+    <div id="myDiv" style="display: none;" class="animate-bottom">
         <br>
         {{ content }}
         <!-- page content -->
@@ -25,9 +25,9 @@
 
     <!-- add javascript -->
     <script type="text/javascript" src="https://botanybase.github.io/assets/js/main.js"></script>
+
+    {% include footer.html %}
     
   </body>
-
-  {% include footer.html %}
   
 </html>
