@@ -1,4 +1,5 @@
 <style>
+/* Basic navbar styles */
 .navbar {
   background-color: #333;
   color: #fff;
@@ -10,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.3s ease-in-out; /* Add a smooth transition effect */
+  transition: all 0.3s ease-in-out;
 }
 
 .maina-wrapper {
@@ -21,12 +22,12 @@
 
 .navbar.hide {
   transform: translateY(-100%);
-}  
+}
 
 .navbar.sticky {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow when sticky */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-  
+
 .maina {
   color: #05ff58 !important;
   font-size: 1.2rem;
@@ -35,7 +36,7 @@
 .navbar ul {
   list-style: none;
   margin: 0;
-  padding: 5px;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -55,17 +56,50 @@
 .navbar a:hover {
   color: #ccc;
 }
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar.show ul {
+    display: flex;
+  }
+
+  .navbar li {
+    margin-right: 0;
+    padding: 0.5rem 0;
+  }
+  
+  .navbar .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+  }
+}
+
 </style>
 
 <nav class="navbar">
-    <p class="maina-wrapper"><a class="maina" href="https://botanybase.github.io/">BotanyBase</a></p>
-    <ul>
-      <li><a href="https://botanybase.github.io/identify">Identify</a></li>
-      <li><a href="https://botanybase.github.io/blog">Blog</a></li>
-      <li><a href="https://botanybase.github.io/forum">Forums</a></li>
-      <li><a href="https://botanybase.github.io/identify/full">Database</a></li>
-      <li><a href="https://botanybase.github.io/docs">Docs</a></li>
-      <li><a href="https://botanybase.github.io/contribute/add" class="button">Contribute</a></li>
-      <!-- Add more links here -->
-    </ul>
+  <p class="maina-wrapper"><a class="maina" href="https://botanybase.github.io/">BotanyBase</a></p>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <ul>
+    <li><a href="https://botanybase.github.io/identify">Identify</a></li>
+    <li><a href="https://botanybase.github.io/blog">Blog</a></li>
+    <li><a href="https://botanybase.github.io/forum">Forums</a></li>
+    <li><a href="https://botanybase.github.io/identify/full">Database</a></li>
+    <li><a href="https://botanybase.github.io/docs">Docs</a></li>
+    <li><a href="https://botanybase.github.io/contribute/add" class="button">Contribute</a></li>
+  </ul>
 </nav>
+
+<script>
+function toggleMenu() {
+  var navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('show');
+}
+</script>
