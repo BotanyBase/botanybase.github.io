@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Alpine Forget-Me-Not",
+    "image": "https://worldoffloweringplants.com/wp-content/uploads/2018/01/Myosotis-alpestris-Alpine-Forget-me-not2.jpg",
+    "climate": "Alpine",
+    "description": "A small, flowering plant with blue blooms.",
+    "height": "Up to 1 foot",
+    "special_feature": "Tiny flowers"
+  },
+  {
+    "name": "Lodgepole Pine Tree",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeTSwQ_iFZ6BqV3sBJbwpLM-xupHogqlu9ng&s",
+    "climate": "Alpine",
+    "description": "A tall tree with a straight trunk and needle-like leaves.",
+    "height": "Up to 100 feet",
+    "special_feature": "Fast growth rate"
+  },
+  {
+    "name": "Quaking Aspen Tree",
+    "image": "https://www.starkbros.com/images/dynamic/7350-960x960.webp",
+    "climate": "Alpine",
+    "description": "A small tree with heart-shaped leaves and a spreading canopy.",
+    "height": "Up to 30 feet",
+    "special_feature": "Unique leaves"
+  },
+  {
+    "name": "Bristlecone Pine Tree",
+    "image": "https://cdn.britannica.com/63/231263-050-81F6B74C/Bristlecone-pine-Mount-Washington-Great-Basin-National-Park-Nevada.jpg",
+    "climate": "Alpine",
+    "description": "A small tree with twisted branches and needle-like leaves.",
+    "height": "Up to 30 feet",
+    "special_feature": "Ancient and resilient"
+  }
+]
