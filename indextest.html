@@ -1,0 +1,145 @@
+---
+layout: default
+title: Main
+---
+
+<style>
+.btn {
+  background-color: #34C759; /* White-ish background */
+  color: #f7f7f7; /* Green text color */
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: block; /* Make the button a block element */
+  margin: 0 auto; /* Center the button */
+  max-width: 200px; /* Add a max width to ensure centering works */
+  transition-duration:l.rotatingText { 
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  text-align: center;
+}
+
+.rotatingText-content { 
+  position: relative;
+  width: 100%;
+}
+
+.rotatingText-description { 
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 14px;
+  margin: 0;
+  
+  @media (min-width: 768px) { 
+    font-size: 18px;
+  }
+}
+
+.rotatingText-adjective { 
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  left: 0;
+  margin-bottom: 0;
+  margin-top: 30px;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  
+  @media (min-width: 768px) { 
+    font-size: 70px;
+  }
+  
+  &:nth-of-type(1) { 
+    animation: rotate-text-up 1.5s .75s; 
+  }
+  
+  &:nth-of-type(2) { 
+    animation: rotate-text-up 1.5s 2s; 
+  }  
+  
+  &:nth-of-type(3) { 
+    animation: fade-text-in 1.5s 3.25s forwards;
+  }
+}
+
+@keyframes rotate-text-up { 
+  0% {
+    transform: translate3d(0, 80px, 0);
+    opacity: 0;
+  }
+  
+  20%, 80% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translate3d(0, -40px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-text-in { 
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 80px, 0);
+  }
+  
+  50%, 100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+</style>
+
+<br>
+<div style="background-image: url('https://botanybase.github.io/assets/img/MainBG.png'); background-size: cover; background-position: center; height: 100vh;">
+<hr>
+<h1 style="text-align: center; padding: 30px; font-size: 50px;">BotanyBase</h1>
+<div class="rotatingText-content">
+  <h2 class="rotatingText-adjective">Botany,</h2>
+  <h2 class="rotatingText-adjective">Open Source,</h2>
+  <h2 class="rotatingText-adjective">BotanyBase</h2>
+</div>
+<p style="text-align: center;">A Plant Classification Guide</p>
+<small><p style="text-align: center;">By <a href="https://1d10t1c-stud10s.github.io">1D10T1C STUD10S</a></small>
+<h2 style="text-align: center;">Using the simplest interface, to help you appreciate nature.</h2>
+<br>
+<a class="btn btn-green" href="/identify">Start Now</a>
+<br>
+</div>
+<hr>
+<br>
+<p style="text-align: center; text-decoration: bold; padding: 5px;">We have multiple ways to help you find out what you're looking at, from leaf types to climate regions. Get started now! No signing up required too :) (It's really easy too, steps below)</p>
+<br>
+<div class="bgsecondary1">
+<h3>1. Find out which climate you are in.</h2>
+<h3>2. Search our database and narrow down results.</h2>
+<h3>3. Match the plant with the pictures provided.</h2>
+<h3>4. You got it!</h2>
+</div>
+<br>
+<h3 style="text-align: center;">Our Database isn't the most extensive!</h3>
+<p style="text-align: center;">Help us <a href="/contribute">contribute</a> now!</p>
+<p style="text-align: center;"><a href="https://botanybase.github.io/contribute/add">Automated Contribution</a></p>
+<br>
+<div class="bgsecondary1">
+<h4><a class="button2" style="display:block; margin: 0 auto;" href="#dev" rel="modal:open">To the Technical Zone</a></h4>
+</div>
+<br>
+
+<!-- Modal HTML embedded directly into document -->
+<div id="dev" class="modal">
+  <p>You are proceeding to the Technical Zone (Docs)! Continue?</p>
+  <a href="/Docs">Let's Go!</a><br>
+  <a href="#" rel="modal:close">Back</a>
+</div>
