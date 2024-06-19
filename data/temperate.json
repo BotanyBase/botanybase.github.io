@@ -1,0 +1,42 @@
+[
+  {
+    "name": "English Ivy",
+    "image": "https://tse2.mm.bing.net/th?id=OIP.kyJm_x5ueX5v8I39QCBTfAHaFj&pid=Api&P=0&h=180",
+    "climate": "Temperate",
+    "description": "A versatile plant with trailing stems and small leaves.",
+    "height": "Up to 8 feet",
+    "special_feature": "Easy to train"
+  },
+  {
+    "name": "Peace Lily",
+    "image": "https://www.noticiasdejardim.com/wp-content/uploads/2020/07/peace-lily-plants-peace-lily-care-1.jpg",
+    "climate": "Temperate",
+    "description": "A plant with white blooms and dark green leaves, known for its air purification abilities.",
+    "height": "Up to 3 feet",
+    "special_feature": "Air purification"
+  },
+  {
+    "name": "Sugar Maple Tree",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLHRmPlzq9VcLQ3fRqcDtYG4caFiRZ7hq0g&sg",
+    "climate": "Temperate",
+    "description": "A large tree with palmate leaves and a grey bark.",
+    "height": "Up to 100 feet",
+    "special_feature": "Brilliant fall colors"
+  },
+  {
+    "name": "Redbud Tree",
+    "image": "https://cdn.mos.cms.futurecdn.net/KqZzsz2Jz4yvU8gr9cPe3m.jpg",
+    "climate": "Temperate",
+    "description": "A small tree with pink flowers and a spreading canopy.",
+    "height": "Up to 30 feet",
+    "special_feature": "Early bloomer"
+  },
+  {
+    "name": "Paperbark Maple Tree",
+    "image": "https://jfschmidt.com/wp-content/uploads/2023/01/acer-fireburstpaperbark-web-01.jpg",
+    "climate": "Temperate",
+    "description": "A small tree with peeling bark and palmate leaves.",
+    "height": "Up to 30 feet",
+    "special_feature": "Unique bark"
+  }
+]
