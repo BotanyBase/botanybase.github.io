@@ -351,3 +351,68 @@ hr {
   display: none;
   text-align: center;
 }
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.corners {
+	width: 40px;
+	height: 40px;
+	position: relative;
+	transform-origin: center;
+	animation: spin 3s infinite linear;
+}
+
+.corner {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	
+	&::before {
+		display: block;
+	        width: 35%;
+		height: 35%;
+		border-radius: 0 40% 0 40%;
+		background-color: #61bd37;
+		content: '';
+	}
+}
+
+@keyframes spin1 {
+	0% { transform: rotate(0deg); }
+	30% { transform: rotate(0deg); }
+	70% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+@keyframes spin2 {
+	0% { transform: rotate(0deg); }
+	30% { transform: rotate(270deg); }
+	70% { transform: rotate(270deg); }
+	100% { transform: rotate(360deg); }
+}
+
+@keyframes spin3 {
+	0% { transform: rotate(0deg); }
+	30% { transform: rotate(90deg); }
+	70% { transform: rotate(90deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.corner--1 {
+	animation: spin1 3s infinite cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.corner--2 {
+	animation: spin2 3s infinite cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.corner--3 {
+	animation: spin3 3s infinite cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.corner--4 {
+	animation: spin4 3s infinite cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
