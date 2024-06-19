@@ -74,7 +74,7 @@
     margin-right: 0;
     padding: 0.5rem 0;
   }
-  
+
   .menu-toggle {
     display: block;
     cursor: pointer;
@@ -90,7 +90,7 @@
 
 <nav class="navbar">
   <p class="maina-wrapper"><a class="maina" href="https://botanybase.github.io/">BotanyBase</a></p>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="menu-toggle hide" onclick="toggleMenu()">☰</div>
   <ul>
     <li><a href="https://botanybase.github.io/identify">Identify</a></li>
     <li><a href="https://botanybase.github.io/blog">Blog</a></li>
@@ -105,5 +105,11 @@
 function toggleMenu() {
   var navbar = document.querySelector('.navbar');
   navbar.classList.toggle('show');
+  var menuToggle = document.querySelector('.menu-toggle');
+  if (navbar.classList.contains('show')) {
+    menuToggle.classList.remove('hide');
+  } else {
+    menuToggle.classList.add('hide');
+  }
 }
 </script>
