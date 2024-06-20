@@ -62,7 +62,7 @@ window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
   if (scrollTop >= offset) {
     navbar.classList.add('sticky');
-    mainContainer.style.paddingTop = navbar.offsetHeight + 'px';
+    //mainContainer.style.paddingTop = navbar.offsetHeight + 'px';
   } else {
     navbar.classList.remove('sticky');
     mainContainer.style.paddingTop = 0;
