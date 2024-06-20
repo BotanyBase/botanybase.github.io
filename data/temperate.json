@@ -38,5 +38,61 @@
     "description": "A small tree with peeling bark and palmate leaves.",
     "height": "Up to 30 feet",
     "special_feature": "Unique bark"
+  },
+    {
+    "name": "Pin Oak Tree",
+    "image": null,
+    "climate": "Temperate",
+    "description": "A large tree with pinnate leaves and a broad canopy.",
+    "height": "Up to 70 feet",
+    "special_feature": "Tolerates wet soil"
+  },
+  {
+    "name": "Sweetgum Tree",
+    "image": null,
+    "climate": "Temperate",
+    "description": "A large tree with star-shaped leaves and colorful fall foliage.",
+    "height": "Up to 100 feet",
+    "special_feature": "Unique fruit"
+  },
+  {
+    "name": "Black Gum Tree",
+    "image": null,
+    "climate": "Temperate",
+    "description": "A small tree with oval leaves and a conical shape.",
+    "height": "Up to 50 feet",
+    "special_feature": "Attractive fall color"
+  },
+  {
+    "name": "Hawthorn Tree",
+    "image": null,
+    "climate": "Temperate",
+    "description": "A small tree with lobed leaves and white flowers.",
+    "height": "Up to 25 feet",
+    "special_feature": "Thorny branches"
+  },
+  {
+    "name": "Sycamore Tree",
+    "image": null,
+    "climate": "Temperate",
+    "description": "A large tree with maple-like leaves and a mottled trunk.",
+    "height": "Up to 100 feet",
+    "special_feature": "Unique bark"
+  },
+  {
+    "name": "Yellow Poplar Tree",
+    "image": null,
+    "climate": "Temperate",
+    "description": "A tall tree with tulip-shaped flowers and yellow-green leaves.",
+    "height": "Up to 100 feet",
+    "special_feature": "Tallest hardwood tree"
+  },
+  {
+    "name": "Dogwood Tree",
+    "image": null,
+    "climate": "Temperate",
+    "description": "A small tree with showy flowers and red berries.",
+    "height": "Up to 25 feet",
+    "special_feature": "Ornamental flowers"
   }
 ]
