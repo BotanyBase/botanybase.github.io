@@ -4,6 +4,38 @@ title: Identify
 ---
 
 <style>
+.bg {
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    background-color: #81a67c;
+    color: #ffffff;
+    width: 80%;
+    height: auto;
+    padding: 8px;
+  }
+  
+.btn {
+  background-color: #34C759; /* White-ish background */
+  color: #f7f7f7; /* Green text color */
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: block; /* Make the button a block element */
+  margin: 0 auto; /* Center the button */
+  max-width: 200px; /* Add a max width to ensure centering works */
+  transition-duration: 0.4s;
+}
+
+.btn:hover {
+  background-color: #ffffff; /* Green background on hover */
+  color: #34C759; /* White text on hover */
+}
+
   .bg-1 {
     background-image: url(https://botanybase.github.io/assets/img/Tropical.png);
   }
@@ -23,12 +55,16 @@ title: Identify
 
 <br>
 <hr>
+<div class="bg">
 <h1 style="text-align: center;">Database Portal</h1>
 <p style="text-align: center;">Here we use <b>climates</b> to help identify plants, which is especially useful if you're unsure of what family, genus or specific species the plant is!</p>
+</div>
 <br>
 <p style="padding: 10px; text-align: center;"><a href="https://botanybase.github.io">Back</a></p>
 <p style="padding: 10px;"><strong>Select a Climate to Begin, if you'd like to identify via leaf type, go <a href="/identify/leaftype">here</a>.</strong></p>
 <p style="padding: 10px;"><strong>Unsure of which climate you're in, go <a href="/identify/full">here</a>.</strong></p>
+<br>
+<a class="btn btn-green" href="https://botanybase.github.io/identify/other/">Learn More about Plants!</a>
 <br>
 <hr>
 <br>
