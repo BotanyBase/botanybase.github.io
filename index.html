@@ -343,6 +343,43 @@ title: Main
     margin-top: -450px;
   }
 }
+
+.news-carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item.active {
+  transform: translateX(0);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #ccc;
+}
 </style>
 
 <br>
@@ -357,6 +394,27 @@ title: Main
 <br>
 </div>
 <hr>
+<br>
+<div class="news-carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <!-- News article 1 content -->
+    </div>
+    <div class="carousel-item">
+      <!-- News article 2 content -->
+    </div>
+    <div class="carousel-item">
+      <!-- News article 3 content -->
+    </div>
+    <!-- Add more news articles here -->
+  </div>
+  <div class="carousel-control-prev" href="#prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </div>
+  <div class="carousel-control-next" href="#next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </div>
+</div>
 <br>
 <div class="bgsecondary2">
 <h3 style="padding-left: 12px; text-align: left !important; font-size: 24px !important; color: #ffffff !important;">BotanyBase is:</h3>
@@ -420,3 +478,32 @@ title: Main
   <a href="#" rel="modal:close">Back</a>
 </div>
 
+<script>
+const carousel = document.querySelector('.news-carousel');
+const carouselInner = carousel.querySelector('.carousel-inner');
+const carouselItems = carouselInner.querySelectorAll('.carousel-item');
+const carouselControlPrev = carousel.querySelector('.carousel-control-prev');
+const carouselControlNext = carousel.querySelector('.carousel-control-next');
+
+let currentSlide = 0;
+
+carouselControlPrev.addEventListener('click', () => {
+  currentSlide--;
+  updateCarousel();
+});
+
+carouselControlNext.addEventListener('click', () => {
+  currentSlide++;
+  updateCarousel();
+});
+
+function updateCarousel() {
+  carouselItems.forEach((item, index) => {
+    item.classList.remove('active');
+    if (index === currentSlide) {
+      item.classList.add('active');
+    }
+  });
+  carouselInner.style.transform = `translateX(${currentSlide * 100}%)`;
+}
+</script>
