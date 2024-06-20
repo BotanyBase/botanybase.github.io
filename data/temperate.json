@@ -41,7 +41,7 @@
   },
     {
     "name": "Pin Oak Tree",
-    "image": null,
+    "image": "https://www.brighterblooms.com/cdn/shop/products/Pin_Oak_1_BB.jpg",
     "climate": "Temperate",
     "description": "A large tree with pinnate leaves and a broad canopy.",
     "height": "Up to 70 feet",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Sweetgum Tree",
-    "image": null,
+    "image": "https://www.thespruce.com/thmb/mmo6Uk2yqlbrneRyOUGeEic3800=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1354385327-0c3b1b1123854493b3cad7212fd9776c.jpg",
     "climate": "Temperate",
     "description": "A large tree with star-shaped leaves and colorful fall foliage.",
     "height": "Up to 100 feet",
@@ -57,7 +57,7 @@
   },
   {
     "name": "Black Gum Tree",
-    "image": null,
+    "image": "https://sylvangardenslandscape.com/wp-content/uploads/2020/05/Black-Gum.jpg",
     "climate": "Temperate",
     "description": "A small tree with oval leaves and a conical shape.",
     "height": "Up to 50 feet",
@@ -65,7 +65,7 @@
   },
   {
     "name": "Hawthorn Tree",
-    "image": null,
+    "image": "https://treegrowing.tcv.org.uk/wp-content/uploads/2019/09/lone-hawthorn-740x555.jpg",
     "climate": "Temperate",
     "description": "A small tree with lobed leaves and white flowers.",
     "height": "Up to 25 feet",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Sycamore Tree",
-    "image": null,
+    "image": "https://www.plantingtree.com/cdn/shop/products/3087.jpg",
     "climate": "Temperate",
     "description": "A large tree with maple-like leaves and a mottled trunk.",
     "height": "Up to 100 feet",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Yellow Poplar Tree",
-    "image": null,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYUC57rOAoF3ixAWSxpmTDT0lrPjH7XnqO0A&s",
     "climate": "Temperate",
     "description": "A tall tree with tulip-shaped flowers and yellow-green leaves.",
     "height": "Up to 100 feet",
@@ -89,7 +89,7 @@
   },
   {
     "name": "Dogwood Tree",
-    "image": null,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXAIMSPBU12AWXe486EbJWYAbCigTW_LeAJA&s",
     "climate": "Temperate",
     "description": "A small tree with showy flowers and red berries.",
     "height": "Up to 25 feet",
