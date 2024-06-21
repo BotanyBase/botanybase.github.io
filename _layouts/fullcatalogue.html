@@ -98,6 +98,31 @@ img {
   display: block;
   border-radius: 5px;
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
 </style>
 
 {{ content }}
@@ -131,6 +156,12 @@ img {
     <img src="{{ plant.image }}" alt="{{ plant.name }}">
   {% endfor %}
 </div>
+
+<div class="modal" hidden>
+  <img src="" alt="Modal Image">
+  <span class="close">&times;</span>
+</div>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -202,7 +233,7 @@ img {
                 <p style="color: #ffffff;">${plant.height}</p>
                 <p style="color: #ffffff;">${plant.special_feature}</p>
                 </div>
-                <a data-gallery="manual" href="${plant.image}">
+                <a data-image-url="${plant.image}" href="#" class="image-link">
                   <img src="${plant.image}" alt="${plant.name}">
                 </a>
               </div>
@@ -215,4 +246,26 @@ img {
       });
     }
   });
+
+const imageLinks = document.querySelectorAll('.image-link');
+
+imageLinks.forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    const imageUrl = link.getAttribute('data-image-url');
+    const modal = document.querySelector('.modal');
+    const modalImage = modal.querySelector('img');
+    modalImage.src = imageUrl;
+    modal.style.display = 'block';
+  });
+});
+
+const closeButtons = document.querySelectorAll('.close');
+
+closeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal');
+    modal.style.display = 'none';
+  });
+});
 </script>
