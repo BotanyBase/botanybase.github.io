@@ -202,12 +202,12 @@ img {
                 <p style="color: #ffffff;">${plant.height}</p>
                 <p style="color: #ffffff;">${plant.special_feature}</p>
                 </div>
-                <a href="#${plant.name}" rel="modal:open">
+                <a href="#${plant.name.replace(/\s+/g,'-')}" rel="modal:open">
                   <img src="${plant.image}" alt="${plant.name}">
                 </a>
               </div>
 
-              <div id="${plant.name}" class="modal">
+              <div id="${plant.name.replace(/\s+/g,'-')}" class="modal">
               <p>Image:</p>
               <img src="${plant.image}" alt="plant.name">
               <a href="#" rel="modal:close">Close</a>
