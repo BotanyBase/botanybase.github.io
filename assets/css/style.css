@@ -186,6 +186,17 @@ hr {
   color: #ffffff; /* White text on hover */
 }
 
+.lightbg {
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    background-color: #81a67c;
+    color: #ffffff;
+    width: 80%;
+    height: auto;
+    padding: 8px;
+}
+
 .posts.post {
 	 padding-bottom: 2em;
 	 border-bottom: 1px solid;
