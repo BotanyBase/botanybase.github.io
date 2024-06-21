@@ -157,12 +157,6 @@ img {
   {% endfor %}
 </div>
 
-<div class="modal" hidden>
-  <img src="" alt="Modal Image">
-  <span class="close">&times;</span>
-</div>
-
-
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // List of known JSON file URLs
@@ -233,9 +227,15 @@ img {
                 <p style="color: #ffffff;">${plant.height}</p>
                 <p style="color: #ffffff;">${plant.special_feature}</p>
                 </div>
-                <a data-image-url="${plant.image}" href="javascript:void(0)" class="image-link">
+                <a data-image-url="${plant.image}" href="#${plant.name}" rel="modal:open" class="image-link">
                   <img src="${plant.image}" alt="${plant.name}">
                 </a>
+              </div>
+
+              <div id="${plant.name}" class="modal">
+              <p>Image:</p>
+              <img src="${plant.image}" alt="plant.name">
+              <a href="#" rel="modal:close">Close</a>
               </div>
             `;
             const plantEntryElement = document.createElement('div');
@@ -246,26 +246,4 @@ img {
       });
     }
   });
-
-const imageLinks = document.querySelectorAll('.image-link');
-
-imageLinks.forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault();
-    const imageUrl = link.getAttribute('data-image-url');
-    const modal = document.querySelector('.modal');
-    const modalImage = modal.querySelector('img');
-    modalImage.src = imageUrl;
-    modal.style.display = 'block';
-  });
-});
-
-const closeButtons = document.querySelectorAll('.close');
-
-closeButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = button.closest('.modal');
-    modal.style.display = 'none';
-  });
-});
 </script>
