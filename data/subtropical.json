@@ -38,5 +38,45 @@
     "description": "A large tree with large flowers and a conical shape.",
     "height": "Up to 80 feet",
     "special_feature": "Fragrant flowers"
+  },
+  {
+    "name": "Azalea",
+    "image": "http://nwdistrict.ifas.ufl.edu/hort/files/2019/03/azalea_ifas.jpg",
+    "climate": "Subtropical",
+    "description": "A flowering shrub with vibrant blooms in shades of pink, purple, and white.",
+    "height": "Up to 6 feet",
+    "special_feature": "Vibrant flowers"
+  },
+  {
+    "name": "Camellia",
+    "image": "https://tse3.mm.bing.net/th?id=OIP.yL_VrXjjzf1YEaSmMKNSVAHaE8&pid=Api&P=0&h=180",
+    "climate": "Subtropical",
+    "description": "An evergreen shrub with showy flowers in shades of pink, white, and red.",
+    "height": "Up to 12 feet",
+    "special_feature": "Evergreen leaves"
+  },
+  {
+    "name": "Pittosporum",
+    "image": "http://davisla.files.wordpress.com/2011/04/pittosporum-tobira-istanbul.jpg",
+    "climate": "Subtropical",
+    "description": "An evergreen shrub with variegated leaves and small white flowers.",
+    "height": "Up to 12 feet",
+    "special_feature": "Evergreen leaves"
+  },
+  {
+    "name": "Sweet Olive",
+    "image": "https://i.pinimg.com/originals/ab/9a/65/ab9a65b0c98beb293335a6aa5ac9b029.jpg",
+    "climate": "Subtropical",
+    "description": "An evergreen shrub with fragrant white flowers and glossy leaves.",
+    "height": "Up to 10 feet",
+    "special_feature": "Fragrant flowers"
+  },
+  {
+    "name": "Ligustrum",
+    "image": "https://tse3.mm.bing.net/th?id=OIP.pTxS7Re2XpzNVE42z5AcDAHaHa&pid=Api&P=0&h=180",
+    "climate": "Subtropical",
+    "description": "An evergreen shrub with white flowers and black berries.",
+    "height": "Up to 10 feet",
+    "special_feature": "Evergreen leaves"
   }
 ]
