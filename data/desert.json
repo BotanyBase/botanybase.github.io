@@ -46,5 +46,46 @@
     "description": "A large cactus with a tall, tree-like structure and arm-like branches.",
     "height": "Up to 40 feet",
     "special_feature": "Large size and arms"
+  },
+  {
+    "name": "Baobab Tree",
+    "image": "(link unavailable)",
+    "climate": "Desert",
+    "description": "A large tree with a distinctive trunk and branches, native to African savannas.",
+    "height": "Up to 100 feet",
+    "special_feature": "Large trunk and unique shape"
+  },
+  {
+    "name": "Acacia Tree",
+    "image": "(link unavailable)",
+    "climate": "Desert",
+    "description": "A thorny tree with feathery leaves, common in African savannas.",
+    "height": "Up to 50 feet",
+    "special_feature": "Thorns and fragrant flowers"
+  },
+  {
+    "name": "Ocotillo",
+    "image": "(link unavailable)",
+    "climate": "Desert",
+    "description": "A shrub with clusters of red flowers and a unique, branching structure.",
+    "height": "Up to 15 feet",
+    "special_feature": "Bright red flowers"
+  },
+  {
+    "name": "Paloverde Tree",
+    "image": "(link unavailable)",
+    "climate": "Desert",
+    "description": "A small tree with bright green leaves and yellow flowers, native to the Southwest US.",
+    "height": "Up to 25 feet",
+    "special_feature": "Bright green leaves and yellow flowers"
+  },
+  {
+    "name": "Desert Marigold",
+    "image": "(link unavailable)",
+    "climate": "Desert",
+    "description": "A shrub with bright yellow or orange flowers, common in the Southwest US.",
+    "height": "Up to 3 feet",
+    "special_feature": "Bright yellow or orange flowers"
   }
+]
 ]
