@@ -49,7 +49,7 @@
   },
   {
     "name": "Baobab Tree",
-    "image": "(link unavailable)",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Adansonia_grandidieri04.jpg",
     "climate": "Desert",
     "description": "A large tree with a distinctive trunk and branches, native to African savannas.",
     "height": "Up to 100 feet",
@@ -57,7 +57,7 @@
   },
   {
     "name": "Acacia Tree",
-    "image": "(link unavailable)",
+    "image": "https://cdn.britannica.com/62/156362-050-4E8FE282/Acacia-tree-savanna-Zimbabwe.jpg",
     "climate": "Desert",
     "description": "A thorny tree with feathery leaves, common in African savannas.",
     "height": "Up to 50 feet",
@@ -65,7 +65,7 @@
   },
   {
     "name": "Ocotillo",
-    "image": "(link unavailable)",
+    "image": "https://cdn.britannica.com/54/40054-050-29E13E65/Ocotillo.jpg",
     "climate": "Desert",
     "description": "A shrub with clusters of red flowers and a unique, branching structure.",
     "height": "Up to 15 feet",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Paloverde Tree",
-    "image": "(link unavailable)",
+    "image": "https://www.planetnatural.com/wp-content/uploads/2023/10/Palo-Verde-Tree.jpg",
     "climate": "Desert",
     "description": "A small tree with bright green leaves and yellow flowers, native to the Southwest US.",
     "height": "Up to 25 feet",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Desert Marigold",
-    "image": "(link unavailable)",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN46IboEyCNGpgVBe8pXZZGmmhxTWGiiz_tA&s",
     "climate": "Desert",
     "description": "A shrub with bright yellow or orange flowers, common in the Southwest US.",
     "height": "Up to 3 feet",
