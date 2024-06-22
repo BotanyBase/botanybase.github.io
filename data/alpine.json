@@ -30,5 +30,61 @@
     "description": "A small tree with twisted branches and needle-like leaves.",
     "height": "Up to 30 feet",
     "special_feature": "Ancient and resilient"
+  },
+  {
+    "name": "Black Spruce Tree",
+    "image": "https://www.awes-ab.ca/wp-content/uploads/2020/07/IMG_2326-black-spruce-Jones-Pond-trail-30-May-2017PJC-scaled.jpg",
+    "climate": "Alpine",
+    "description": "A small to medium-sized tree with needle-like leaves and a conical shape.",
+    "height": "Up to 50 feet",
+    "special_feature": "Adaptability to cold climates"
+  },
+  {
+    "name": "Paper Birch Tree",
+    "image": "http://imagehost.vendio.com/a/35088526/aview/2889.jpg",
+    "climate": "Alpine",
+    "description": "A medium-sized tree with white bark and leaves that turn yellow in the fall.",
+    "height": "Up to 70 feet",
+    "special_feature": "Unique bark"
+  },
+  {
+    "name": "Blueberry Bush",
+    "image": "https://tse3.mm.bing.net/th?id=OIP.77paNVCzNyyAnNhFkwGhcwHaHa&pid=Api&P=0&h=180",
+    "climate": "Alpine",
+    "description": "A small shrub with blue berries and green leaves.",
+    "height": "Up to 6 feet",
+    "special_feature": "Delicious berries"
+  },
+  {
+    "name": "Labrador Tea",
+    "image": "http://www.herbalteasonline.com/wp-content/uploads/2015/06/Labrador-Plant.jpg",
+    "climate": "Alpine",
+    "description": "A small shrub with white flowers and leaves that resemble tea leaves.",
+    "height": "Up to 3 feet",
+    "special_feature": "Unique leaves"
+  },
+  {
+    "name": "Tamarack Tree",
+    "image": "https://c1.staticflickr.com/3/2721/4060445677_3ff5412ca9_b.jpg",
+    "climate": "Alpine",
+    "description": "A small to medium-sized tree with needle-like leaves and a conical shape.",
+    "height": "Up to 50 feet",
+    "special_feature": "Adaptability to wet soils"
+  },
+  {
+    "name": "Bilberry Bush",
+    "image": "https://tse1.mm.bing.net/th?id=OIP.NQe_HO86BogHqBUTZ3w9OAHaFj&pid=Api&P=0&h=180",
+    "climate": "Alpine",
+    "description": "A small shrub with blue berries and green leaves.",
+    "height": "Up to 6 feet",
+    "special_feature": "Delicious berries"
+  },
+  {
+    "name": "Red Osier Dogwood",
+    "image": "https://d31kydh6n6r5j5.cloudfront.net/uploads/sites/594/2020/12/1838795_orig.jpg",
+    "climate": "Alpine",
+    "description": "A small shrub with red stems and white flowers.",
+    "height": "Up to 10 feet",
+    "special_feature": "Unique stems"
   }
 ]
