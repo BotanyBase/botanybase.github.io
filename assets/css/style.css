@@ -8,6 +8,35 @@ html {
   transition: opacity 1s ease-in-out;
 }
 
+
+body {
+  --sb-track-color: #f1f1f1;
+  --sb-thumb-color: #8c8c8c;
+  --sb-size: 14px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
 p {
   font-family: "Montserrat", "Merriweather", serif;
   font-weight: 800;
