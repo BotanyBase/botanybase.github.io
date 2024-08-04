@@ -10,9 +10,9 @@
   "theme_color": "#cc9a68",
   "icons": [
     {
-      "src": "https://botanybase.github.io/assets/favicon.png",
+      "src": "https://botanybase.github.io/assets/faviconnew.png",
       "type": "image/png",
-      "sizes": "666x666"
+      "sizes": "1000x1000"
     }
   ],
   "id": "1DSTBB",
