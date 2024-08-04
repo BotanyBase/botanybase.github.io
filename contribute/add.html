@@ -73,24 +73,27 @@ title: Add to DB
 <p style="margin: 0 auto; display: block; padding-left: 20vw; padding-right: 20vw; text-align: left;">If you do plan to contribute, please fill in the parameters accordingly. Do note that our automated system is limited to 50 submissions per month and is recommended to contribute via our <a href="https://github.com/BotanyBase/botanybase.github.io/">Github</a> to prevent this!</p>
 <p style="padding: 10px; text-align: center;"><a href="https://botanybase.github.io">Back</a></p>
 
-<form id="plantForm" action="https://formcarry.com/s/SCwSex8EYkd" method="POST">
-  <!-- Hidden input to trigger repository dispatch -->
-  <input type="hidden" name="event_type" value="create-issue">
-  <label for="name">Plant Name:</label>
-  <input type="text" id="name" name="name" required><br><br>
-  <label for="image">Plant Image URL:</label>
-  <input type="url" id="image" name="image" required><br><br>
-  <label for="climate">Plant Climate:</label>
-  <select id="climate" name="climate" required>
-    <option value="tropical">Tropical</option>
-    <option value="subtropical">Subtropical</option>
-    <option value="temperate">Temperate</option>
-    <option value="alpine">Alpine</option>
-    <option value="desert">Desert</option>
-  </select><br><br>
-  <label for="description">Plant Description:</label><br>
-  <textarea id="description" name="description" rows="5" required></textarea><br><br>
-  <button type="submit">Add Plant</button>
-</form>
 
-<div id="message"></div>
+  
+<form id="plantForm" action="https://formcarry.com/s/SCwSex8EYkd" method="POST"></form>
+<div class="card">
+    <div class="card-content">
+    <input type="hidden" name="event_type" value="create-issue">
+    <label for="name">Plant Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="image">Plant Image URL:</label>
+    <input type="url" id="image" name="image" required><br><br>
+    <label for="climate">Plant Climate:</label>
+    <select id="climate" name="climate" required>
+      <option value="tropical">Tropical</option>
+      <option value="subtropical">Subtropical</option>
+      <option value="temperate">Temperate</option>
+      <option value="alpine">Alpine</option>
+      <option value="desert">Desert</option>
+    </select><br><br>
+    <label for="description">Plant Description:</label><br>
+    <textarea id="description" name="description" rows="5" required></textarea><br><br>
+    <button type="submit">Add Plant</button>
+    </div>
+</div>
+</form>
