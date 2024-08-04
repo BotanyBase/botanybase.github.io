@@ -379,8 +379,73 @@ title: Main
   }
 }
 
+  .announcement {
+  position: relative;
+  background: #1da3ff;
+  color: white;
+  margin-top: 56px;
+  top: -327px;
+  transition: .2s;
+  z-index: 1;
+  
+  a {
+    color: white;
+    transition: .25s ease;
+    
+    &:hover {
+      opacity: .75;
+    }
+  }
+  
+  &__close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 18px;
+    width: 25px;
+    height: 25px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    opacity: .65;
+    transition: .25s ease;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+  
+  &__title {
+    font-size: 21px;
+    line-height: 42px;
+  }
+}
+
+.content {
+  position: relative;
+  top: -327px;
+  transition: .2s;
+}
+
+.open {
+  top: 0;
+}
+
+.wrapper {
+  max-width: 1160px;
+  padding: 40px 20px;
+  margin: 0 auto;
+}
 </style>
 
+<div class="announcement open">
+  <div class="wrapper">
+    <label class="announcement__close">&#x2715;</label>
+    <h2 class="announcement__title">Welcome to One!</h2>
+    <p>We have just updated the site and added new features into BotanyBase, do report any bugs directly to us, some UI elements are still work in progress.</p>
+  </div>
+</div>
 <br>
 <!--<div style="background-image: url('https://botanybase.github.io/assets/img/MainBG.png'); background-size: cover; background-position: center; height: 100vh;">-->
 <div class="bannerbg">
@@ -459,3 +524,9 @@ title: Main
   <a href="/Docs">Let's Go!</a><br>
   <a href="#" rel="modal:close">Back</a>
 </div>
+
+<script>
+$('.announcement__close').click(function(){
+  $(".announcement, .content").removeClass("open");
+});
+</script>
