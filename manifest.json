@@ -1,5 +1,5 @@
 {
-  "background_color": "#cc9a68",
+  "background_color": "#525252",
   "dir": "ltr",
   "display": "standalone",
   "name": "BotanyBase",
@@ -7,7 +7,7 @@
   "scope": "/",
   "short_name": "BotanyBase",
   "start_url": "/",
-  "theme_color": "#cc9a68",
+  "theme_color": "#525252",
   "icons": [
     {
       "src": "https://botanybase.github.io/assets/faviconnew.png",
