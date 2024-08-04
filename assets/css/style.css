@@ -3,7 +3,7 @@
 
 html {
   margin-top: 4em;
-  background-color: #e0ceb8;
+  background-color: #303030;
   overflow-x: hidden;
   transition: opacity 1s ease-in-out;
 }
@@ -48,42 +48,42 @@ p {
   font-family: "Montserrat", "Merriweather", serif;
   font-weight: 800;
   font-style: normal;
-  color: #4d3922;
+  color: #49c453;
 }
 
 a {
   font-family: "Montserrat", "Merriweather", serif;
   font-weight: 800;
   font-style: normal;
-  color: #bf8032;
+  color: #baffc0;
 }
 
 h1 {
   font-family: "Merriweather", serif;
   font-weight: 900;
   font-style: normal;
-  color: #5c4b36;
+  color: #00ff15;
 }
 
 h2 {
   font-family: "Merriweather", serif;
   font-weight: 900;
   font-style: normal;
-  color: #5c4b36;
+  color: #00ff15;
 }
 
 h3 {
   font-family: "Merriweather", serif;
   font-weight: 900;
   font-style: normal;
-  color: #5c4b36;
+  color: #00ff15;
 }
 
 h4 {
     font-family: "Merriweather", serif;
   font-weight: 900;
   font-style: normal;
-  color: #5c4b36;
+  color: #00ff15;
 }
 
 .button-box {
