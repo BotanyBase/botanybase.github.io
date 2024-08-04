@@ -182,7 +182,8 @@ fetchAndCombineJSON().then(plants => {
             plantEntriesContainer.appendChild(message2);
         } else {
             plantEntriesContainer.innerHTML = '';
-            filtered.forEach(plant => {`
+            filtered.forEach(plant => {
+            const plantEntryHTML = `
               <div class="card">
  <div class="card-content">
     <h2>${plant.name}</h2>
