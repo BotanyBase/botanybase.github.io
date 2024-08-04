@@ -111,7 +111,9 @@ img {
 <!-- catalogue.html -->
 
 <!-- Search input field -->
-<input type="search" id="search-input" placeholder="Search plants">
+<div class="input-container">
+<input type="search" id="search-input" class="input" placeholder="Search plants">
+</div>
 <br>
 
 {% assign currentClimate = page.climate | downcase %}
