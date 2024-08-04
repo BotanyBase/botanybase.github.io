@@ -544,6 +544,8 @@ hr {
   position: relative;
   width: 100%;
   max-width: 270px;
+  display: block;
+	margin: 0 auto;
 }
 
 .input {
