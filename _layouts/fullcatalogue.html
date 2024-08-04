@@ -194,18 +194,19 @@ img {
         } else {
           filtered.forEach(plant => {
             const plantEntryHTML = `
-              <div class="entry-wrapper">
-                <h2>${plant.name}</h2>
-                <small><p style="text-align: center;">${plant.climate}</p></small>
-                <p>${plant.description}</p>
-                <div style="text-align: center;">
-                <p style="color: #ffffff;">${plant.height}</p>
-                <p style="color: #ffffff;">${plant.special_feature}</p>
-                </div>
-                <a href="#${plant.name.replace(/\s+/g,'-')}" rel="modal:open">
-                  <img src="${plant.image}" alt="${plant.name}">
-                </a>
-              </div>
+<div class="card">
+ <div class="card-content">
+    <h2>${plant.name}</h2>
+    <small><p style="text-align: center;">${plant.climate}</p></small>
+    <p>${plant.description}</p>
+    <div style="text-align: center;">
+      <p style="color: #ffffff;">${plant.height}</p>
+      <p style="color: #ffffff;">${plant.special_feature}</p>
+    </div>
+    <a href="#${plant.name.replace(/\s+/g,'-')}" rel="modal:open">
+      <img src="${plant.image}" alt="${plant.name}">
+    </a>
+ </div>
 
               <div id="${plant.name.replace(/\s+/g,'-')}" class="modal">
               <p>Image:</p>
@@ -222,3 +223,9 @@ img {
     }
   });
 </script>
+
+
+
+
+
+                  
