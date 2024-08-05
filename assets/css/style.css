@@ -18,6 +18,18 @@ html {
   background-position: -5px -5px
 }
 
+.bg {
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    border: 2px #000000 solid;
+    background-color: #1e421d;
+    color: #ffffff;
+    width: 80%;
+    height: auto;
+    padding: 8px;
+}
+
 body {
   --sb-track-color: #f1f1f1;
   --sb-thumb-color: #005c18;
