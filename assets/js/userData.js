@@ -1,5 +1,5 @@
-const authToken == localStorage.get('authToken');
-const authStatus == localStorage.get('auth');
+const authToken = localStorage.get('authToken');
+const authStatus = localStorage.get('auth');
 
 if (authStatus == 1) {
 function formatTimestamp(timestamp) {
