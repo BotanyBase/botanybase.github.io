@@ -111,12 +111,13 @@
     <li class="square xyz-in" xyz="fade down flip-down-50%"><a href="https://botanybase.github.io/identify/full">Database</a></li>
     <li class="square xyz-in" xyz="fade down flip-down-50%"><a href="https://botanybase.github.io/docs">Docs</a></li>
     <li class="square xyz-in" xyz="fade down flip-up-50%"><a href="https://botanybase.github.io/contribute/add" class="button">Contribute</a></li>
-    <li class="square xyz-in" xyz="fade down flip-up-50%"><a href="https://botanybase.github.io/auth" class="button">Sign-up/Login</a></li>
+    <li id="auth0" class="square xyz-in" xyz="fade down flip-up-50%"><a href="https://botanybase.github.io/auth" class="button">Sign-up/Login</a></li>
+    <li style="display: none;" id="auth1" class="square xyz-in" xyz="fade down flip-up-50%"><a href="https://botanybase.github.io/auth/dashboard" class="button">Dashboard</a></li>
   </ul>
 </nav>
 
 <!-- <div class="square xyz-in" xyz="fade down flip-up-50%"></div> -->
-
+<script src="/js/userData.js"></script>
 <script>
 function toggleMenu() {
   var navbar = document.querySelector('.navbar');
@@ -128,5 +129,13 @@ function toggleMenu() {
   } else {
     menuToggle.innerHTML = '<i class="fa fa-bars"></i>'; 
   }
+}
+
+if (authStatus == 1) {
+  document.getElementById("auth0").style.display = "none";
+  document.getElementById("auth1").style.display = "block";
+} else {
+ document.getElementById("auth1").style.display = "none";
+ document.getElementById("auth0").style.display = "block"; 
 }
 </script>
