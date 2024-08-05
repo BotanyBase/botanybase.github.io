@@ -30,6 +30,18 @@ html {
     padding: 8px;
 }
 
+.lightbg {
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    border: 2px #000000 solid;
+    background-color: #81a67c;
+    color: #ffffff;
+    width: 80%;
+    height: auto;
+    padding: 8px;
+}
+
 body {
   --sb-track-color: #f1f1f1;
   --sb-thumb-color: #005c18;
@@ -247,17 +259,6 @@ hr {
 .button2:hover {
   background-color: #34C759; /* Green background on hover */
   color: #ffffff; /* White text on hover */
-}
-
-.lightbg {
-    display: block;
-    margin: 0 auto;
-    border-radius: 12px;
-    background-color: #81a67c;
-    color: #ffffff;
-    width: 80%;
-    height: auto;
-    padding: 8px;
 }
 
 .posts.post {
