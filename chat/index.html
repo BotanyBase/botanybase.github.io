@@ -214,7 +214,7 @@ title: BotanyBase ChatBot
     id="input"
   />
   <label class="brutalist-label">Chat Input:</label>
-  <button class="nb-button blue rounded" id="send" onclick="sendClicked()"></button>
+  <button class="nb-button blue rounded" id="send"></button>
 </div>
 
 </div>
@@ -226,6 +226,10 @@ const messageInput = document.getElementById('input');
 const sendButton = document.getElementById('send');
 const messageList = document.getElementById('messages');
 
+sendButton.addEventListener('click', () => {
+  sendClicked();
+});
+  
 function sendClicked() {
   const message = messageInput.value;
   const messageHTML = `
@@ -236,7 +240,7 @@ function sendClicked() {
   const responseHTML = `
   <p>${response}</p>`
   displayMessage(responseHTML);
-}
+};
   
 function displayMessage(message) {
     console.log('Displaying message:', message);
@@ -246,5 +250,5 @@ function displayMessage(message) {
     messageList.insertAdjacentHTML('beforeend', messageHTML);
     // Scroll to the bottom
     messageList.scrollTop = messageList.scrollHeight;
-}
+};
 </script>
