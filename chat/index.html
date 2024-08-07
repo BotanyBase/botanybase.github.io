@@ -234,24 +234,21 @@ function sendClicked() {
   const message = messageInput.value;
   const messageHTML = `
   <p>${message}</p>
-  `
+  `;
   displayMessage(messageHTML);
   var response;
   (async () => {
     response = await gpt.ask(context + message);
-  });
-  setTimeout(() => {
     const responseHTML = `
-    <p>${response}</p>`
+    <p>${response}</p>`;
     displayMessage(responseHTML);
-  }, 5000);
-  
+  });
 };
   
 function displayMessage(message) {
     console.log('Displaying message:', message);
     const messageHTML = `
-    <div>${message}</div>
+    <div style="color: #ffffff !important; text-align: left; padding: 20px;">${message}</div>
     `;
     messageList.insertAdjacentHTML('beforeend', messageHTML);
     // Scroll to the bottom
