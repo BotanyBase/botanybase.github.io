@@ -236,8 +236,9 @@ function sendClicked() {
   <p>${message}</p>
   `
   displayMessage(messageHTML);
+  var response;
   (async () => {
-    const response = await gpt.ask(context + message);
+    response = await gpt.ask(context + message);
   });
   const responseHTML = `
   <p>${response}</p>`
