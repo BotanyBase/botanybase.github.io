@@ -1,7 +1,7 @@
 const authToken = localStorage.getItem('authToken');
 const authStatus = localStorage.getItem('auth');
-const authUsername;
-const authEmail;
+var authUsername;
+var authEmail;
 
 if (authStatus == 1) {
 function formatTimestamp(timestamp) {
