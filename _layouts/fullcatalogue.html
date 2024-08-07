@@ -227,7 +227,16 @@ img {
   });
 
   function savePlant(plant) {
-    
+    fetch('https://x8ki-letl-twmt.n7.xano.io/api:iGbUspz7/auth/botanybase/edit', {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: authUsername,
+            plant: plant
+          })
+        })
   }
 </script>
 
