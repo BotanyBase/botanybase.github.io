@@ -1,5 +1,7 @@
 const authToken = localStorage.getItem('authToken');
 const authStatus = localStorage.getItem('auth');
+const authUsername;
+const authEmail;
 
 if (authStatus == 1) {
 function formatTimestamp(timestamp) {
@@ -21,7 +23,8 @@ fetch('https://x8ki-letl-twmt.n7.xano.io/api:iGbUspz7/auth/me', {
 })
 .then((response) => response.json())
 .then((data) => {
-
+    authUsername = data.name;
+    authEmail = data.email
 })
 .catch((error) => {
   console.error(error);
