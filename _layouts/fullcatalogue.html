@@ -206,6 +206,9 @@ img {
     <a href="#${plant.name.replace(/\s+/g,'-')}" rel="modal:open">
       <img src="${plant.image}" alt="${plant.name}">
     </a>
+    <div onclick="savePlant(${plant.name})">
+      <i class="fa-solid fa-bookmark"></i>
+    </div>
  </div>
 
               <div id="${plant.name.replace(/\s+/g,'-')}" class="modal">
@@ -222,6 +225,10 @@ img {
       });
     }
   });
+
+  function savePlant(plant) {
+    
+  }
 </script>
 
 
