@@ -231,7 +231,8 @@ img {
     fetch('https://x8ki-letl-twmt.n7.xano.io/api:iGbUspz7/auth/botanybase/edit', {
           method: 'PUT',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + authToken;
           },
           body: JSON.stringify({
             name: authUsername,
