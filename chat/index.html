@@ -232,6 +232,9 @@ sendButton.addEventListener('click', () => {
   
 function sendClicked() {
   const message = messageInput.value;
+  alert(message);
+  alert(context);
+  alert(message + context);
   const messageHTML = `
   <p>${message}</p>
   `;
