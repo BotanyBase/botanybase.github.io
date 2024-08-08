@@ -225,7 +225,15 @@ const context = 'Before you answer this client, here are some rules, 1. You are 
 const messageInput = document.getElementById('input');
 const sendButton = document.getElementById('send');
 const messageList = document.getElementById('messages');
-
+(async () => {
+    response = await gpt.ask('Instruction: Welcome the client to BotanyBase, a plant identification field guide (strip your answer of Markdown formatting).');
+    alert(response);
+    const responseHTML = `
+    <p>${response}</p>`;
+    displayMessage(responseHTML);
+    alert(responseHTML);
+});
+  
 sendButton.addEventListener('click', () => {
   setTimeout(() => {
   const message = messageInput.value;
