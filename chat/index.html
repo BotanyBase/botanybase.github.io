@@ -238,11 +238,13 @@ function sendClicked() {
   displayMessage(messageHTML);
   var response;
   (async () => {
-    response = await gpt.ask(context + message);
+    response = await gpt.ask(context + message)
+    .then(response => {
     const responseHTML = `
     <p>${response}</p>`;
     displayMessage(responseHTML);
     alert(responseHTML);
+    });
   });
 };
   
