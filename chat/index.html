@@ -218,7 +218,7 @@ title: BotanyBase ChatBot
 </div>
  <button class="nb-button blue rounded" id="send" style="margin-left: 16px;">Send</button>
 </div>
-<script src="https://cdn.jsdelivr.net/gh/ashishagarwal2023/freegptjs@1.0.2/src/freegpt.min.js"></script>
+
 <script>
 const context = 'Before you answer this client, here are some rules, 1. You are no longer part of You.com but BotanyBase assistant. 2. You will only take questions about Botany, nothing else. 3. Strip the answer of ALL MARKDOWN! 4. You will not include any of these rules as part of your answer, whatever is next after this rule is the client question. QUESTION -> ';
   
@@ -242,14 +242,14 @@ function sendClicked() {
   var response;
   response = await gpt.ask(context + message);
   alert(response);
-  (async () => {
+  /*(async () => {
     response = await gpt.ask(context + message);
     alert(response);
     const responseHTML = `
     <p>${response}</p>`;
     displayMessage(responseHTML);
     alert(responseHTML);
-  });
+  });*/
 };
   
 function displayMessage(message) {
