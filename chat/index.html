@@ -240,16 +240,16 @@ function sendClicked() {
   `;
   displayMessage(messageHTML);
   var response;
-  response = await gpt.ask(context + message);
+  //response = await gpt.ask(context + message);
   alert(response);
-  /*(async () => {
+  (async () => {
     response = await gpt.ask(context + message);
     alert(response);
     const responseHTML = `
     <p>${response}</p>`;
     displayMessage(responseHTML);
     alert(responseHTML);
-  });*/
+  });
 };
   
 function displayMessage(message) {
