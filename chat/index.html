@@ -227,6 +227,7 @@ const sendButton = document.getElementById('send');
 const messageList = document.getElementById('messages');
 
 sendButton.addEventListener('click', () => {
+  setTimeout(() => {
   const message = messageInput.value;
   alert(message);
   alert(context);
@@ -246,6 +247,7 @@ sendButton.addEventListener('click', () => {
     displayMessage(responseHTML);
     alert(responseHTML);
   });
+  }, 1000);
 });
   
 function sendClicked() {
