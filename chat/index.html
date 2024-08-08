@@ -234,12 +234,14 @@ function sendClicked() {
   const message = messageInput.value;
   alert(message);
   alert(context);
-  alert(message + context);
+  alert(context + messag);
   const messageHTML = `
   <p>${message}</p>
   `;
   displayMessage(messageHTML);
   var response;
+  response = await gpt.ask(context + message);
+  alert(response);
   (async () => {
     response = await gpt.ask(context + message);
     alert(response);
