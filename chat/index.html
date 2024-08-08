@@ -246,33 +246,11 @@ sendButton.addEventListener('click', () => {
     <p>${response}</p>`;
     displayMessage(responseHTML);
     alert(responseHTML);
+    messageInput.value = '';
   });
   }, 1000);
 });
-  
-function sendClicked() {
-  const message = messageInput.value;
-  alert(message);
-  alert(context);
-  alert(context + message);
-  const messageHTML = `
-  <p>${message}</p>
-  `;
-  displayMessage(messageHTML);
-  var response;
-  //response = await gpt.ask(context + message);
-  alert(response);
-  (async () => {
-    response = await gpt.ask(context + message);
-    alert(response);
-    const responseHTML = `
-    <p>${response}</p>`;
-    displayMessage(responseHTML);
-    alert(responseHTML);
-    messageInput.value = '';
-  });
-  
-};
+
   
 function displayMessage(message) {
     console.log('Displaying message:', message);
