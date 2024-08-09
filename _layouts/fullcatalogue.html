@@ -228,6 +228,7 @@ img {
   });
 
   function savePlant(plant) {
+    alert('Saved plant for ' + authUsername + ' , data: ' + plant);
     fetch('https://x8ki-letl-twmt.n7.xano.io/api:iGbUspz7/auth/botanybase/edit', {
           method: 'PUT',
           headers: {
