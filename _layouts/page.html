@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<nav aria-label="breadcrumb bg">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <span class="breadcrumb-trail">
+        <a href="/learn">Learn</a>
+        {% for ancestor in page.ancestors %}
+          /{{ ancestor.title }}
+        {% endfor %}
+        /{{ page.title }}
+      </span>
+    </li>
+  </ol>
+</nav>
+
+<div class="progress-container header">
+  <div class="progress-bar" id="myBar"></div>
+</div>
+
+<div style="text-align: left; padding-left: 15%; padding-right: 15%;">
+  {{ content }}
+</div>
+
+
+<style>
+.breadcrumb-trail {
+  display: inline;
+}
+
+/* Style the header: fixed position (always stay at the top) */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 16px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 16px;
+  background: #00eb23;
+  width: 0%;
+}
+</style>
+
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
