@@ -718,7 +718,7 @@ hr {
 }
 
 /* From Uiverse.io by adamgiebl */ 
-.container {
+.gridbg {
   width: 100%;
   height: 100%;
   --color: rgba(114, 114, 114, 0.3);
