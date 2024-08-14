@@ -1,5 +1,4 @@
 //main.js
-document.startViewTransition(() => updateDOM());
 
 //loadpagesmoothly.js
 var myVar;
