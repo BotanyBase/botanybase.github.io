@@ -227,29 +227,22 @@ const sendButton = document.getElementById('send');
 const messageList = document.getElementById('messages');
   
 sendButton.addEventListener('click', () => {
-  setTimeout(() => {
   const message = messageInput.value;
-  alert(message);
-  alert(context);
-  alert(context + message);
   const messageHTML = `
   <p>${message}</p>
   `;
   displayMessage(messageHTML);
   var response;
-  console.log(gpt.ask('hi'));
-  //response = await gpt.ask(context + message);
-  alert(response);
   (async () => {
-    response = await gpt.ask(/*context + */message);
+    let response = await gpt.ask(context + message);
     alert(response);
     const responseHTML = `
     <p>${response}</p>`;
     displayMessage(responseHTML);
     alert(responseHTML);
     messageInput.value = '';
+    alert(response);
   });
-  }, 1000);
 });
 
   
