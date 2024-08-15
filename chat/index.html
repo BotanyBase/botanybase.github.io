@@ -241,7 +241,6 @@ sendButton.addEventListener('click', () => {
     displayMessage(responseHTML);
     alert(responseHTML);
     messageInput.value = '';
-    alert(response);
   });
 });
 
@@ -255,13 +254,4 @@ function displayMessage(message) {
     // Scroll to the bottom
     messageList.scrollTop = messageList.scrollHeight;
 };
-
-(async () => {
-    const response = await gpt.ask('Instruction: Welcome the client to BotanyBase, a plant identification field guide (strip your answer of Markdown formatting).');
-    alert(response);
-    const responseHTML = `
-    <p>${response}</p>`;
-    displayMessage(responseHTML);
-    alert(responseHTML);
-});
 </script>
