@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div class="gridbg">
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item">
+<nav aria-label="breadcrumb bg">
+  <div class="breadcrumb">
+    <p class="breadcrumb-item">
       <span class="breadcrumb-trail">
         <a href="/learn">Learn</a>
         {% for ancestor in page.ancestors %}
@@ -13,8 +13,8 @@ layout: default
         {% endfor %}
         /{{ page.title }}
       </span>
-    </li>
-  </ol>
+    </p>
+  </div>
 </nav>
 
 <div class="progress-container header">
