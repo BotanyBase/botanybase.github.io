@@ -14,7 +14,7 @@ title: Learn
 <br>
 
 <h3>Taxonomy</h3>
-<section class="splide bannerbg" aria-label="Plant Taxonomy">
+<section class="splide bannerbg c1" aria-label="Plant Taxonomy">
   <div class="splide__track">
 		<ul class="splide__list">
 			<li class="splide__slide">
@@ -31,7 +31,7 @@ title: Learn
 <br>
 
 <h3>Biochemistry</h3>
-<section class="splide" aria-label="Biochemistry">
+<section class="splide bannerbg c2" aria-label="Biochemistry">
   <div class="splide__track">
 		<ul class="splide__list">
 			<li class="splide__slide">
@@ -66,4 +66,9 @@ title: Learn
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <link rel="stylesheet" href="url-to-cdn/splide.min.css">
 <script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '.c1' );
+    var splide = new Splide( '.c2' );
+    splide.mount();
+  } );
 </script>
