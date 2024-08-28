@@ -229,7 +229,7 @@ img {
 
   function savePlant(plant) {
     if (authStatus == 1) {
-    alert('Saved plant for ' + authUsername + ' , data: ' + plant);
+    new AWN().success('Saved ' + plant + ' for ' + authUsername);
     fetch('https://x8ki-letl-twmt.n7.xano.io/api:iGbUspz7/auth/botanybase/edit', {
           method: 'PUT',
           headers: {
@@ -242,7 +242,7 @@ img {
           })
         })
     } else {
-      alert('You are not signed in, unable to save plant.');
+      new AWN().alert('You are not signed in, unable to save plant!');
     }
   }
 
