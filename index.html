@@ -462,7 +462,7 @@ title: Main
 </div>
 
 <script>
-$('.announcement__close').click(function(){
-  $(".announcement, .content").removeClass("open");
-});
+if (authStatus == 1) {
+  new AWN().info('Welcome back ' + authUsername + '!');
+};
 </script>
