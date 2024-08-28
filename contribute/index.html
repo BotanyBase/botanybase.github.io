@@ -1,33 +1,89 @@
 ---
 layout: default
-title: Contribute
-permalink: contribute
+title: Add to DB
 ---
 
-<div style="padding: 10px;">
-<h1 id="contributing">Contributing</h1>
+ <style>
+    .success {
+      color: green;
+    }
 
-<p style="text-align: center;"><a href="https://botanybase.github.io">Back</a></p>
+    .error {
+      color: red;
+    }
+    
+    /* Add a background color and padding to the form */
 
-<p style="text-align: center;"><a href="https://botanybase.github.io/contribute/add">Automated Version</a></p>
+    /* Style the form fields */
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-family: "Merriweather";
+    }
 
-  <hr>
-  
-<p>If you wish to help us out, here is how <strong>you</strong> can do so! 
-What you&#39;ll need:</p>
-<ul>
-<li>Basic knowledge of JSON file format</li>
-<li>What&#39;s a pull request and fork</li>
-<li>A Github account!</li>
-</ul>
-<h2 id="steps">Steps</h2>
-<ol>
-<li>Go to our <a href="https://github.com/botanybase/botanybase.github.io/">repository on Github</a></li>
-<li>Fork the repository</li>
-<li>Now in your forked repository, head to the identify folder/directory</li>
-<li>Under <code>plants.json</code> you&#39;ll see that in the file there are plant entries</li>
-<li>Fill up your plant and create a pull request</li>
-<li>Our team will check and if everything goes well, we&#39;ll approve</li>
-<li>In the event we ask you to change or deny your pull request, please cooperate :)</li>
-</ol>
-</div>
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ded1cc;
+      box-sizing: border-box;
+    }
+
+    /* Add a button style */
+    button[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition-duration: 0.5s;
+      font-family: "Montserrat";
+    }
+
+    /* Add a hover effect to the button */
+    button[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+
+   label {
+    font-family: 'Montserrat';
+    color: #ffffff;
+   }
+
+   select {
+    font-family: 'Montserrat';
+   }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align: center;">Contribute to the Plant Database</h1>
+<p style="margin: 0 auto; display: block; padding-left: 20vw; padding-right: 20vw; text-align: left;">If you do plan to contribute, please fill in the parameters accordingly. Do note that our automated system is limited to 50 submissions per month and is recommended to contribute via our <a href="https://github.com/BotanyBase/botanybase.github.io/">Github</a> to prevent this!</p>
+<p style="padding: 10px; text-align: center;" class="nb-button green rounded"><a href="https://botanybase.github.io">Back</a></p>
+
+
+
+<form action="https://formcarry.com/s/SCwSex8EYkd" method="POST" style="display: block; margin: 0 auto;"></form>
+    <div class="card-content">
+    <input type="hidden" name="event_type" value="create-issue">
+    <label for="name">Plant Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="image">Plant Image URL:</label>
+    <input type="url" id="image" name="image" required><br><br>
+    <label for="climate">Plant Climate:</label>
+    <select id="climate" name="climate" required>
+      <option value="tropical">Tropical</option>
+      <option value="subtropical">Subtropical</option>
+      <option value="temperate">Temperate</option>
+      <option value="alpine">Alpine</option>
+      <option value="desert">Desert</option>
+    </select><br><br>
+    <label for="description">Plant Description:</label><br>
+    <textarea id="description" name="description" rows="5" required></textarea><br><br>
+    <button type="submit">Add Plant</button>
+</form>
+
+<script>
+  new AWN().warning('As of BotanyBase V2, the contribute form service has been stopped, a new way to do automated contribution is being worked on. For now, use the PR method.');
+</script>
